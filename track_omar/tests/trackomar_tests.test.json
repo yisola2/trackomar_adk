@@ -1,0 +1,53 @@
+[
+  {
+    "query": "j'ai depense 12 euros au kebab hier",
+    "expected_tool_use": [
+      {
+        "tool_name": "sauvegarder_toutes_transactions"
+      }
+    ],
+    "reference": "J'ai enregistré une dépense de 12€ en catégorie resto."
+  },
+  {
+    "query": "j'ai recu mon salaire de 1500 euros",
+    "expected_tool_use": [
+      {
+        "tool_name": "sauvegarder_toutes_transactions"
+      }
+    ],
+    "reference": "J'ai enregistré un revenu de 1500€ en catégorie salaire."
+  },
+  {
+    "query": "j'ai paye le loyer 650 euros et fait des courses pour 80 euros",
+    "expected_tool_use": [
+      {
+        "tool_name": "sauvegarder_toutes_transactions"
+      },
+      {
+        "tool_name": "verifier_categorie_suivante"
+      }
+    ],
+    "reference": "J'ai enregistré 2 transactions : loyer 650€ et courses 80€."
+  },
+  {
+    "query": "30 euros de loisirs aujourd'hui",
+    "expected_tool_use": [
+      {
+        "tool_name": "sauvegarder_toutes_transactions"
+      },
+      {
+        "tool_name": "calculer_solde_budget"
+      }
+    ],
+    "reference": "J'ai enregistré une dépense de 30€ en catégorie loisirs."
+  },
+  {
+    "query": "remboursement secu 45 euros",
+    "expected_tool_use": [
+      {
+        "tool_name": "sauvegarder_toutes_transactions"
+      }
+    ],
+    "reference": "J'ai enregistré un remboursement de 45€."
+  }
+]

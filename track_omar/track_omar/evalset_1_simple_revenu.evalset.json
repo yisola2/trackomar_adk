@@ -1,0 +1,161 @@
+{
+  "eval_set_id": "evalset_1_simple_revenu",
+  "name": "evalset_1_simple_revenu",
+  "eval_cases": [
+    {
+      "eval_id": "case date hier",
+      "conversation": [
+        {
+          "invocation_id": "e-0ea3a5e2-0d7a-488d-82b8-432fbf78dc61",
+          "user_content": {
+            "parts": [
+              {
+                "text": "jai recu un salaire de 1500 euro hier"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "J'ai enregistré un revenu de 1 500 euros dans la catégorie \"salaire\"."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "SauvegardeAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-a85fae95-6d18-4c09-ad7a-99f4dd80bafd",
+                        "args": {},
+                        "name": "sauvegarder_toutes_transactions"
+                      },
+                      "thought_signature": "CoQHAb4-9vt3dIhn3wgJLjI-iFXcoh8dshE3G-qznFeFD069II5N9UvNEfNW8yoGHtF9UN-ggXZmIfl-uzWWGH-8iJgtvmxWum58tcOZw65PzzBDQK-kfMuc1BMoU9inCds-xma27vQAy7pmEf0Mvq8TjPmWkzwY67NQzh0eu7mgwsNNtwINGfRw47yPKwoa02_tnoQups9wkqv34VB-3asuzV0e7qEr9LcsQ7p8YG2viVT-BjzzFfk7qwW1jR4RE_QAWZKRGPmBpCrrg2Vax8ZbKqXY1er15f3_mi0t6xQuhTMqKfQRRMWrtAZho_T-ZtCzciXEgN9Ea-qbI1vsGQH6RfnW5lbNkxcFTbDA46AWmKddmfAyeOITDvmLIs9XuBD1Tn6ZNNnGNmfZ2gmE6gW64Azt3vRTeaJjVoBU2DLPEd4-T6XkDgN2W1Z4bccbpvY_MVfxwbany5asYkT2F8t2EPRzVBfVGXlOwdkXWyXpowuXaZlBDxva-L9oqKD_2RIn7BiSbrco4gybg1lTLGef5ZKVcDXCwWFTH4mPp3iH99b-j7btrH3HEy4VM4SmWpKYMN-bHCSmUHuAphSXWETDPBkG9sARj_lzzwyGPtb4sCCm6KPxHswZh-Ee16NvcVt0Z2OyywRUCQPcxxWp1WQ192pQ-wLL9Gpfez_S2JjRGYxE0gNO5BjUVZI0eTnNg_SdSSmOwZ2sBWjW-auwNd41VsHy7iIrjTdKiuGkd3LU13NR8rKiMK3UlCLWBJVVbbWgioGyfwuk2hN36bEe2ghYIQ7f_yYotoJ5XAXe6uiUjz1opkDvEO98at6TyJWUbgs4gtYUnirSohJo_utDzzWrgmjCRs-n3fkHWTRbZEnR8DgczgH0i5nVZ72dFzMO0EEbSuZfZPl-NQESYBxd_wQ0j0AAQ5Z3pGqm0zrLqIMSOeJp_7AbcjrmkwZzJhnUJIPnmc3TDHnQ-54SkT-7P-SE6lv5Q235m05Q7L57vH_nKNhmJUNw5AhpgyXKtZpgsPgOkRnuYIw-2hXNiwG8JaJIkqAXhw5U0iwa02wKYk7S05QjJgq3DTLmkfZrI_wv65WEPy33i6WV88Hkb0T730KPwPr7eCx1uSxqkwwSBNGH-HujFQzjrC9gWRADpIByD_LANdgZiuAIiFY940456UecPQR3Rbn_E5DgiASanCnTrVD8YgCp"
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "SauvegardeAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-a85fae95-6d18-4c09-ad7a-99f4dd80bafd",
+                        "name": "sauvegarder_toutes_transactions",
+                        "response": {
+                          "nb_sauvegardees": 1,
+                          "transactions": [
+                            {
+                              "montant": 1500.0,
+                              "categorie": "salaire",
+                              "type": "revenu"
+                            }
+                          ],
+                          "categories_a_verifier_budget": []
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1772798521.689687
+        }
+      ],
+      "session_input": {
+        "app_name": "track_omar",
+        "user_id": "user",
+        "state": {
+          "texte_nettoye": "",
+          "resultat_sauvegarde": ""
+        }
+      },
+      "creation_timestamp": 1772798549.8160408
+    },
+    {
+      "eval_id": "case99a2fa",
+      "conversation": [
+        {
+          "invocation_id": "e-d698a87b-d9d8-4d32-8c00-e978dd2708f3",
+          "user_content": {
+            "parts": [
+              {
+                "text": "jai recu le salire 3000 euro"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "SauvegardeAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-b2404be6-04dd-452d-bd6c-7a5508bda906",
+                        "args": {},
+                        "name": "sauvegarder_toutes_transactions"
+                      },
+                      "thought_signature": "CtEDAb4-9vuL-VYX699dgwchb7HubGg9S2NdWB940rhJG5JLlihDDmXh7qyHeqpe44YBD7gnTn1cBaxlJ_NrZBbK_5l9vl1c6eCPga6u7rK7TDLL37PXbadS9PB1yDWNEXcOQi55xnn-AnbBTodOwJXFgmxnkdyogAbzpGm-fKR_FP22v3SRfZcXRSSFgb7VgFA0m-j6oG0tzaoNwGkkV_AhNEL0d0B3qJKKbZ-BMMv3y5pfpg7DtAYU4dscAXWyMo0AIgMhrOKpVWdZrB8EIqbODwzA4DOw2NlWVS2FNlF_szqi-KqHShJamIqU7-61iyhepb9_BTckyRFJy2soXWifz5KpqgZsbILPJNA3oFZ9IG3NYW5kI8UcAyt0ooZYX_wlVr2B36Sv8aog9PMEzik7ZHxtK3bb4YAjt4iMBaDWm_XFRj3hzrBg0xyQdzUjNjW4S7_YrHndoJhJDV-XGuxRIuKkFCwoqi1GSsXov00B2XSrojP-ENRk_yZbsxFHtXpcyU7fhZr0WsHq5Cm0XjLM3vhZiG5W2Q4HIgW3mcxMjkAKoaxXlzNsqLtze_IC5mqc-2eWh9s7KaC5gZwCUWZ3PZSGlbp5sDnJ_QuHib_-5Wt-"
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "SauvegardeAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-b2404be6-04dd-452d-bd6c-7a5508bda906",
+                        "name": "sauvegarder_toutes_transactions",
+                        "response": {
+                          "nb_sauvegardees": 1,
+                          "transactions": [
+                            {
+                              "montant": 3000,
+                              "categorie": "salaire",
+                              "type": "revenu"
+                            }
+                          ],
+                          "categories_a_verifier_budget": []
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1772795529.875631
+        }
+      ],
+      "session_input": {
+        "app_name": "track_omar",
+        "user_id": "user",
+        "state": {
+          "texte_nettoye": "",
+          "resultat_sauvegarde": ""
+        }
+      },
+      "creation_timestamp": 1772795693.6249738
+    }
+  ],
+  "creation_timestamp": 1772795687.8149736
+}

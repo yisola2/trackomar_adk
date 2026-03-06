@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trackomar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d0f;
+      --surface: #141416;
+      --border: #222226;
+      --accent: #c8f542;
+      --accent-dim: rgba(200, 245, 66, 0.12);
+      --red: #ff4d4d;
+      --red-dim: rgba(255, 77, 77, 0.12);
+      --text: #f0f0f0;
+      --muted: #666;
+      --radius: 16px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow-x: hidden;
+    }
+
+    /* Background grain */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--text);
+    }
+
+    header span {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid var(--accent);
+      padding: 2px 8px;
+      border-radius: 99px;
+      letter-spacing: 0.08em;
+    }
+
+    /* Lang selector */
+    .lang-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .lang-btn {
+      flex: 1;
+      padding: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--muted);
+      font-family: 'Syne', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .lang-btn.active {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Transcript box */
+    .transcript-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      min-height: 100px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text);
+      position: relative;
+      transition: border-color 0.2s;
+    }
+
+    .transcript-box.listening {
+      border-color: var(--accent);
+    }
+
+    .transcript-box .placeholder {
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .transcript-box .interim {
+      color: var(--muted);
+    }
+
+    /* Mic button */
+    .mic-btn {
+      width: 100%;
+      padding: 18px;
+      border-radius: var(--radius);
+      border: 1.5px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.15s;
+      letter-spacing: 0.01em;
+    }
+
+    .mic-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .mic-btn.active {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .mic-btn.active .mic-icon {
+      animation: pulse 1s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.7; }
+    }
+
+    /* Wave bars */
+    .wave {
+      display: none;
+      gap: 3px;
+      align-items: center;
+      height: 20px;
+    }
+
+    .wave.visible { display: flex; }
+
+    .wave span {
+      display: block;
+      width: 3px;
+      background: var(--accent);
+      border-radius: 99px;
+      animation: wave 0.8s ease-in-out infinite;
+    }
+
+    .wave span:nth-child(1) { height: 6px; animation-delay: 0s; }
+    .wave span:nth-child(2) { height: 14px; animation-delay: 0.1s; }
+    .wave span:nth-child(3) { height: 20px; animation-delay: 0.2s; }
+    .wave span:nth-child(4) { height: 14px; animation-delay: 0.3s; }
+    .wave span:nth-child(5) { height: 6px; animation-delay: 0.4s; }
+
+    @keyframes wave {
+      0%, 100% { transform: scaleY(0.4); }
+      50% { transform: scaleY(1); }
+    }
+
+    /* Send button */
+    .send-btn {
+      width: 100%;
+      padding: 18px;
+      border-radius: var(--radius);
+      border: none;
+      background: var(--accent);
+      color: #0d0d0f;
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+      transition: all 0.15s;
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    .send-btn.ready {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .send-btn.ready:hover {
+      background: #d4ff55;
+      transform: translateY(-1px);
+    }
+
+    .send-btn.loading {
+      opacity: 0.6;
+      pointer-events: none;
+    }
+
+    /* Response */
+    .response-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      display: none;
+    }
+
+    .response-box.success {
+      display: block;
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .response-box.error {
+      display: block;
+      border-color: var(--red);
+      color: var(--red);
+      background: var(--red-dim);
+    }
+
+    .response-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      opacity: 0.6;
+    }
+
+    /* Footer */
+    footer {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>trackomar</h1>
+      <span>VOICE</span>
+    </header>
+
+    <!-- Language selector -->
+    <div class="lang-row">
+      <button class="lang-btn active" data-lang="fr-FR" onclick="setLang(this)">🇫🇷 Français</button>
+      <button class="lang-btn" data-lang="en-US" onclick="setLang(this)">🇬🇧 English</button>
+    </div>
+
+    <!-- Text input for mock requests -->
+    <input 
+      type="text" 
+      id="mockInput" 
+      placeholder="Ou écris directement ici..." 
+      oninput="document.getElementById('sendBtn').classList.toggle('ready', this.value.trim().length > 0)"
+      onkeypress="if(event.key === 'Enter') sendMockRequest()"
+      style="width: 100%; padding: 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font-family: 'Syne', sans-serif; font-size: 0.95rem;"
+    />
+
+    <!-- Transcript display -->
+    <div class="transcript-box" id="transcript">
+      <span class="placeholder" id="placeholder">Appuie sur le micro et parle...</span>
+    </div>
+
+    <!-- Mic button -->
+    <button class="mic-btn" id="micBtn" onclick="toggleMic()">
+      <span class="mic-icon">🎤</span>
+      <span id="micLabel">Commencer à parler</span>
+      <div class="wave" id="wave">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </button>
+
+    <!-- Send button -->
+    <button class="send-btn" id="sendBtn" onclick="sendMockRequest()">
+      Envoyer au backend →
+    </button>
+
+    <!-- Response -->
+    <div class="response-box" id="responseBox">
+      <div class="response-label" id="responseLabel">Réponse</div>
+      <div id="responseText"></div>
+    </div>
+
+    <footer>trackomar · ADK backend · localhost:8000</footer>
+  </div>
+
+  <script>
+    // --- Config ---
+    const ADK_URL = "http://localhost:8000/run";
+    const APP_NAME = "track_omar";
+
+    let recognition = null;
+    let isListening = false;
+    let userWantsToListen = false;
+    let finalTranscript = "";
+    let currentLang = "fr-FR";
+    let sessionId = null;
+
+    // --- Lang ---
+    function setLang(btn) {
+      document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentLang = btn.dataset.lang;
+      if (recognition) recognition.lang = currentLang;
+      updatePlaceholder();
+    }
+
+    function updatePlaceholder() {
+      document.getElementById("placeholder").textContent =
+        currentLang === "fr-FR"
+          ? "Appuie sur le micro et parle..."
+          : "Press mic and speak...";
+    }
+
+    // --- Speech Recognition ---
+    function toggleMic() {
+      if (!("webkitSpeechRecognition" in window) && !("SpeechRecognition" in window)) {
+        showResponse("error", "Ton navigateur ne supporte pas Web Speech API. Utilise Chrome.");
+        return;
+      }
+
+      if (isListening) {
+        userWantsToListen = false;
+        recognition.stop();
+      } else {
+        userWantsToListen = true;
+        finalTranscript = "";
+        startListening();
+      }
+    }
+
+    function startListening() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recognition = new SpeechRecognition();
+      recognition.lang = currentLang;
+      recognition.continuous = true;
+      recognition.interimResults = true;
+
+      recognition.onstart = () => {
+        isListening = true;
+        updateUI(true);
+        hideResponse();
+      };
+
+      recognition.onresult = (event) => {
+        let interim = "";
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          if (event.results[i].isFinal) {
+            finalTranscript += event.results[i][0].transcript + " ";
+          } else {
+            interim += event.results[i][0].transcript;
+          }
+        }
+        renderTranscript(finalTranscript, interim);
+      };
+
+      recognition.onerror = (event) => {
+        console.error("Speech error:", event.error);
+        isListening = false;
+        if (event.error === "aborted") return;
+        if (event.error === "no-speech" && userWantsToListen) return;
+        userWantsToListen = false;
+        updateUI(false);
+        showResponse("error", "Erreur micro : " + event.error);
+      };
+
+      recognition.onend = () => {
+        isListening = false;
+        if (userWantsToListen) {
+          // Nouvelle instance nécessaire — Chrome refuse de relancer le même objet
+          setTimeout(() => startListening(), 100);
+          return;
+        }
+        updateUI(false);
+        if (finalTranscript.trim()) {
+          document.getElementById("sendBtn").classList.add("ready");
+        }
+      };
+
+      recognition.start();
+    }
+
+    function renderTranscript(final, interim) {
+      const box = document.getElementById("transcript");
+      const placeholder = document.getElementById("placeholder");
+      if (placeholder) placeholder.style.display = "none";
+
+      box.innerHTML = "";
+      if (final) {
+        const finalSpan = document.createElement("span");
+        finalSpan.textContent = final;
+        box.appendChild(finalSpan);
+      }
+      if (interim) {
+        const interimSpan = document.createElement("span");
+        interimSpan.className = "interim";
+        interimSpan.textContent = interim;
+        box.appendChild(interimSpan);
+      }
+    }
+
+    function updateUI(listening) {
+      const btn = document.getElementById("micBtn");
+      const label = document.getElementById("micLabel");
+      const wave = document.getElementById("wave");
+      const box = document.getElementById("transcript");
+
+      if (listening) {
+        btn.classList.add("active");
+        box.classList.add("listening");
+        wave.classList.add("visible");
+        label.textContent = currentLang === "fr-FR" ? "En écoute..." : "Listening...";
+      } else {
+        btn.classList.remove("active");
+        box.classList.remove("listening");
+        wave.classList.remove("visible");
+        label.textContent = currentLang === "fr-FR" ? "Commencer à parler" : "Start speaking";
+      }
+    }
+
+    // --- Send to ADK ---
+    async function sendMockRequest() {
+      const input = document.getElementById("mockInput").value.trim();
+      if (input) {
+        finalTranscript = input;
+        renderTranscript(finalTranscript, "");
+        document.getElementById("mockInput").value = "";
+      }
+      if (!finalTranscript.trim()) return;
+      await sendToADK();
+    }
+
+    async function createSession(userId) {
+      const BASE = window.location.origin;
+      const res = await fetch(`${BASE}/apps/track_omar/users/${userId}/sessions`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({})
+      });
+      if (!res.ok) throw new Error("Impossible de créer la session : HTTP " + res.status);
+      const data = await res.json();
+      return data.id;
+    }
+
+    async function sendToADK() {
+      const text = finalTranscript.trim();
+      if (!text) return;
+
+      const sendBtn = document.getElementById("sendBtn");
+      sendBtn.classList.remove("ready");
+      sendBtn.classList.add("loading");
+
+      // Elapsed timer so user knows it's still processing
+      let elapsed = 0;
+      const timer = setInterval(() => {
+        elapsed++;
+        sendBtn.textContent = `Traitement... ${elapsed}s`;
+      }, 1000);
+      sendBtn.textContent = "Traitement... 0s";
+
+      const BASE = window.location.origin;
+      const userId = "user_trackomar";
+
+      // Abort after 180s (matches proxy timeout)
+      const controller = new AbortController();
+      const abortTimeout = setTimeout(() => controller.abort(), 180000);
+
+      try {
+        if (!sessionId) {
+          sessionId = await createSession(userId);
+        }
+
+        const response = await fetch(`${BASE}/run`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          signal: controller.signal,
+          body: JSON.stringify({
+            app_name: "track_omar",
+            user_id: userId,
+            session_id: sessionId,
+            new_message: {
+              role: "user",
+              parts: [{ text: text }]
+            }
+          })
+        });
+
+        if (!response.ok) throw new Error("HTTP " + response.status);
+
+        // /run returns a JSON array of events
+        const events = await response.json();
+        let fullResponse = "";
+
+        for (const event of events) {
+          if (event?.content?.parts) {
+            for (const part of event.content.parts) {
+              if (part.text) fullResponse += part.text;
+            }
+          }
+        }
+
+        showResponse("success", fullResponse || "Transaction traitée !");
+        resetTranscript();
+
+      } catch (err) {
+        const msg = err.name === "AbortError"
+          ? "Timeout (180s dépassés). Le pipeline est peut-être trop lent, réessaie."
+          : "Erreur : " + err.message + ". Vérifie que adk api_server + proxy tournent.";
+        showResponse("error", msg);
+      } finally {
+        clearInterval(timer);
+        clearTimeout(abortTimeout);
+        sendBtn.classList.remove("loading");
+        sendBtn.textContent = "Envoyer au backend →";
+      }
+    }
+
+    // --- Helpers ---
+    function showResponse(type, text) {
+      const box = document.getElementById("responseBox");
+      const label = document.getElementById("responseLabel");
+      const content = document.getElementById("responseText");
+
+      box.className = "response-box " + type;
+      label.textContent = type === "success" ? "✅ Réponse" : "❌ Erreur";
+      content.textContent = text;
+    }
+
+    function hideResponse() {
+      document.getElementById("responseBox").className = "response-box";
+    }
+
+    function resetTranscript() {
+      finalTranscript = "";
+      const box = document.getElementById("transcript");
+      box.innerHTML = '<span class="placeholder" id="placeholder">Appuie sur le micro et parle...</span>';
+      document.getElementById("sendBtn").classList.remove("ready");
+    }
+  </script>
+</body>
+</html>

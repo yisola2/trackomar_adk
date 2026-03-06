@@ -1,0 +1,601 @@
+{
+  "eval_set_id": "evalset_date_compliquee",
+  "name": "evalset_date_compliquee",
+  "eval_cases": [
+    {
+      "eval_id": "case 2 dates with delta",
+      "conversation": [
+        {
+          "invocation_id": "e-d741c95c-774d-4c71-951d-e44096ff73a0",
+          "user_content": {
+            "parts": [
+              {
+                "text": "il y a trois mardi jai paye le resto 300 euro et 3 jours apres jai recu 50 euro comme cadeau"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "J'ai enregistré une dépense de 300 euros pour un restaurant et un revenu de 50 euros reçu en cadeau."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "SauvegardeAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-c3817a05-50be-4895-b7bf-508b9347a586",
+                        "args": {},
+                        "name": "sauvegarder_toutes_transactions"
+                      },
+                      "thought_signature": "CqQGAb4-9vus9qBJNmAtd5baWikzUumPvOC8-ssNJcyVhIuHsn7Iou8wiPJwBSz40s10oD1QTnM3ZRrBPO1gc9J_S4bd6gqTfv13akYg4FPCKEnpHB7DcTXpuZxqI5dZxkG2TBGCXo7fnGWXywakmo2u677fd_FF4wGzT7aBLpISWBf5balAPGm6AcJFrmNKRXy2Sp5VukmQ9H7M0lyErT2Jj-eWbcZC9StiYdU3nmpK46xe-Y5OaSjv2NK8rVJry0aqcB9jakSTRAbR1vbXa9mVOXnZaKS39bC_aO5-u-HWClQruML4NJr2DA-Jo2KyY2U8LqCl6AgAL2yGDQ6hvKCeaPcON6tU50rq_eySbIG-LI-HSLzMYtLaBuxtN4QjjlukXSSGMnzXg9o2RG-gNPlTOHtl0km7wjN7DAHcrNCQFFhSnIueqe3v5wbSe2ofCU5LGQitVR2Y8Bt6wgwWNziFgMulyyGyuuv7g-EJNwvKmzztLfXZOvyqrXp_g09eVxpRXgXFVqXAtESXjVbX558CXJ0Em9h8X80GlQ_FwWU39uM1RWmlMrl_zNZvxn1u7_58GM-3qgNJoCq3rA7pzDvbRIGXE05SWX6N9KyW5cCmx7J24EILiVF8Ic6vkNPApVXj4Wupl_GtIgPtMLFKnbS-i6zFovPS4gK8_ZgcsGOxc20s8uM-a3hUi1z2wBJQPIsJe6AhwnNgIljkZ99qnSFeIYvqv6lAZ314FCL7GsUIBGpsXa5-TV9-dtIDAX_s05A2E9nQMt0KZGaafy0jHJpqFIkOkhmVJluTopZyjHSKYvWfSWPM3tkvKRtEr56rIYnnlxkVAGwbEi2vxybVeAgPZVvdJMl0S9KbsftTsHebOJuu-2-AX7Ko_S7FTDOt8xWhsOsxx5MXXhmN1SOZchEgqF28k4fpLYluJupEouZ7LpzaJKyQVPDPIDgRh6HuVYZDdeqy9JM0QYK28lVQhiodI-nK8t5aCzXCgnpgSrqodDvdC_QhJFdufX0GJ0oA3c1xicsoXlZPEE5k8XiKOe0bmojI37eUjEzg12-C1uqFjWSSZlmc"
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "SauvegardeAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-c3817a05-50be-4895-b7bf-508b9347a586",
+                        "name": "sauvegarder_toutes_transactions",
+                        "response": {
+                          "nb_sauvegardees": 2,
+                          "transactions": [
+                            {
+                              "montant": 300.0,
+                              "categorie": "resto",
+                              "type": "depense"
+                            },
+                            {
+                              "montant": 50.0,
+                              "categorie": "autre",
+                              "type": "revenu"
+                            }
+                          ],
+                          "categories_a_verifier_budget": [
+                            "resto"
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-50bbee43-d51e-41c4-91a7-c84bcff7f827",
+                        "args": {},
+                        "name": "verifier_categorie_suivante"
+                      },
+                      "thought_signature": "Cr8HAb4-9vvkF4tYIncZbBjaKZvHR3uDGi26Bc1A500ieHpyB1-jLzczde3E2lFerPG5CGUvB5XewWIyYegJ19-rv8c12ESZrBNYT2RAt_AjaAIDpQ8bC9nqT3HnGVPVrDYVxhl1GMR13-gwJg61luhZ73vmHYedJMR-bcSHfAHnyUTtZA2xBFwNSqVLrIn0Eu-nMmW8KgenrVvqeQoHWFCp1ZITc2MBT_DfSYYriICXGPMgm26rkIMZ-jxcx3jbRiLyT3LPu-E62R1EVCif4G2nDgGlbYUuxxyMLUrESqp1XslL5WN9uC0LcK5ALtk0wWTuICUH0BeOF74Pn_VW-Bj0V4-lG5vvfV7YFKE8hFErjasa2GpQH_grc5mJHd-NqU9AZJY5BtY_PEbtS6KDu81t1_pNlW2i0jOHcNno7rZ4qZ4eXOiS1hyYS9eN_IELhICk7S_1GN2E28PLN2RPDH4dTuS_ZApNz-sxP2GYZEnOeG0PJLThjhiHOhFpvAE3Kvw5jkEfIWlIPTPqmQHqQnoqz6IVXJKT3qB6Mn2FQHmQR7HZHbWcIUBfxI6se5zslFPq53BBcZx0lGcdX7_ZnFsqzwf0IzkeFTGMHw5LPOWj2vUqSMyMH2EjPByPi9QiLoQocFOvYlAzN3As-n-7WsPegE6q9CN56MOTI37eT-Ef8LNjuX4PSKZHuzMLJ7d_npbQU4u953hbBqEl3cgEwaz1HS2N8iMYWm9S-BnWbeGSgopHD_KzKewI4aWoNFUovngP0cXyan5ER5C3KXklYPaOSMdstSRFape8G4VgyTuIugWzvPcSsE3TSm8Qi6TMXer3_bGNUoYrWCTVHlJsQG-t36aEWSulnybzIXn9GimMqqDqED_D-Vmk0G3dxEwJPJHlDDqZ16lDxF93cw4djMQgQ7R9cOkRK_mxZbIAnCOUpQBbR8WfiRbiiu6f7ROk0P75rzdNipTHvhUaKcK2It8V06mjXwwtotCVWCUJST6dL4JvWJzxLcGtoM6_Q7cGhCtwkImv8XZEG61KJRnGg2Ob4A0o9VYZTyWKifUqtPnDhfrsYqAA1jHaMLRpI9hinthMHMvZR8yoYA0aji7GgF59HrpdPEcLDh2tO4TaSlG28Q4hRBsyl5dDTReZzx8H_DbWlYlmAPK_iXZTew8flnBrTS9Zq18mvM0nE7Dpk8KV2cyxG4cUCI_4He8HYy4rDP_pP4n_ezA4R9fje6QrB_CCUsl4aMdD5NvhV59tplkpkVzD0yOYdJBfvTiY9ogZxXo="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-50bbee43-d51e-41c4-91a7-c84bcff7f827",
+                        "name": "verifier_categorie_suivante",
+                        "response": {
+                          "termine": false,
+                          "categorie": "resto"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-b51ea436-4d2d-4573-a7f9-8a6003133cf0",
+                        "args": {
+                          "request": "resto"
+                        },
+                        "name": "BudgetAgent"
+                      },
+                      "thought_signature": "CvwDAb4-9vuzMUqmaSgLgMEo3UtBOzUvzAz29SXoiYnxsTZsLRrR8_9evrDsL5t7yn9tYMiZZ88S35HCAvS-0eijcvAJpQUG_b4-pkdOXo53zfgqWwXF1_ujAFqZ9I1YyKHeOqAEqEgh6t37LVuVfaAalOvbgKycc_7DYxKUrccqTGacpcY4PI_oiqQOpekc9h9s20-WXjzkAPt_X8AK6_bc3jitbmDQsrht571byNEA374QztKQoX31j_s_TX9mYftfQpb7KsOSvFaS0TTBYeqei-03j4I8_Ey-6IPNg2-FlqedmM69GUeyGtvc9JEs-i-B2w4Dd49phrgtNIXxo89CC75YMaNT3GbuKxA8485DE6HoA9iwoD6OzqDD16S7o2pxKMolFHR6QzMmcpekIGQ31m2AGg_5t7NmxdPx7GXA943-P_Ou-oL2UYp_z7BWVZVMJv3gzxI0nHKXTVp1aaK-fRx3opzqBM7g_4K4CJ9KMSm0wDNvLPnOcK8ZfSYJ-bl5T_-Lni_Pxg68meg9NxH0Q0du4rCXPzEWuStvoJY1e58KezzAb0GMU5gtZ515wCb6wh6Ihjyc_iMAz6xlTxqE27OhtpN1pondjy1Fq0JoaJ_SimQ9pWqS8q2f7gD5WNYKEXuEbTiFYzrOByf5bibjbqQ9nwRkuBpc5WeRpQ=="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-b51ea436-4d2d-4573-a7f9-8a6003133cf0",
+                        "name": "BudgetAgent",
+                        "response": {
+                          "result": "{\"calculer_solde_budget_response\": {\"alerte\": true, \"budget_defini\": true, \"categorie\": \"resto\", \"limite\": 50, \"pourcentage\": 5151, \"total_depense\": 2575.5}}"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-2a4e5916-1dd8-4471-b7d1-2c45c0ef0479",
+                        "args": {
+                          "agent_name": "AlertAgent"
+                        },
+                        "name": "transfer_to_agent"
+                      },
+                      "thought_signature": "Cq4GAb4-9vuVOaQ6BrRQptHoNJgY2tfk8Xv4BsZ8uGWungVy3h0dGGDyVw4K7JWa30z_zKcCrY0OXS2_T_YNKZK6znuv2aEPCzFBSZT0u1IAuzvJOySC3_hN_hjWfu-HV3QsF-OoY4opO4sTdMJlvj8kNEkDOBPP6aA4peQDt6ODByhncCB9eOMS53RHCNOo0UXGTnZYAfa8BHgK_PMPr_F1j9HqYP2DqAF2P_G_dk0CNC7uKcp7tvf2qxkMqUdJide-4PUN3LipbaaUaz3swwAhsAThmXh04YwAEaUNp6_Glra6iaqVfkrpKF8FUzOS16UV2LolQDMkK7XK5Rq-NDniFKpFrYG8IwZ342Qx4ebXb8H-tLAunbHCS6D-LY6KjawNnemTyi9ZYtVT80RXDbET4lnOgyF1xVxFxbVrr_O1wjUocp8k_n2LN8M5iP3ywqp6ATFUFTv0NKElM_EC6h36xZIrr9GBwHIizGRWT2_nYY2rqTDsZqmp5UcGxlO6thmz684qeroBC1oVF9BXeYwqZShgAE92mFwDqxKgkNCFKheeLmp23JZQjcFrv9WYTIQyFT8JaCwDsUAUs3M-DHv5mzNUabPcb8ldnrifMhH-8zCCg-_rG8WYpxfypq1SatqwS2U1k7kmIq92GB85NMt-0TxdR6tl-Hwbxojw5PkVBBBQJOVJGtSgm3-8Xu2pHwVtBgut53-kbTcTIhNWif6w1YVmUqQ2EeiDJ3HK7b4b6RfvJWj7t_qBx0-2q2jM7PKlqXJW9lsOpiFk2-Dc79aJAd-wojZtVYFWVkR5vNuNjPGFfY5ePj5F6gzxTA8QOe8J2KV3nZW166R6GKVKaIfw6J5y_bNxD3i9MbGuwzSoEKA6s2GjA1O_iAByYQ5XrBBfTiOMSneJ8xNzks2DRktPDvGhV0GRmvv097LuNmfarYjF_1AzQ-Q2iAT5laStYyEb1zPiO3fQgMQ46mLR0BhUhfzvqMBoBr2bMnDN2TZJmuK8LyZYe_nsk-E4B7t8rjnpo9Gyp_678LR8F4T3Elkgycn_vezCUrLF1OJoa1znN9k1NmEZLfN2FclMxz68AQ=="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-2a4e5916-1dd8-4471-b7d1-2c45c0ef0479",
+                        "name": "transfer_to_agent",
+                        "response": {
+                          "result": null
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "AlertAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-412c0a60-cea8-4cb5-a8ca-6e9d69755630",
+                        "args": {},
+                        "name": "obtenir_categorie_courante"
+                      },
+                      "thought_signature": "CqoIAb4-9vtRr_k1e5qk4WmQ8W8zjvyUr4P3BHAsQjGEUNAD7kjwM9qNzfT4Xu_EtNBNKXOy3fCs7T2LudD9wYyL4fZJsILcCubDdAobIrvFAg80Vvl_hesHW2rTW7kYpIFCf1PMsePKf7pJ3Rk3rPMcPtY2g6XFglAIPpItBE-5HSN6CWrlmzje_50w1u2wYMpqFb-5n7l2yOPZjgI6vcX-LguG7wCj17Le2dSIGYyOGf4RoSRndLKv9XtMOZh14319_RcL2WQUYcdZ1rTCe0lDGS4HX9BNoCNmt4O6brGllVxaKowtMjSyrNo2DcKmLvFLMgBTQKbNNSoD-CnHidRtB-ySDvI21KqMbqLCFGndrwQ4Pe1FSCVKM5xEvTyXtjBdEbb9VB5wHQgFzLk7AfHzMFwR9Z9uR2qpwDceYex4nBZM26yTaWwRIAQ7u-Rk1o7zqp8GYPXgzkD0OvryAtD0HsM1ZJ0ZX3aRGC0wa6irrQQsWmV3pXfd8fI0VaJhx14z0hXWvugUTC5INiNJBgwU5Bglh2ZNdOJs9fXzfYtPpUnXyKzk4IVjIAYSmbxfmn6eaODjtxm3reFTFrYg3BgYyKyw9VonDZwxIvwMP-7WImvRzNo2B3X_x6R03F0w528iBzbhRpzt-lzRTcKklQDTiDoSEetnLZTeYlQKfjGeWEPlEA2CZDacjLOuau_wsbt0vMDZfPXP3WxkInaeljOCye9lNAYB7LU31DF8N4bTHk0X1wINxrdulMmKd_ECcCYCLRBkT1nAtD3XWqBDdEs82mVsp71DaEoEc1uFiOfUmdknh16OJJxBEae6y5xg3di1etn7Wp0KaYhmjZbljUTznp1GUVGo8txmJP-fwPN2FjIunJNsKFT38GQS9B3yMVDhx6E9idl4UiyOcOxVGKCNTchHvJxJKPU5KLUW6qSTZPxVjaMzRk-9jRxS6DNDVLimIUVKAliDVx5SUd9UqbiZUOBtupKrEU523fLbYFFobB8W7-H-sJ_1qYC8rmV01wSmjeWhvt4AVBh-0FsXgzJkWAClO_g8AegvjxQ2BrSIDyxk2YwJD1yYtDhed40CGz0bgrcRdI3NgCkdL9BQcMtPDvj3e3bdZPR_b1GtziW1JBMXJlQ6AWUSLBZea4aK_J17Ov9Zu-MInymSpp4C8rCmORwwSVxDss28AVzOC-HeyG3sJjRza9I2ToswvMatzYT_wDxLL_hAxvwf_xsNJwfaSnJVIn3jJT7YrfE8dlvAKjyApLlIPu6SYugB513m1E-wcTz6pd6fHP_4cib6DGUAEish_rNMBOBDdukNNi3k-uu8jy5SAdq2crvS3C_02qvXtxTT_OM6HAfixp4QrLBNO3z8yG02rpwcVIgomqYss6ZzotFhbPm3CDSKrnwcoQtRR1nubJjOQW3fLA=="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "AlertAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-412c0a60-cea8-4cb5-a8ca-6e9d69755630",
+                        "name": "obtenir_categorie_courante",
+                        "response": {
+                          "categorie": "resto"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "AlertAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-5d04f8f5-62ea-438a-91ef-2396478b97a1",
+                        "args": {
+                          "categorie": "resto"
+                        },
+                        "name": "calculer_solde_budget"
+                      },
+                      "thought_signature": "CqIBAb4-9vvIcIwdB_7jTzObZYHXOTMMnzaoKgHbUBkzXCzCymJBFetCsTSz_o4nZCW-KcCQ-soGipIXYUXHX8n5b7M8y1_N_McvCQYnagGvmAMEPq6cw4tzYSoSZd2BxMvLzGM52etMsN189FWoV9fI7jajnt4UbYyYgjcWjfzMuLWP_cmk1LfUvgMG9EAmsdtJS7bbOzo8W8qWibT5nxQ7aBuH"
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "AlertAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-5d04f8f5-62ea-438a-91ef-2396478b97a1",
+                        "name": "calculer_solde_budget",
+                        "response": {
+                          "categorie": "resto",
+                          "budget_defini": true,
+                          "limite": 50.0,
+                          "total_depense": 2575.5,
+                          "pourcentage": 5151.0,
+                          "alerte": true
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "AlertAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-0f28bbe4-3347-4d4d-8f79-ce70dffa6187",
+                        "args": {
+                          "categorie": "resto"
+                        },
+                        "name": "lire_contexte_alertes"
+                      },
+                      "thought_signature": "CosCAb4-9vtZJmdsNz86fyBzL-5oasxmkEyWkMwX82Q9a5dDQp79AsKmbNQhmeFJzRuT3q1ynBSetkx2Q1WgB2CDXmM1cE3RIbZaH7uf1JBSWEiX4LlLkFoxPgLlQXak5zGKv2QrZkC-HS52mWI3_HszV_rfRcQJz_rAh9okvN1fmKyBLaLRLrSsQWNDBwx7WoqolTTAQDa0pqPwfJXCcNM9ElfRoxmYqnzGEddNeYHZNbiiYteB7ZTEvJZfecpWrOWpZe83tFTKNGRoiaGuQ9MZCAmZSxzM9O6Pmdq5aJ-rfFzsij0JOei0_28bs5AMTl2uUDmDBHPFDqj__Lx0_ZCgQIfzvW1355fJTgnz"
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "AlertAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-0f28bbe4-3347-4d4d-8f79-ce70dffa6187",
+                        "name": "lire_contexte_alertes",
+                        "response": {
+                          "nb_alertes_ce_mois": 0,
+                          "streak_jours": 1,
+                          "pourcentage_mois_precedent": null,
+                          "contexte": "premiere_fois"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "AlertAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-ef56557a-8d5a-4b50-800b-f95dea0187ed",
+                        "args": {
+                          "message": "Oups ! On dirait que ton budget 'resto' s'est transformé en buffet à volonté ce mois-ci ! Tu as déjà dépensé 5151% de ton budget de 50€. C'est ta première alerte, alors considère ceci comme un petit clin d'oeil de ton agent budget préféré. 😉"
+                        },
+                        "name": "envoyer_notif"
+                      },
+                      "thought_signature": "CpEGAb4-9vvrAdbTNpsv9e5VRg_xx0JKZ4eMXs5lOsxoiv3ninkwf-yRiKX_8GbgSqBg0AmtbF2wQwmfxTuDA05aWblZ2VRZCUQ6Ozd4MKz2AXiPNZ2jEMfQghM32I3xb1pWFKQOHGuHHAhNX96rBW04l5NVkIT7P8M4CJAr4iqVMYWMWc2QvvpUiRG8Yx2RUw7ZE_0sG6M8sdGl8CNR2wmVNyRM1_m7J1TwU2TXFYRsUxigVTCiwv1vJB9wgGTD0dM9vbzJBHJucha8-brOmSOGgt4fc0067BexL4ZFVuDZTJxJmUA553oaF2sQc9x3mJrUz-X8mTr1Y33Q6W4gxuJlofUiGUzLROWUQ2obdVZviWJXCVFG-nNmhmnhuDYIoiFST5U67tZQwdQBA41T5Dl5ONTRkQYNURxn0eSUwRCN6sWazFS0jJojvISnv0NxK6etBxM9tjuFNZaiXoHAviOcFD_r4o9We4USmB8UeA_Dhrs9GEvSPQEaGMdqy08rNMKGxKhgbcs_nTBN_vf8Pki1SJ62Ebk87M3VeOSMEgjl33XO10hqQh9dtw7vgOduDZu1PzmOgEoSSAzcJho12DqC-ANoG5lDjNJMR5xdfivdCud1ZvvMbdHcHm_IkFNHNoYi01bbOXBU6xpBW01UdyhOF2BFXC5cIA3CiSZNKEhSQb6f2sIkyXRLVb9opfBV9d1XBuTP5mduMqp0esFHiWaE7fwy7C6N56-Zq_SLZY_CsTIjrgomvb9JIfIDRtIoh4Nd8t9ZtlsgOpRSkFusk_ABmZbYFaUSTrKoCGY0CSdWu_KRw5PxMZ8T60nUF8All5tdhcmGFXqVJGgziUHP61cR4ZwKvS9Zhx1INSBj9wOQb1uwSLX3cI1IjJJ8ouhyk0EC7hfgjdHuID57Qe-DN_fEXgV7MDt6KmYeJ-xcaF6QOnAS8rNVUAD3ShpDUG68nVCxAN1xHi85-tFFLAs4OZO3GZB-3vt_W5_c-AvJs6RTl1joBt7NsaqoC5mvTP_4aMADZf83fZCKtHoJggQ4mhAAfKI="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "AlertAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-ef56557a-8d5a-4b50-800b-f95dea0187ed",
+                        "name": "envoyer_notif",
+                        "response": {
+                          "envoye": true,
+                          "message": "Oups ! On dirait que ton budget 'resto' s'est transformé en buffet à volonté ce mois-ci ! Tu as déjà dépensé 5151% de ton budget de 50€. C'est ta première alerte, alors considère ceci comme un petit clin d'oeil de ton agent budget préféré. 😉"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "AlertAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-5b09bceb-5a0a-4706-9e25-26339ff41b45",
+                        "args": {
+                          "categorie": "resto"
+                        },
+                        "name": "enregistrer_alerte"
+                      },
+                      "thought_signature": "CqgBAb4-9vueu0SQmEfUoOFe5kOeSypKhNB064Z7xL3QqYinUOwO25J4EfQkBChw03ZQJyUMObNdtCf176fugl0z4ISrtQ-eUxWrPnkwy7sz87f7Kd1sDRwIMlrVVQAYXnukzD95MbmIyaP37fTP7sufewvTOYXtT30hKu3BM_PcFwafjGKXvPpEGxDqRoymJSMV1CjJfHx5EIfvquGSpV6k2208kBkyBhUF"
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "AlertAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-5b09bceb-5a0a-4706-9e25-26339ff41b45",
+                        "name": "enregistrer_alerte",
+                        "response": {
+                          "enregistre": true,
+                          "nb_total_alertes": 1
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-c4326cb8-37a9-407c-a7d9-54baf1db80ea",
+                        "args": {},
+                        "name": "verifier_categorie_suivante"
+                      },
+                      "thought_signature": "CtEMAb4-9vsTTvwqI7WTMKQnYlPOE-E7icguexkxb0a2L8tf5pBFc4TLSR3L8Z5sobAwvp-hZmAb-vEWqIovyFtVaEYkCEKYaKfFPpp8hzlAYND9xd-ZlAItCTPfq6VZaJNL596lC32D4LnGAEU8JmNXjpYvbSKKQv7cHL6NKMU98UgaRH09bBYL2e5ElKFLpUO3E1XhXAiYr1JhZX285rELKfPyDoVburvNDbOqekDJjqXrJns6PldtI9tALV_1pCQ7kQBEcmNtx3lW0VVXMWOeiPCgdXkKCbBYJD-Cw2Zok-eqj2MIJWPiZ9xTl4YbGPVeevKQPNPptfi1Y6ZjlvCROCSEPg3ylqwkIEZu1tdkRyOZg_9unUl_HCuWa8nxaThF7AiFYUdXXBfgxSRXYumTk2OsRQqLcsiH9LDpkfu66rExdXUmn7KIJiYDm330Eckp8KjTXs-jH5y5JYAxRd1Kdk_S6ovyERDDozQ3AueKuKvJ9ymmfuKwXoqIwtoHjseo62jgRRyqd8OnA00aN8iLct8jHS6sHKkwHgUVjPbiKV4il8G7yaTohpahf9HHPH0PWbk2gyUAYpUvwcJJUlCnfih2gqPEGWxvBD8j2y1j6xFakzZcVgyFqeqwOeZtSrPV41xm07fYAnGexGtZDcQTXUoPVI9oJyeBJMt2Y90SWN7gu-Ij3_FDEW4sByYFoyoM7kVMIM3TLydCVr6mVltvNEYCEI3fRZvxiOn2usluXWQNf_jFtIoAP-xKyYQy2gQzT4z0LLurynSR25S3KA-t_d6neW_RwcHCf9anMDDaQmJt4l_HReKeaM9_zPSYlwGUhIQP8ZkSq6REGuQr7DcXdCvu9v5tdQ5yXSIrWmhJVFOpwQzAC8OfS4Yr0PynHKV800-7C8Wihzu8NFdq9oNobSJEkUplPMpcVFGSUkUPMQhTdszFgJiuFAV0AOMrKbZG4KKO01LSMW9X-dlrKNTDYJvQ9Yubv5xvucRiYCjCGHkCPsQKsWu7higSXEyEf31TJtPYHA0-FrkXiO5OWEhjzu6nBdRd1nCjX-mY9JpXzdaLiZZgxhL_3HoubB5OnTk2Tn1t3uJ6NUmEjZDB6NbC-VrRJ4JkJ475HPG_HV4W7uuzT74t1kT4US9S1Ur3JuHUkoDzJPs1zrXnItnXdOLZYsA41WfXSMlPC7kEdr0MM2oRjIWp5W48uXhDklmsxVfEqJhhEaL2h7gChYgMTydX0drnLAkxg_Yj52vTYm1FkMQqbi-fKglHVH4DIPVCzNrOPocFpvnKhQQucb2-IPVV0KRP9zz1-YRftgMeCdGf9YaQD7DYKJrgqa7AQ4Jiiy-IL1xoQCLimPa4P1zh9trVmbvzsStIh_iJgbKhnMzNPDzUgaFPUXe7RPOY0zLPrLKjb8VLszXZ41ISsmyY5XxBpi9gIgCSEbCEFg-167qHBrKJcfMHOoM1BPgAm3UbPUNIhSkdfclV6HFtwLpmNJtYDYXM64m4ONbpUvVe4aeP0F_6rcm55FrfGgmHFIAYv7sPCHOZ8zb_lOy0EM98irp8R-Y-hlEG5iXzQDibG8Ref-C5akju2oFX7-IMj_ctBE0DwkN079biHv2BzCH0B8m7xobnA--LPPJ8KUsZWCkGdj4rTWL02kqP-2NgKDoxyImUaiXuPFNILS6N98nN75BMiptNXstJUYj9Wrd4TWhMa9slyCsn2tReQl9PZD0Kf8uM-3vjGlzOTrvD8xlRUVAPEq8ubhwTWWee24v3odKLNreLUHSglhe5lvKmFRfvpj65_e2ryxBsUdOsraClh3OlmhhknA6mvezIQR0nut26QEIEh794BZXMW2J5hd93c7jr5wrXv2jFBxu8HgszElREHa49C6SwIjOTcIpZC3XpJ8xlao_-IaQT5zI984qYd-ELwEGBfSlRawwlUduzBVGcL23xX9dFGWqA8J_2yar-faLSv9LTyMOPKW2l3HtuAajPN7cAyfuhOvGNuWrxLNPwEd_FbW0LK0NfnNvDA1VJ8wYUWmcVFc_nrwcw8RfkGEi69WnKeoxT1N32Zoghh0eWhmO-upLkR6hb_peaL8-R0nqPLUbr5dlou9pFJIKMTxvaVC1Y3ehmxiPiyH6aN8flN0gs3WtgsVtrRV97VV27eVJ1"
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-c4326cb8-37a9-407c-a7d9-54baf1db80ea",
+                        "name": "verifier_categorie_suivante",
+                        "response": {
+                          "termine": true
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1772796335.221151
+        }
+      ],
+      "session_input": {
+        "app_name": "track_omar",
+        "user_id": "user",
+        "state": {
+          "texte_nettoye": "",
+          "resultat_sauvegarde": ""
+        }
+      },
+      "creation_timestamp": 1772796409.8296306
+    },
+    {
+      "eval_id": "case7ff0bb",
+      "conversation": [
+        {
+          "invocation_id": "e-7ba2de6f-969f-4da8-b6ab-db4faf9368ae",
+          "user_content": {
+            "parts": [
+              {
+                "text": "il y a trois mardi jai paye le resto 300 euro et 3 jours apres jai recu 50 euro comme cadeau"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "J'ai enregistré une dépense de 300 euros pour le restaurant et un revenu de 50 euros."
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "SauvegardeAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-1cda2e4b-f62c-4148-83a4-89acd694d61b",
+                        "args": {},
+                        "name": "sauvegarder_toutes_transactions"
+                      },
+                      "thought_signature": "CvwDAb4-9vu8yNTafzSbH_P5ti9Fu5JDZjKL9cX5pdXaILa36NUe39d8XSLjjMV6tQbr2mHGRVh2mnaq3jNGjuADR6P9-qSieyfvPq355wdpK2RO8yco5LKbe8WUAmcIahAmHRwD2NtK-IG-zeYTbPvRK6i4qmctDfwFuLJFsZBD99BYZ6lXLuQOqbhJNxGDcln1Ucy3r52ZeqMEewF6WZuNyJGb8n_0oHbVk5670GUHFa0-a0WXqJ3Mymesa2wDo_V4m-Wz1sEjQUbWAu9RpmWahD1DSJllLST_Bgd0ojGR2jGOm6eZ2jBnY5NYhxlNLXZQsjbfwBi9aDUJaaq_WhW3XLYLahqBHw-oDwQZVFqzN7Qf-e0D4VCyZ-VpDHPw-QrqOXPEzv7lGTLoL42AQPFgNONZ7qTpxb1gMp5c-7Kpq8QqGMf1OkAuu98gMa_u3qpBGJjU6auJN7yHvh6rSwrcvD0P0CXZLUD76ov-KCIQL9QCQIkX1C4ki_qMBBRhT3-mKqNgWQnOQNCdsF84Y2L8wlf68v6bcjbN8-6H1WnFFWwUyoidbjvztiuxk_i1ENw4r06O9wGLwuP6wTMs7wE4OlfmdXhRTiO9ZlL-FXC2_J9Z_SbBAR3pV1PeZ0ss6TvXsN4Y1RHZElbzn4OeqoMnx1uYEJAwzqlCCUUTpw=="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "SauvegardeAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-1cda2e4b-f62c-4148-83a4-89acd694d61b",
+                        "name": "sauvegarder_toutes_transactions",
+                        "response": {
+                          "nb_sauvegardees": 2,
+                          "transactions": [
+                            {
+                              "montant": 300.0,
+                              "categorie": "resto",
+                              "type": "depense"
+                            },
+                            {
+                              "montant": 50.0,
+                              "categorie": "autre",
+                              "type": "revenu"
+                            }
+                          ],
+                          "categories_a_verifier_budget": [
+                            "resto"
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-dc55c79d-dd2a-46c1-ac2d-0bdf1fa27571",
+                        "args": {},
+                        "name": "verifier_categorie_suivante"
+                      },
+                      "thought_signature": "CuAFAb4-9vvff6QBf1iJmpNJeWQXZYY_0EZAde54IR6TIlx2t117pJYqqUjUval-r-1Z-LrxG74qC1Oy0Lek4I8b5lY_84Kgm7w1lIM-BtHB5r6UqGdB1qxL3YOH7BXzeb215BG-lTxUcHV3Zgg8CPEhVAaFrniDT4JmdqNTQu-wffMInCJNu8PKL5IP5MRETLSL_COMxDqS6Lxf0c1tPYMSnDFmJTVY4bMVWKewQjJmTndFmVViacWCXpjJG1dzEEPJvApailJD6yIDg99LAukofBNqACBmLFAf98_mp4ZW-A3rgW7XsTM_eEfZRokIymb79z8r-GIJh3oPguvrfa7Pq4fSlc-8jZUwuFhBPBS4azqkXRKfvVmmXUpuwKVp53katm9t_tsCLrxH-7G2y-7uTkqZMSI0F1tJykgs26nbPzYhPxrLN3wg8et0nb75md5EDpMjWMIxCsdzwauoqd3XSGa-dQTnN_Bvv2wkWHrhmS4C4qCbZVQWecwjJ-Sb9PiXVqjfuZaOOuuHEbX3CI2uHDQXS-P1XINmH01XJI0d0wzkmmJg89zyX1KvldvZNT1VOTh8p7Wy-4MRYcFv9zogJjHgzj5Cguvcieaw4g__77AFgp38yfygGtFhdA-HnmNyyzzUwkexDSTCSdoPQHhL4GNX_LbLlkQNKz61Gmen8M1l-ZeEU6CzfV4f5-F2BkESNxt8izZqiYc3VPP4OQUOxmwimO8fcDc0mxCl5IQyFCrvjRrsTLQHUOESENhIiGFZZ8up3r2nSedQE0ALbE8K-0XES5F2M8C_5egfXPVAbubxSDpZAuPl7QW8sCDF1wApjbakvl3zTQ0-oPqqzYj3QPY0XUjNZ8W07LCuYedMOYdspvyPTX3Hsq9wQlxSPEsoKFhrgs0A-xbdCE-MzTQmg01raKAvQm3QmR_1hs2u3ZHvlYgCu2MKE5BLjBNyUgJgZwb0AqtfX08J3VIuMmXn9w=="
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-dc55c79d-dd2a-46c1-ac2d-0bdf1fa27571",
+                        "name": "verifier_categorie_suivante",
+                        "response": {
+                          "termine": false,
+                          "categorie": "resto"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-29ddb0cc-e204-44e2-abfc-348438263df8",
+                        "args": {
+                          "request": "resto"
+                        },
+                        "name": "BudgetAgent"
+                      },
+                      "thought_signature": "Cq8CAb4-9vt2FFR6v54skIY8pyjHTjB3ixHIbMcWf2HppelY_g9Hr5r6tx97Ghy3WP2alTprCMLx-8PfmdenO5lUE5ngJz7oXdgNsXQduq9N_N56rweXsGb35aHeLg8iLriyZ_h9AekYSBi_-hoEVaWPcsf6Gw6YiOqUjPHF5HBD3Ihjjt_UZL8b-6Zxrg_rl1TMCPpCo9JeIwWxMMhz_vCkkEopMRUZe5SDPi4ke674EigXZwX7VaajfkN9uG0GuUkUbGTnD01pEgEDBuWYO81fawIwLWp3oaNtIfYvkw8jbLwV_y4E3zrksfskS5XhBfJ1DLAcK9k_uJZtPaOG4C_QqAXTrGuse8tr3D076eUlhMAZrExNANPTv5Knfkofy_cYiKcxEDr9Tu1O8-MPecPn"
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-29ddb0cc-e204-44e2-abfc-348438263df8",
+                        "name": "BudgetAgent",
+                        "response": {
+                          "result": "{\"calculer_solde_budget_response\": {\"alerte\": false, \"budget_defini\": true, \"categorie\": \"resto\", \"limite\": 50, \"pourcentage\": 0, \"total_depense\": 0}}"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-c8eca069-e719-4375-b35b-fabba512afa5",
+                        "args": {},
+                        "name": "verifier_categorie_suivante"
+                      },
+                      "thought_signature": "CroEAb4-9vtQCmUeRzPbBVkmQlIJPF-X3Toy8CwsTvJnBmCut6Xlq0LlBY_cEouFPTELohVrGhpBjC_ziyMwwQMLUe4TmSGXI--dVGI6x3Tqsf9LfurytmMv5FUYaFMtt1CCE8-hsluo1fytsDUQiMXkaQaLfjvZqIedeEjLvOodcPgC8Oj9rgn8YY7nncqffnsvIcgB_t9t02BFygXDUG-M_jGhflN-Xg1elG9VuU0vSp8K0vhj7o_6NrIt7rsSbgqb2yaYe0duLbU750Dx6wh-mu95eFITjXmcjLtWJJDqKuihMxFVg8pyd_ifGR5kKmboNwdDAg1nLAl2ug7aIte879mnJ7rJ9HmZIBhsDha8j6NySX5DdmSoTcZvcZyKq-flbehZoH3X_C4s3Q0c3csFyEsegFwUNzchyuSCvNXLlCb2UY1l2kFmhlC7U8FIka6yQGkhFwCXiaJgj-DnLy2hC5vSd_leyPXY23RiStrruR2M7BGBds9wP6jySKYhjD_gu0l3TeC2e1Jv564-x7pfjygWV3O8QQ4qNlYdcY0oX9byTGnHZp-h0fmyXCrBUiYkMTAxg5d_siaEXQZGPfeo0wUBZoYUlPyPlSTj9g88_xmLpFmWc3SfWtxOq-wY_1Z7gS9WAnH5pxA6lhmbVj53fnVxJ2FPsDT4MFfH9LNVKXEqxFw5iCYeyziBVf8jz-HaKS4gXzryuF8_vR42a8dlRnJBxpEJJQsNKBjH834_mpehjNIem8sRjW_Q"
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "OrchestratorAgent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-c8eca069-e719-4375-b35b-fabba512afa5",
+                        "name": "verifier_categorie_suivante",
+                        "response": {
+                          "termine": true
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1772798770.908177
+        }
+      ],
+      "session_input": {
+        "app_name": "track_omar",
+        "user_id": "user",
+        "state": {
+          "texte_nettoye": "",
+          "resultat_sauvegarde": ""
+        }
+      },
+      "creation_timestamp": 1772798814.6708548
+    }
+  ],
+  "creation_timestamp": 1772796155.896074
+}
