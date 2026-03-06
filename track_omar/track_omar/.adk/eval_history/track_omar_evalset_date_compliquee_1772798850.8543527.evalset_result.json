@@ -1,0 +1,2073 @@
+{
+  "eval_set_result_id": "track_omar_evalset_date_compliquee_1772798850.8543527",
+  "eval_set_result_name": "track_omar_evalset_date_compliquee_1772798850.8543527",
+  "eval_set_id": "evalset_date_compliquee",
+  "eval_case_results": [
+    {
+      "eval_set_file": "evalset_date_compliquee",
+      "eval_set_id": "evalset_date_compliquee",
+      "eval_id": "case7ff0bb",
+      "final_eval_status": 1,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 0.7,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.4,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 0.85,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "il y a trois mardi jai paye le resto 300 euro et 3 jours apres jai recu 50 euro comme cadeau",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "J'ai enregistré une dépense de 300 euros pour un restaurant et un revenu de 50 euros reçu comme cadeau.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "SauvegardeAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-1d7ae6ef-35b4-4b9c-9c66-b19bce97a136",
+                          "args": {},
+                          "name": "sauvegarder_toutes_transactions",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "Cs4DAb4-9vuwDJj2dfHW6NL60jRKDX71LRtB2PQHGjFBBIrf1xyrT76AiwckPgk95b6vXQuMtsQU4UdYQLsDVAnxO_b7Cm4MN_Fta1LuXqmXhkrXQOBK_GFbkgA1DXdbTMJyI41XejydA4Q1WZuBWE86p4z7seZWfMGi9lvhrY03Ym1mnpIftcmwY3Z9fkaAXdUrhugH9WB0O33HMDM025oLCTHeYJ3wELUoXv5vX68SBE0CmEZtEQyIh4vfPBh7DlWIUgbTHeBpMaX0jujxZP1F-eeUGLNRNtpgJZY6UKCA_4wtUOsBJ6lqtcOOT5YSN9QQ_dviSzhfM-fNCekKVOVMe8ADSdQmNAeoaReJFIkxD4NB0kNoWcRJvsjoNsaia14YdUTo5J2AS7zZNvDxiQH1-Y4VEzUK863dy3NUcYQhi2d24HyloDz5Cb2AM37rPUKIhBFpaAW7oIc6odz4Nprc4H3gJFa4iqyLWwwb6FVypwDuxnEOvzlWhgXpPQH6WjLw9zGI3UOKukdZDORzKOVN9db0qgs8V1VbAfsrNap-J_bd5yWYvNPulGADs8-FCdXQiVKemFFXhKp5mPMCUa5vrNctY_Oz6sbpLU79EViU",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "SauvegardeAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-1d7ae6ef-35b4-4b9c-9c66-b19bce97a136",
+                          "name": "sauvegarder_toutes_transactions",
+                          "response": {
+                            "nb_sauvegardees": 2,
+                            "transactions": [
+                              {
+                                "montant": 300.0,
+                                "categorie": "resto",
+                                "type": "depense"
+                              },
+                              {
+                                "montant": 50.0,
+                                "categorie": "autre",
+                                "type": "revenu"
+                              }
+                            ],
+                            "categories_a_verifier_budget": [
+                              "resto"
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-6b8c8bd7-5595-4162-86fd-cc8a13f29605",
+                          "args": {},
+                          "name": "verifier_categorie_suivante",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CuQCAb4-9vsVVhLf4RMYiuC5RUeXglJHFCN3RICfw7zML5AgBt8S2DHXWc-g-LtFZZzzHaVJzNzhqnYfEYDIw8pvDBiKpA14VwAG5Z8lgsg_GMcvwpupmNz3DigkW95JQ9xKjLPx6kFbkD6tCZ9B6emjvkKawJ08mKS4yjxuxkd-MEGIs_A_0_SRIeWLPzOJK-fzfpryy89RE70kAM1rP9UknsLDVv4jo-BAq7L_lOEAglTRdNXNSnT37Y_aoA3PzSpwaU0hPt8AXdV9BJSaYjW9Gi_dO97AE12qXA9fy7uatOya1HTMRf_a7gc3TRYBh7QFTWA1hennxbw3BkMa7fdHzPRCQAn4EotO_dEGjLZMM8oOm7S4Yjx1P74ZGIkKMKsVgHHmBz20XjLXYPS4zftm-419A57DHwpezmHrD6XxqFpX-0aX65VXkysTlop2pq_eWoV2p_Ssv6eSQPjWw-hXyNqBc6k=",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-6b8c8bd7-5595-4162-86fd-cc8a13f29605",
+                          "name": "verifier_categorie_suivante",
+                          "response": {
+                            "termine": false,
+                            "categorie": "resto"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-33add496-d41d-42e0-81d7-92eddf8d9927",
+                          "args": {
+                            "request": "resto"
+                          },
+                          "name": "BudgetAgent",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "Cs4EAb4-9vvHMO2hzBtEOClXMHxfx9en4GviRTG1FH6Q55lN__kmGevC0R2fUmqAw8AWeZ45yxZHR4B2kcuDzs646b_W66E4J70TS-sxyYZuz9WskthOZkBrSe57Fhz1N0rgg5NXbGOa3nL-9PMpvASZDWrDPvHG6Ke7B9xL4Znl4nDsJnp5uvi-e5_CC83lXvhSfT-ywi9DaR6biqWYXfoo5VrFIlk2skBFFs8dcwG4pyToc5TmnkiXzg57O3znFDFuFdKf36Cq-AZzwRRP1pIeICtgBDnSkDvUXPnaHB_hmwLlNqES7u_bi15mIYrIBm7M1DeFWyQxfbfFiOBhqjo3nT-CdzLclP2vGHixqhzNrOQbR8WgbQ78hBaHosMPeYxPfLPlvS6clb9hUPTtI1-loa_HtEiBxCcW_2bNrbMVV1W2TwdC_ZA6ZR-PVebgT-CTnE315BrmvQ-Hh9mDCFR8S8Xi-_1BxEQnPfRi5Gyz-PEFOlTVechqsWI7AFWs9p4nTp3zEN5IbmaP6QlL4t5-adeGYdy03c2PQEXU8GLwzRdQQen9FHyyFJPRFjKfxSnBX2S4KpGxnBI6aTc6x-XZCo9or-hfaiHzSI5aUlcUT603fGAPyZSWhL4IiWPzXSseJ1iWHwRMLxdbW3Yy4seJ1EeCyiw8hYgIXgOAgMjKxpKYoLAco3gF7GxOz77gnd1uFjvs8eUFT382NQb3vSqhvLFXNVvUpz1YzWcZ3tDmge9POeVfxnpLjbhkH1tYxrWwEx31KmqwQhFYtARNDjI=",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-33add496-d41d-42e0-81d7-92eddf8d9927",
+                          "name": "BudgetAgent",
+                          "response": {
+                            "result": "{\"calculer_solde_budget_response\": {\"alerte\": false, \"budget_defini\": true, \"categorie\": \"resto\", \"limite\": 50, \"pourcentage\": 0, \"total_depense\": 0}}"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-ecfc5d18-a749-455d-97ab-4e10e006cf62",
+                          "args": {},
+                          "name": "verifier_categorie_suivante",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CrMCAb4-9vsIuAWtalr6C0FZIKZRJEBOvmhta1my5v9XwctgaAD-G18pnCcj0QVji5_2Ep9W8jHqGvalClWnMaG9nk5ZK9f3gVXv9L7kMczXhWUXy4oYkji-J_zKLwg5Zl42gsTTKdbvogqfKnAPiO7-RkKmZWEmlq8FMIXTTsM_wWh6iiSyrveh89BuXHTM_VGZZiJTik8uzQkmGtKti_u2N71v_27WhDhIjnQRI4bFelqGyOLz2hZZZnFTY7y7_GQRkFqPo_tgM8XOgwoi4FnjyNT3Ij92cYG6VLkkRQ69oBz7ysY2S5-_ELJmd_Xa4i9_TnCVnnPi4F5paI_XVz1klLuGDhXhluWWYOx4YuCrY1NQdJmJFla7lwMR9Qu8EMlQ4dWtX0dwoc5shJLZauzKx3HxgA==",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-ecfc5d18-a749-455d-97ab-4e10e006cf62",
+                          "name": "verifier_categorie_suivante",
+                          "response": {
+                            "termine": true
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1772798835.376163,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "TranscriptionAgent": {
+                  "name": "TranscriptionAgent",
+                  "instructions": "\n    Tu reçois un texte brut issu d'une transcription vocale.\n    Nettoie et reformule ce texte pour le rendre clair et exploitable.\n    Retourne uniquement le texte nettoyé, sans commentaire.\n    \n\nYou are an agent. Your internal name is \"TranscriptionAgent\".",
+                  "tool_declarations": []
+                },
+                "ExtractionAgent": {
+                  "name": "ExtractionAgent",
+                  "instructions": "\n    \n    Contexte temporel :\n    Aujourd'hui : 2026-03-06 (vendredi)\n    Hier : 2026-03-05\n    Demain : 2026-03-07\n    lundi dernier : 2026-02-23\n    mardi dernier : 2026-02-24\n    mercredi dernier : 2026-02-25\n    jeudi dernier : 2026-02-26\n    vendredi dernier : 2026-02-27\n    samedi dernier : 2026-02-28\n    dimanche dernier : 2026-03-01\n    \n\n    Tu reçois ce texte : Il y a trois mardis, j'ai payé le resto 300 euros, et trois jours après, j'ai reçu 50 euros comme cadeau.\n\n    Extrais TOUTES les transactions et retourne UNIQUEMENT un tableau JSON valide (sans backticks).\n    Chaque objet doit avoir : montant (float), type (\"depense\"/\"revenu\"),\n    categorie (depense: resto/transport/courses/loisirs/sante/loyer/autre,\n               revenu: salaire/remboursement/virement/autre),\n    date (YYYY-MM-DD), description (string).\n\n    Exemple de sortie attendue :\n    [{\"montant\": 12.0, \"type\": \"depense\", \"categorie\": \"resto\", \"date\": \"2026-03-06\", \"description\": \"kebab\"}, {\"montant\": 3.0, \"type\": \"depense\", \"categorie\": \"transport\", \"date\": \"2026-03-06\", \"description\": \"metro\"}]\n    \n\nYou are an agent. Your internal name is \"ExtractionAgent\".",
+                  "tool_declarations": []
+                },
+                "SauvegardeAgent": {
+                  "name": "SauvegardeAgent",
+                  "instructions": "\n    Appelle sauvegarder_toutes_transactions (sans argument).\n    Réponds avec le résumé retourné par l'outil.\n    \n\nYou are an agent. Your internal name is \"SauvegardeAgent\".",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "\n    Lit le JSON des transactions depuis le state, les sauvegarde toutes en base,\n    et prépare la liste des catégories de dépenses à vérifier pour le budget.\n\n    Returns:\n        dict avec le nombre de transactions sauvegardées et un résumé\n    ",
+                          "name": "sauvegarder_toutes_transactions",
+                          "parameters": null,
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search_retrieval": null,
+                      "url_context": null,
+                      "mcp_servers": null
+                    }
+                  ]
+                },
+                "OrchestratorAgent": {
+                  "name": "OrchestratorAgent",
+                  "instructions": "\n    1. Appelle verifier_categorie_suivante (sans argument).\n    2. Si \"termine\" est true : réponds \"Toutes catégories vérifiées.\"\n    3. Sinon, note la catégorie retournée et appelle BudgetAgent avec cette catégorie.\n    4. Si le résultat de BudgetAgent indique alerte=True : transfère le contrôle à AlertAgent.\n    5. Sinon : réponds \"OK, budget non dépassé pour cette catégorie.\"\n    \n\nYou are an agent. Your internal name is \"OrchestratorAgent\".\n\n\nYou have a list of other agents to transfer to:\n\n\nAgent name: AlertAgent\nAgent description: \n\n\nIf you are the best to answer the question according to your description,\nyou can answer it.\n\nIf another agent is better for answering the question according to its\ndescription, call `transfer_to_agent` function to transfer the question to that\nagent. When transferring, do not generate any text other than the function\ncall.\n\n**NOTE**: the only available agents for `transfer_to_agent` function are\n`AlertAgent`.\n\nIf neither you nor the other agents are best for the question, transfer to your parent agent BudgetLoop.\n",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Transfer the question to another agent.\n\n  This tool hands off control to another agent when it's more suitable to\n  answer the user's question according to the agent's description.\n\n  Note:\n    For most use cases, you should use TransferToAgentTool instead of this\n    function directly. TransferToAgentTool provides additional enum constraints\n    that prevent LLMs from hallucinating invalid agent names.\n\n  Args:\n    agent_name: the agent name to transfer to.\n  ",
+                          "name": "transfer_to_agent",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "agent_name": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": [
+                                  "AlertAgent"
+                                ],
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "agent_name"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\n    Récupère la prochaine catégorie à vérifier pour le budget.\n    Déclenche l'escalade du LoopAgent quand toutes les catégories ont été vérifiées.\n\n    Returns:\n        dict avec 'termine': True si fini, sinon 'categorie': str\n    ",
+                          "name": "verifier_categorie_suivante",
+                          "parameters": null,
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "",
+                          "name": "BudgetAgent",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "request": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "request"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search_retrieval": null,
+                      "url_context": null,
+                      "mcp_servers": null
+                    }
+                  ]
+                },
+                "ResumeAgent": {
+                  "name": "ResumeAgent",
+                  "instructions": "\n    Le texte traité était : Il y a trois mardis, j'ai payé le resto 300 euros, et trois jours après, j'ai reçu 50 euros comme cadeau.\n    Les transactions sauvegardées : J'ai bien sauvegardé 2 transactions. La catégorie de dépense \"resto\" doit être vérifiée pour le budget.\n\n    Génère un court résumé en français de ce qui a été enregistré (1-2 phrases max).\n    \n\nYou are an agent. Your internal name is \"ResumeAgent\".",
+                  "tool_declarations": []
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "e-7ba2de6f-969f-4da8-b6ab-db4faf9368ae",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "il y a trois mardi jai paye le resto 300 euro et 3 jours apres jai recu 50 euro comme cadeau",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "J'ai enregistré une dépense de 300 euros pour le restaurant et un revenu de 50 euros.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "SauvegardeAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-1cda2e4b-f62c-4148-83a4-89acd694d61b",
+                          "args": {},
+                          "name": "sauvegarder_toutes_transactions",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CvwDAb4-9vu8yNTafzSbH_P5ti9Fu5JDZjKL9cX5pdXaILa36NUe39d8XSLjjMV6tQbr2mHGRVh2mnaq3jNGjuADR6P9-qSieyfvPq355wdpK2RO8yco5LKbe8WUAmcIahAmHRwD2NtK-IG-zeYTbPvRK6i4qmctDfwFuLJFsZBD99BYZ6lXLuQOqbhJNxGDcln1Ucy3r52ZeqMEewF6WZuNyJGb8n_0oHbVk5670GUHFa0-a0WXqJ3Mymesa2wDo_V4m-Wz1sEjQUbWAu9RpmWahD1DSJllLST_Bgd0ojGR2jGOm6eZ2jBnY5NYhxlNLXZQsjbfwBi9aDUJaaq_WhW3XLYLahqBHw-oDwQZVFqzN7Qf-e0D4VCyZ-VpDHPw-QrqOXPEzv7lGTLoL42AQPFgNONZ7qTpxb1gMp5c-7Kpq8QqGMf1OkAuu98gMa_u3qpBGJjU6auJN7yHvh6rSwrcvD0P0CXZLUD76ov-KCIQL9QCQIkX1C4ki_qMBBRhT3-mKqNgWQnOQNCdsF84Y2L8wlf68v6bcjbN8-6H1WnFFWwUyoidbjvztiuxk_i1ENw4r06O9wGLwuP6wTMs7wE4OlfmdXhRTiO9ZlL-FXC2_J9Z_SbBAR3pV1PeZ0ss6TvXsN4Y1RHZElbzn4OeqoMnx1uYEJAwzqlCCUUTpw==",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "SauvegardeAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-1cda2e4b-f62c-4148-83a4-89acd694d61b",
+                          "name": "sauvegarder_toutes_transactions",
+                          "response": {
+                            "nb_sauvegardees": 2,
+                            "transactions": [
+                              {
+                                "montant": 300.0,
+                                "categorie": "resto",
+                                "type": "depense"
+                              },
+                              {
+                                "montant": 50.0,
+                                "categorie": "autre",
+                                "type": "revenu"
+                              }
+                            ],
+                            "categories_a_verifier_budget": [
+                              "resto"
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-dc55c79d-dd2a-46c1-ac2d-0bdf1fa27571",
+                          "args": {},
+                          "name": "verifier_categorie_suivante",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CuAFAb4-9vvff6QBf1iJmpNJeWQXZYY_0EZAde54IR6TIlx2t117pJYqqUjUval-r-1Z-LrxG74qC1Oy0Lek4I8b5lY_84Kgm7w1lIM-BtHB5r6UqGdB1qxL3YOH7BXzeb215BG-lTxUcHV3Zgg8CPEhVAaFrniDT4JmdqNTQu-wffMInCJNu8PKL5IP5MRETLSL_COMxDqS6Lxf0c1tPYMSnDFmJTVY4bMVWKewQjJmTndFmVViacWCXpjJG1dzEEPJvApailJD6yIDg99LAukofBNqACBmLFAf98_mp4ZW-A3rgW7XsTM_eEfZRokIymb79z8r-GIJh3oPguvrfa7Pq4fSlc-8jZUwuFhBPBS4azqkXRKfvVmmXUpuwKVp53katm9t_tsCLrxH-7G2y-7uTkqZMSI0F1tJykgs26nbPzYhPxrLN3wg8et0nb75md5EDpMjWMIxCsdzwauoqd3XSGa-dQTnN_Bvv2wkWHrhmS4C4qCbZVQWecwjJ-Sb9PiXVqjfuZaOOuuHEbX3CI2uHDQXS-P1XINmH01XJI0d0wzkmmJg89zyX1KvldvZNT1VOTh8p7Wy-4MRYcFv9zogJjHgzj5Cguvcieaw4g__77AFgp38yfygGtFhdA-HnmNyyzzUwkexDSTCSdoPQHhL4GNX_LbLlkQNKz61Gmen8M1l-ZeEU6CzfV4f5-F2BkESNxt8izZqiYc3VPP4OQUOxmwimO8fcDc0mxCl5IQyFCrvjRrsTLQHUOESENhIiGFZZ8up3r2nSedQE0ALbE8K-0XES5F2M8C_5egfXPVAbubxSDpZAuPl7QW8sCDF1wApjbakvl3zTQ0-oPqqzYj3QPY0XUjNZ8W07LCuYedMOYdspvyPTX3Hsq9wQlxSPEsoKFhrgs0A-xbdCE-MzTQmg01raKAvQm3QmR_1hs2u3ZHvlYgCu2MKE5BLjBNyUgJgZwb0AqtfX08J3VIuMmXn9w==",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-dc55c79d-dd2a-46c1-ac2d-0bdf1fa27571",
+                          "name": "verifier_categorie_suivante",
+                          "response": {
+                            "termine": false,
+                            "categorie": "resto"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-29ddb0cc-e204-44e2-abfc-348438263df8",
+                          "args": {
+                            "request": "resto"
+                          },
+                          "name": "BudgetAgent",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "Cq8CAb4-9vt2FFR6v54skIY8pyjHTjB3ixHIbMcWf2HppelY_g9Hr5r6tx97Ghy3WP2alTprCMLx-8PfmdenO5lUE5ngJz7oXdgNsXQduq9N_N56rweXsGb35aHeLg8iLriyZ_h9AekYSBi_-hoEVaWPcsf6Gw6YiOqUjPHF5HBD3Ihjjt_UZL8b-6Zxrg_rl1TMCPpCo9JeIwWxMMhz_vCkkEopMRUZe5SDPi4ke674EigXZwX7VaajfkN9uG0GuUkUbGTnD01pEgEDBuWYO81fawIwLWp3oaNtIfYvkw8jbLwV_y4E3zrksfskS5XhBfJ1DLAcK9k_uJZtPaOG4C_QqAXTrGuse8tr3D076eUlhMAZrExNANPTv5Knfkofy_cYiKcxEDr9Tu1O8-MPecPn",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-29ddb0cc-e204-44e2-abfc-348438263df8",
+                          "name": "BudgetAgent",
+                          "response": {
+                            "result": "{\"calculer_solde_budget_response\": {\"alerte\": false, \"budget_defini\": true, \"categorie\": \"resto\", \"limite\": 50, \"pourcentage\": 0, \"total_depense\": 0}}"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-c8eca069-e719-4375-b35b-fabba512afa5",
+                          "args": {},
+                          "name": "verifier_categorie_suivante",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CroEAb4-9vtQCmUeRzPbBVkmQlIJPF-X3Toy8CwsTvJnBmCut6Xlq0LlBY_cEouFPTELohVrGhpBjC_ziyMwwQMLUe4TmSGXI--dVGI6x3Tqsf9LfurytmMv5FUYaFMtt1CCE8-hsluo1fytsDUQiMXkaQaLfjvZqIedeEjLvOodcPgC8Oj9rgn8YY7nncqffnsvIcgB_t9t02BFygXDUG-M_jGhflN-Xg1elG9VuU0vSp8K0vhj7o_6NrIt7rsSbgqb2yaYe0duLbU750Dx6wh-mu95eFITjXmcjLtWJJDqKuihMxFVg8pyd_ifGR5kKmboNwdDAg1nLAl2ug7aIte879mnJ7rJ9HmZIBhsDha8j6NySX5DdmSoTcZvcZyKq-flbehZoH3X_C4s3Q0c3csFyEsegFwUNzchyuSCvNXLlCb2UY1l2kFmhlC7U8FIka6yQGkhFwCXiaJgj-DnLy2hC5vSd_leyPXY23RiStrruR2M7BGBds9wP6jySKYhjD_gu0l3TeC2e1Jv564-x7pfjygWV3O8QQ4qNlYdcY0oX9byTGnHZp-h0fmyXCrBUiYkMTAxg5d_siaEXQZGPfeo0wUBZoYUlPyPlSTj9g88_xmLpFmWc3SfWtxOq-wY_1Z7gS9WAnH5pxA6lhmbVj53fnVxJ2FPsDT4MFfH9LNVKXEqxFw5iCYeyziBVf8jz-HaKS4gXzryuF8_vR42a8dlRnJBxpEJJQsNKBjH834_mpehjNIem8sRjW_Q",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-c8eca069-e719-4375-b35b-fabba512afa5",
+                          "name": "verifier_categorie_suivante",
+                          "response": {
+                            "termine": true
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1772798770.908177,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 0.7,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.4,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 0.85,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___8bb70845-55a2-4519-a4d0-13562661e0bd",
+      "session_details": {
+        "id": "___eval___session___8bb70845-55a2-4519-a4d0-13562661e0bd",
+        "app_name": "track_omar",
+        "user_id": "user",
+        "state": {
+          "texte_nettoye": "Il y a trois mardis, j'ai payé le resto 300 euros, et trois jours après, j'ai reçu 50 euros comme cadeau.",
+          "resultat_sauvegarde": "J'ai bien sauvegardé 2 transactions. La catégorie de dépense \"resto\" doit être vérifiée pour le budget.",
+          "__llm_request_key__": "49d8edc1-95b0-4c75-bdab-29a2bbfe9c7b",
+          "transactions_json": "```json\n[\n  {\n    \"montant\": 300.0,\n    \"type\": \"depense\",\n    \"categorie\": \"resto\",\n    \"date\": \"2026-02-10\",\n    \"description\": \"payé le resto\"\n  },\n  {\n    \"montant\": 50.0,\n    \"type\": \"revenu\",\n    \"categorie\": \"autre\",\n    \"date\": \"2026-02-13\",\n    \"description\": \"reçu comme cadeau\"\n  }\n]\n```",
+          "categories_a_verifier": [],
+          "transactions_sauvegardees": [
+            {
+              "montant": 300.0,
+              "categorie": "resto",
+              "type": "depense"
+            },
+            {
+              "montant": 50.0,
+              "categorie": "autre",
+              "type": "revenu"
+            }
+          ],
+          "streak_sans_depassement": 1,
+          "categorie_courante": "resto"
+        },
+        "events": [
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "il y a trois mardi jai paye le resto 300 euro et 3 jours apres jai recu 50 euro comme cadeau",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "136e1cce-7765-4f39-a9d6-f06f30da8443",
+            "timestamp": 1772798827.063115
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Il y a trois mardis, j'ai payé le resto 300 euros, et trois jours après, j'ai reçu 50 euros comme cadeau.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "321a4cea-48cf-4480-b61a-4b7965778475"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 37,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 94,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 94
+                }
+              ],
+              "thoughts_token_count": 926,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 1057,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "TranscriptionAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "321a4cea-48cf-4480-b61a-4b7965778475",
+                "texte_nettoye": "Il y a trois mardis, j'ai payé le resto 300 euros, et trois jours après, j'ai reçu 50 euros comme cadeau."
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "bb7c7138-3928-4f51-a2b3-f7f698792f31",
+            "timestamp": 1772798827.072961
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "```json\n[\n  {\n    \"montant\": 300.0,\n    \"type\": \"depense\",\n    \"categorie\": \"resto\",\n    \"date\": \"2026-02-10\",\n    \"description\": \"payé le resto\"\n  },\n  {\n    \"montant\": 50.0,\n    \"type\": \"revenu\",\n    \"categorie\": \"autre\",\n    \"date\": \"2026-02-13\",\n    \"description\": \"reçu comme cadeau\"\n  }\n]\n```",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "183ae2c3-77e4-4153-9168-51aaa7a0e547"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 135,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 519,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 519
+                }
+              ],
+              "thoughts_token_count": 654,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 1308,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "ExtractionAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "183ae2c3-77e4-4153-9168-51aaa7a0e547",
+                "transactions_json": "```json\n[\n  {\n    \"montant\": 300.0,\n    \"type\": \"depense\",\n    \"categorie\": \"resto\",\n    \"date\": \"2026-02-10\",\n    \"description\": \"payé le resto\"\n  },\n  {\n    \"montant\": 50.0,\n    \"type\": \"revenu\",\n    \"categorie\": \"autre\",\n    \"date\": \"2026-02-13\",\n    \"description\": \"reçu comme cadeau\"\n  }\n]\n```"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "2a16e68b-04bc-4ea7-8e5e-a1d09655de07",
+            "timestamp": 1772798835.377174
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-1d7ae6ef-35b4-4b9c-9c66-b19bce97a136",
+                    "args": {},
+                    "name": "sauvegarder_toutes_transactions",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "Cs4DAb4-9vuwDJj2dfHW6NL60jRKDX71LRtB2PQHGjFBBIrf1xyrT76AiwckPgk95b6vXQuMtsQU4UdYQLsDVAnxO_b7Cm4MN_Fta1LuXqmXhkrXQOBK_GFbkgA1DXdbTMJyI41XejydA4Q1WZuBWE86p4z7seZWfMGi9lvhrY03Ym1mnpIftcmwY3Z9fkaAXdUrhugH9WB0O33HMDM025oLCTHeYJ3wELUoXv5vX68SBE0CmEZtEQyIh4vfPBh7DlWIUgbTHeBpMaX0jujxZP1F-eeUGLNRNtpgJZY6UKCA_4wtUOsBJ6lqtcOOT5YSN9QQ_dviSzhfM-fNCekKVOVMe8ADSdQmNAeoaReJFIkxD4NB0kNoWcRJvsjoNsaia14YdUTo5J2AS7zZNvDxiQH1-Y4VEzUK863dy3NUcYQhi2d24HyloDz5Cb2AM37rPUKIhBFpaAW7oIc6odz4Nprc4H3gJFa4iqyLWwwb6FVypwDuxnEOvzlWhgXpPQH6WjLw9zGI3UOKukdZDORzKOVN9db0qgs8V1VbAfsrNap-J_bd5yWYvNPulGADs8-FCdXQiVKemFFXhKp5mPMCUa5vrNctY_Oz6sbpLU79EViU",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "4b1781ca-d639-43d8-a0d9-5c4f0b4972e8"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 16,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 347,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 347
+                }
+              ],
+              "thoughts_token_count": 86,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 449,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "SauvegardeAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "4b1781ca-d639-43d8-a0d9-5c4f0b4972e8"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "id": "2f761e34-505e-4abd-a2d4-2ac0e3646720",
+            "timestamp": 1772798839.556958
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-1d7ae6ef-35b4-4b9c-9c66-b19bce97a136",
+                    "name": "sauvegarder_toutes_transactions",
+                    "response": {
+                      "nb_sauvegardees": 2,
+                      "transactions": [
+                        {
+                          "montant": 300.0,
+                          "categorie": "resto",
+                          "type": "depense"
+                        },
+                        {
+                          "montant": 50.0,
+                          "categorie": "autre",
+                          "type": "revenu"
+                        }
+                      ],
+                      "categories_a_verifier_budget": [
+                        "resto"
+                      ]
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "SauvegardeAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "categories_a_verifier": [
+                  "resto"
+                ],
+                "transactions_sauvegardees": [
+                  {
+                    "montant": 300.0,
+                    "categorie": "resto",
+                    "type": "depense"
+                  },
+                  {
+                    "montant": 50.0,
+                    "categorie": "autre",
+                    "type": "revenu"
+                  }
+                ],
+                "streak_sans_depassement": 1
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "ed2d194a-79ba-4b5a-a9fe-6973ed647e13",
+            "timestamp": 1772798840.649199
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "J'ai bien sauvegardé 2 transactions. La catégorie de dépense \"resto\" doit être vérifiée pour le budget.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "69b89d54-0b3e-4e91-bd23-3a438fed06c7"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 26,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 449,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 449
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 475,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "SauvegardeAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "69b89d54-0b3e-4e91-bd23-3a438fed06c7",
+                "resultat_sauvegarde": "J'ai bien sauvegardé 2 transactions. La catégorie de dépense \"resto\" doit être vérifiée pour le budget."
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "7bc390f9-09d4-4049-91e5-b1c2009572c0",
+            "timestamp": 1772798840.660641
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-6b8c8bd7-5595-4162-86fd-cc8a13f29605",
+                    "args": {},
+                    "name": "verifier_categorie_suivante",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "CuQCAb4-9vsVVhLf4RMYiuC5RUeXglJHFCN3RICfw7zML5AgBt8S2DHXWc-g-LtFZZzzHaVJzNzhqnYfEYDIw8pvDBiKpA14VwAG5Z8lgsg_GMcvwpupmNz3DigkW95JQ9xKjLPx6kFbkD6tCZ9B6emjvkKawJ08mKS4yjxuxkd-MEGIs_A_0_SRIeWLPzOJK-fzfpryy89RE70kAM1rP9UknsLDVv4jo-BAq7L_lOEAglTRdNXNSnT37Y_aoA3PzSpwaU0hPt8AXdV9BJSaYjW9Gi_dO97AE12qXA9fy7uatOya1HTMRf_a7gc3TRYBh7QFTWA1hennxbw3BkMa7fdHzPRCQAn4EotO_dEGjLZMM8oOm7S4Yjx1P74ZGIkKMKsVgHHmBz20XjLXYPS4zftm-419A57DHwpezmHrD6XxqFpX-0aX65VXkysTlop2pq_eWoV2p_Ssv6eSQPjWw-hXyNqBc6k=",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "9dcf9ca4-4d42-4efe-bd01-f95faa6f3f04"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 14,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 903,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 903
+                }
+              ],
+              "thoughts_token_count": 67,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 984,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "9dcf9ca4-4d42-4efe-bd01-f95faa6f3f04"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "id": "bf4976b0-f36c-45a4-a6c6-c24f27090b12",
+            "timestamp": 1772798841.427933
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-6b8c8bd7-5595-4162-86fd-cc8a13f29605",
+                    "name": "verifier_categorie_suivante",
+                    "response": {
+                      "termine": false,
+                      "categorie": "resto"
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "categories_a_verifier": [],
+                "categorie_courante": "resto"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "7a5fd464-8bac-4ff0-8bf6-87dc83d8489b",
+            "timestamp": 1772798842.351632
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-33add496-d41d-42e0-81d7-92eddf8d9927",
+                    "args": {
+                      "request": "resto"
+                    },
+                    "name": "BudgetAgent",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "Cs4EAb4-9vvHMO2hzBtEOClXMHxfx9en4GviRTG1FH6Q55lN__kmGevC0R2fUmqAw8AWeZ45yxZHR4B2kcuDzs646b_W66E4J70TS-sxyYZuz9WskthOZkBrSe57Fhz1N0rgg5NXbGOa3nL-9PMpvASZDWrDPvHG6Ke7B9xL4Znl4nDsJnp5uvi-e5_CC83lXvhSfT-ywi9DaR6biqWYXfoo5VrFIlk2skBFFs8dcwG4pyToc5TmnkiXzg57O3znFDFuFdKf36Cq-AZzwRRP1pIeICtgBDnSkDvUXPnaHB_hmwLlNqES7u_bi15mIYrIBm7M1DeFWyQxfbfFiOBhqjo3nT-CdzLclP2vGHixqhzNrOQbR8WgbQ78hBaHosMPeYxPfLPlvS6clb9hUPTtI1-loa_HtEiBxCcW_2bNrbMVV1W2TwdC_ZA6ZR-PVebgT-CTnE315BrmvQ-Hh9mDCFR8S8Xi-_1BxEQnPfRi5Gyz-PEFOlTVechqsWI7AFWs9p4nTp3zEN5IbmaP6QlL4t5-adeGYdy03c2PQEXU8GLwzRdQQen9FHyyFJPRFjKfxSnBX2S4KpGxnBI6aTc6x-XZCo9or-hfaiHzSI5aUlcUT603fGAPyZSWhL4IiWPzXSseJ1iWHwRMLxdbW3Yy4seJ1EeCyiw8hYgIXgOAgMjKxpKYoLAco3gF7GxOz77gnd1uFjvs8eUFT382NQb3vSqhvLFXNVvUpz1YzWcZ3tDmge9POeVfxnpLjbhkH1tYxrWwEx31KmqwQhFYtARNDjI=",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "afe162d5-8cf6-4e38-9ef3-37d0c6c6d76d"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 672
+                }
+              ],
+              "cached_content_token_count": 672,
+              "candidates_token_count": 14,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 941,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 941
+                }
+              ],
+              "thoughts_token_count": 142,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 1097,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "afe162d5-8cf6-4e38-9ef3-37d0c6c6d76d"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "id": "b8ed0aa3-98a4-43a2-a717-721666fc2843",
+            "timestamp": 1772798842.361525
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-33add496-d41d-42e0-81d7-92eddf8d9927",
+                    "name": "BudgetAgent",
+                    "response": {
+                      "result": "{\"calculer_solde_budget_response\": {\"alerte\": false, \"budget_defini\": true, \"categorie\": \"resto\", \"limite\": 50, \"pourcentage\": 0, \"total_depense\": 0}}"
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "1ce1eb3e-ea52-4e75-8b08-d762eabb729d"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "5343128f-0057-4939-8826-5f63bb135ece",
+            "timestamp": 1772798846.451772
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "OK, budget non dépassé pour cette catégorie.",
+                  "thought": null,
+                  "thought_signature": "CuIFAb4-9vsm76TD44XXOCb_H6ypAq6xIupPHKaJ8C5EF2p_Ynh0rrpJm7klpvqpADtB7BoaFAlOpAw3KdNsc7cPZEAPaMfxDMTBiScUJAmTPBmHH8WKWj3arGZpshL7tsn6RxU7fB_CATEJlyHMVDXi5JS1BhEDnX_jn6_tqJrNtE0-eSW6Jieg4W4sid8XgoBtMlPVudP96jDPCIGC6LTu9swYmSyl1YAz3Jdsy1GNxUWgxt26sTgTf6AargZnULBRSszEUtuLaIV15DhQj1zQauRuHNs9jRB5mCbLu3XuO-IKqs-dbHPD_cEyKT75R9azOaIN6C8Iqk6mL0ak0ZwEupbWVfEnGIXv1RcsWh74fhOLBzW8wAYvbKvaT3AJslSAf1GtJYNks6J5cT1oBV1UNLVaA5KP_B6IEjVk7N_aDHLXcODhXTDx-5LpwhlRvEmdjYdoprXwdK0XcO1ropvipuB2znvPuBhE15nEeqp1QH9mxrxJ5OYEKma03JuQrqSuzZC5HMkgpYD9bgQtW6jH4WtPR-5N3TxDZOJVzSL9_DApmw1gT2oHqTlLIbRFQAsfeaauENXQ0xdygVQMYmflXcOnJNtUvPQc3xVhsz7sBZlkXlnc3ePWP5Qzr70YX_rL-IKGRvk3m_eusut1RdTT3joM4WD2qfZe2nutff6UO3AlouzkzAyu63kqaEC8DWesUsxuu1PZY8_Lid3J2xVnPge4BMbHlV_GGmtyMDKT8TWmeAl9mncB4lMgIBLrqm-AacbUBa8PmiVY1Qx9xiy9QUqUZwG-NjsgQiHzC4PPlF1J1JyEoSWqVS8B19Y8xRqWEJQjenTuncnUET3CDYDzgAZcUCATFJ6Bs7ULM3oTiHO38aNK65yscs7HxxfiaszIfwmMnD22tSr9LAAd4udi6Cek_g61PKAjGsoK8trsQIxDuXoEkZ0gTRksfj-MOkwi8hl31dmCYFBreCJeQQfLaEtl",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "fec8d0d6-2e18-4440-84bc-a8e66a39dcf8"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 10,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 1023,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 1023
+                }
+              ],
+              "thoughts_token_count": 196,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 1229,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "fec8d0d6-2e18-4440-84bc-a8e66a39dcf8"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "b2c3b44d-1efc-46e8-bb36-a3e18e04b1ba",
+            "timestamp": 1772798846.460999
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-ecfc5d18-a749-455d-97ab-4e10e006cf62",
+                    "args": {},
+                    "name": "verifier_categorie_suivante",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "CrMCAb4-9vsIuAWtalr6C0FZIKZRJEBOvmhta1my5v9XwctgaAD-G18pnCcj0QVji5_2Ep9W8jHqGvalClWnMaG9nk5ZK9f3gVXv9L7kMczXhWUXy4oYkji-J_zKLwg5Zl42gsTTKdbvogqfKnAPiO7-RkKmZWEmlq8FMIXTTsM_wWh6iiSyrveh89BuXHTM_VGZZiJTik8uzQkmGtKti_u2N71v_27WhDhIjnQRI4bFelqGyOLz2hZZZnFTY7y7_GQRkFqPo_tgM8XOgwoi4FnjyNT3Ij92cYG6VLkkRQ69oBz7ysY2S5-_ELJmd_Xa4i9_TnCVnnPi4F5paI_XVz1klLuGDhXhluWWYOx4YuCrY1NQdJmJFla7lwMR9Qu8EMlQ4dWtX0dwoc5shJLZauzKx3HxgA==",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "9ea5e065-ee93-4575-ad4a-232822c8cbab"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 721
+                }
+              ],
+              "cached_content_token_count": 721,
+              "candidates_token_count": 14,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 1054,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 1054
+                }
+              ],
+              "thoughts_token_count": 59,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 1127,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "9ea5e065-ee93-4575-ad4a-232822c8cbab"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "id": "f5050f14-05c9-49e2-8bfb-bf1d6207a333",
+            "timestamp": 1772798847.879917
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-ecfc5d18-a749-455d-97ab-4e10e006cf62",
+                    "name": "verifier_categorie_suivante",
+                    "response": {
+                      "termine": true
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": true,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "3c87f249-f342-463e-bac7-456dd38932c1",
+            "timestamp": 1772798848.816706
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Toutes catégories vérifiées.",
+                  "thought": null,
+                  "thought_signature": "Co8DAb4-9vtsCNYKOp2bJ4Pn8CdtAW45NhfIx0jSdXRtMmsiulNPc9GKE11rYjYh76LX8QamShQwgJ1sVii9fwe-7N5Gc71F7LOt3oWnQvWLHL3HouAQmfkBtH91iSXJ7CJ-7MOoQQXpcJb8uXY-WJy4ax-qzI2WtAb8aImByxCyrOvkp30IsaxGz-NAg5kqkq_HmQxDHCnjeMPYJ0_NUpzUeLy-xWBL4ufI1AGHgt5cT7h4k3Of2UDQSrrG0vYHSjdXbKJAsBVtt9Sb-kJm-KlrefxVwHMN3dSR7tnakkXFrXLalfUMrjvn1AUnDY0YZD4mG8BgmHSX-TuaOJp-Qm1KIODHbeyQDWyAc0tV__T1DqWMJICBOK-X3XXI4NEKAv2vFJd-dneD56Zine3nopVPpHIc8R698O9k66z_Mv__2ySmeq__qbVlliiE1gLH4ywHxokSpQK4zFhZa4HvQknRXddm1n-Sx-VGQLNj03_J08ak6u3kay_PVV_kko8Q7MQnG6CiXBaQDtHcTK7RwP-4",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "5d09ca5c-76e8-4af0-a513-e93aae06c4af"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 548
+                }
+              ],
+              "cached_content_token_count": 548,
+              "candidates_token_count": 6,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 1066,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 1066
+                }
+              ],
+              "thoughts_token_count": 95,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 1167,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "5d09ca5c-76e8-4af0-a513-e93aae06c4af"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "ee78695d-b86d-4000-b7c2-f8db65ebe0ea",
+            "timestamp": 1772798848.828186
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "J'ai enregistré une dépense de 300 euros pour un restaurant et un revenu de 50 euros reçu comme cadeau.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "49d8edc1-95b0-4c75-bdab-29a2bbfe9c7b"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 28,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 761,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 761
+                }
+              ],
+              "thoughts_token_count": 29,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 818,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-3cc3f7bd-d995-4b1e-a9b7-d1018c138faf",
+            "author": "ResumeAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "49d8edc1-95b0-4c75-bdab-29a2bbfe9c7b"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "cd251dc7-dc0b-4424-953c-79736dc845fb",
+            "timestamp": 1772798850.028571
+          }
+        ],
+        "last_update_time": 1772798850.028571
+      },
+      "user_id": "user"
+    }
+  ],
+  "creation_timestamp": 1772798850.8543527
+}

@@ -3,5 +3,4 @@ __pycache__/
 .env
 .venv/
 *.db
-.adk/
 node_modules/

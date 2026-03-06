@@ -1,0 +1,958 @@
+{
+  "eval_set_result_id": "track_omar_evalset_1_simple_revenu_1772798645.4970148",
+  "eval_set_result_name": "track_omar_evalset_1_simple_revenu_1772798645.4970148",
+  "eval_set_id": "evalset_1_simple_revenu",
+  "eval_case_results": [
+    {
+      "eval_set_file": "evalset_1_simple_revenu",
+      "eval_set_id": "evalset_1_simple_revenu",
+      "eval_id": "case date hier",
+      "final_eval_status": 1,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 0.7,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.4,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 0.7407407407407408,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-aff89082-d0b8-4d0f-8c5d-a0f77087fb64",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "jai recu un salaire de 1500 euro hier",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Un revenu de 1 500 euros, catégorisé comme salaire, a été enregistré.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "SauvegardeAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-a0d85aaa-8a29-4e53-a394-5c3be3587e79",
+                          "args": {},
+                          "name": "sauvegarder_toutes_transactions",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CqoDAb4-9vsQ32Jrff-c7j564cTKfIzMsrPhNhG18iyDji3dpl0AwwQvZKc5a16sR6wi5aaQh44jq99FVA8Tym0hWmo3kQhBxDKUV9pHSAXEXaPrQmPpe60HQeljRHy3MdpcKy5TL5iIYvUQo4lRqpc21r3O-ZLoJXLp9pPtPvFx1GAyQlg0KqFSAQK44XDjAusOHLNmlKKieeOlv6djq-U61if4xP5FYLxe5dVr8bNzSXQ8MRpcoh76g1AdfGVMsLufxIFyG-t5IZPBYQl4xjyxCaGrIcLI98XtWnHOC0wINH8KL9mYFdsUG0U-nPvUmc7uEPcRLLU1g6aQRzTlmdJpZrlekQrvmcc8GgVx8BbWi98zxAtFijP8cGngeOwxufliVogiMQbON2tRZK20A8mrbv5fEiTd8jiWAZKJAuttcLqcQV-K_kpDbLKid0s7YAc_Bpnmj0qlydMOSOyX3jhMHTmaZu8YwDV5ee5Sc2AuVB4sTaTbi6pgW3civZHUVAjpyE6vc8ryHjiTulYPFAKqZH8vcVP-QendRqot91YDLp_3suKHuEW2meo1",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "SauvegardeAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-a0d85aaa-8a29-4e53-a394-5c3be3587e79",
+                          "name": "sauvegarder_toutes_transactions",
+                          "response": {
+                            "nb_sauvegardees": 1,
+                            "transactions": [
+                              {
+                                "montant": 1500.0,
+                                "categorie": "salaire",
+                                "type": "revenu"
+                              }
+                            ],
+                            "categories_a_verifier_budget": []
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1772798639.006871,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "TranscriptionAgent": {
+                  "name": "TranscriptionAgent",
+                  "instructions": "\n    Tu reçois un texte brut issu d'une transcription vocale.\n    Nettoie et reformule ce texte pour le rendre clair et exploitable.\n    Retourne uniquement le texte nettoyé, sans commentaire.\n    \n\nYou are an agent. Your internal name is \"TranscriptionAgent\".",
+                  "tool_declarations": []
+                },
+                "ExtractionAgent": {
+                  "name": "ExtractionAgent",
+                  "instructions": "\n    \n    Contexte temporel :\n    Aujourd'hui : 2026-03-06 (vendredi)\n    Hier : 2026-03-05\n    Demain : 2026-03-07\n    lundi dernier : 2026-02-23\n    mardi dernier : 2026-02-24\n    mercredi dernier : 2026-02-25\n    jeudi dernier : 2026-02-26\n    vendredi dernier : 2026-02-27\n    samedi dernier : 2026-02-28\n    dimanche dernier : 2026-03-01\n    \n\n    Tu reçois ce texte : J'ai reçu un salaire de 1 500 euros hier.\n\n    Extrais TOUTES les transactions et retourne UNIQUEMENT un tableau JSON valide (sans backticks).\n    Chaque objet doit avoir : montant (float), type (\"depense\"/\"revenu\"),\n    categorie (depense: resto/transport/courses/loisirs/sante/loyer/autre,\n               revenu: salaire/remboursement/virement/autre),\n    date (YYYY-MM-DD), description (string).\n\n    Exemple de sortie attendue :\n    [{\"montant\": 12.0, \"type\": \"depense\", \"categorie\": \"resto\", \"date\": \"2026-03-06\", \"description\": \"kebab\"}, {\"montant\": 3.0, \"type\": \"depense\", \"categorie\": \"transport\", \"date\": \"2026-03-06\", \"description\": \"metro\"}]\n    \n\nYou are an agent. Your internal name is \"ExtractionAgent\".",
+                  "tool_declarations": []
+                },
+                "SauvegardeAgent": {
+                  "name": "SauvegardeAgent",
+                  "instructions": "\n    Appelle sauvegarder_toutes_transactions (sans argument).\n    Réponds avec le résumé retourné par l'outil.\n    \n\nYou are an agent. Your internal name is \"SauvegardeAgent\".",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "\n    Lit le JSON des transactions depuis le state, les sauvegarde toutes en base,\n    et prépare la liste des catégories de dépenses à vérifier pour le budget.\n\n    Returns:\n        dict avec le nombre de transactions sauvegardées et un résumé\n    ",
+                          "name": "sauvegarder_toutes_transactions",
+                          "parameters": null,
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search_retrieval": null,
+                      "url_context": null,
+                      "mcp_servers": null
+                    }
+                  ]
+                },
+                "ResumeAgent": {
+                  "name": "ResumeAgent",
+                  "instructions": "\n    Le texte traité était : J'ai reçu un salaire de 1 500 euros hier.\n    Les transactions sauvegardées : J'ai sauvegardé 1 transaction. Il s'agit d'un revenu de 1500 euros, catégorisé comme salaire.\n\n    Génère un court résumé en français de ce qui a été enregistré (1-2 phrases max).\n    \n\nYou are an agent. Your internal name is \"ResumeAgent\".",
+                  "tool_declarations": []
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "e-0ea3a5e2-0d7a-488d-82b8-432fbf78dc61",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "jai recu un salaire de 1500 euro hier",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "J'ai enregistré un revenu de 1 500 euros dans la catégorie \"salaire\".",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "SauvegardeAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-a85fae95-6d18-4c09-ad7a-99f4dd80bafd",
+                          "args": {},
+                          "name": "sauvegarder_toutes_transactions",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CoQHAb4-9vt3dIhn3wgJLjI-iFXcoh8dshE3G-qznFeFD069II5N9UvNEfNW8yoGHtF9UN-ggXZmIfl-uzWWGH-8iJgtvmxWum58tcOZw65PzzBDQK-kfMuc1BMoU9inCds-xma27vQAy7pmEf0Mvq8TjPmWkzwY67NQzh0eu7mgwsNNtwINGfRw47yPKwoa02_tnoQups9wkqv34VB-3asuzV0e7qEr9LcsQ7p8YG2viVT-BjzzFfk7qwW1jR4RE_QAWZKRGPmBpCrrg2Vax8ZbKqXY1er15f3_mi0t6xQuhTMqKfQRRMWrtAZho_T-ZtCzciXEgN9Ea-qbI1vsGQH6RfnW5lbNkxcFTbDA46AWmKddmfAyeOITDvmLIs9XuBD1Tn6ZNNnGNmfZ2gmE6gW64Azt3vRTeaJjVoBU2DLPEd4-T6XkDgN2W1Z4bccbpvY_MVfxwbany5asYkT2F8t2EPRzVBfVGXlOwdkXWyXpowuXaZlBDxva-L9oqKD_2RIn7BiSbrco4gybg1lTLGef5ZKVcDXCwWFTH4mPp3iH99b-j7btrH3HEy4VM4SmWpKYMN-bHCSmUHuAphSXWETDPBkG9sARj_lzzwyGPtb4sCCm6KPxHswZh-Ee16NvcVt0Z2OyywRUCQPcxxWp1WQ192pQ-wLL9Gpfez_S2JjRGYxE0gNO5BjUVZI0eTnNg_SdSSmOwZ2sBWjW-auwNd41VsHy7iIrjTdKiuGkd3LU13NR8rKiMK3UlCLWBJVVbbWgioGyfwuk2hN36bEe2ghYIQ7f_yYotoJ5XAXe6uiUjz1opkDvEO98at6TyJWUbgs4gtYUnirSohJo_utDzzWrgmjCRs-n3fkHWTRbZEnR8DgczgH0i5nVZ72dFzMO0EEbSuZfZPl-NQESYBxd_wQ0j0AAQ5Z3pGqm0zrLqIMSOeJp_7AbcjrmkwZzJhnUJIPnmc3TDHnQ-54SkT-7P-SE6lv5Q235m05Q7L57vH_nKNhmJUNw5AhpgyXKtZpgsPgOkRnuYIw-2hXNiwG8JaJIkqAXhw5U0iwa02wKYk7S05QjJgq3DTLmkfZrI_wv65WEPy33i6WV88Hkb0T730KPwPr7eCx1uSxqkwwSBNGH-HujFQzjrC9gWRADpIByD_LANdgZiuAIiFY940456UecPQR3Rbn_E5DgiASanCnTrVD8YgCp",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "SauvegardeAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-a85fae95-6d18-4c09-ad7a-99f4dd80bafd",
+                          "name": "sauvegarder_toutes_transactions",
+                          "response": {
+                            "nb_sauvegardees": 1,
+                            "transactions": [
+                              {
+                                "montant": 1500.0,
+                                "categorie": "salaire",
+                                "type": "revenu"
+                              }
+                            ],
+                            "categories_a_verifier_budget": []
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1772798521.689687,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 0.7,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.4,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 0.7407407407407408,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___80455703-d25e-46b3-a376-da42128dc827",
+      "session_details": {
+        "id": "___eval___session___80455703-d25e-46b3-a376-da42128dc827",
+        "app_name": "track_omar",
+        "user_id": "user",
+        "state": {
+          "texte_nettoye": "J'ai reçu un salaire de 1 500 euros hier.",
+          "resultat_sauvegarde": "J'ai sauvegardé 1 transaction. Il s'agit d'un revenu de 1500 euros, catégorisé comme salaire.",
+          "__llm_request_key__": "610b4498-0842-448e-9d82-72736e43c3c3",
+          "transactions_json": "[{\"montant\": 1500.0, \"type\": \"revenu\", \"categorie\": \"salaire\", \"date\": \"2026-03-05\", \"description\": \"salaire\"}]",
+          "categories_a_verifier": [],
+          "transactions_sauvegardees": [
+            {
+              "montant": 1500.0,
+              "categorie": "salaire",
+              "type": "revenu"
+            }
+          ],
+          "streak_sans_depassement": 1
+        },
+        "events": [
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "jai recu un salaire de 1500 euro hier",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-aff89082-d0b8-4d0f-8c5d-a0f77087fb64",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "fa7bdc3e-0b02-4aa3-ab43-70f031e21184",
+            "timestamp": 1772798636.717392
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "J'ai reçu un salaire de 1 500 euros hier.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "5b302903-cda9-45a8-8f26-69a3cff92db5"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 16,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 78,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 78
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 94,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-aff89082-d0b8-4d0f-8c5d-a0f77087fb64",
+            "author": "TranscriptionAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "5b302903-cda9-45a8-8f26-69a3cff92db5",
+                "texte_nettoye": "J'ai reçu un salaire de 1 500 euros hier."
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "47619a4c-71d8-4c93-8809-33f2853dca28",
+            "timestamp": 1772798636.728923
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "[{\"montant\": 1500.0, \"type\": \"revenu\", \"categorie\": \"salaire\", \"date\": \"2026-03-05\", \"description\": \"salaire\"}]",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "77317cee-d3ca-4ab5-9c27-0c6f625f81a6"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 50,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 461,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 461
+                }
+              ],
+              "thoughts_token_count": 247,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 758,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-aff89082-d0b8-4d0f-8c5d-a0f77087fb64",
+            "author": "ExtractionAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "77317cee-d3ca-4ab5-9c27-0c6f625f81a6",
+                "transactions_json": "[{\"montant\": 1500.0, \"type\": \"revenu\", \"categorie\": \"salaire\", \"date\": \"2026-03-05\", \"description\": \"salaire\"}]"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "735fddcb-fde2-4293-8cef-78ad0415c643",
+            "timestamp": 1772798639.00725
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-a0d85aaa-8a29-4e53-a394-5c3be3587e79",
+                    "args": {},
+                    "name": "sauvegarder_toutes_transactions",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "CqoDAb4-9vsQ32Jrff-c7j564cTKfIzMsrPhNhG18iyDji3dpl0AwwQvZKc5a16sR6wi5aaQh44jq99FVA8Tym0hWmo3kQhBxDKUV9pHSAXEXaPrQmPpe60HQeljRHy3MdpcKy5TL5iIYvUQo4lRqpc21r3O-ZLoJXLp9pPtPvFx1GAyQlg0KqFSAQK44XDjAusOHLNmlKKieeOlv6djq-U61if4xP5FYLxe5dVr8bNzSXQ8MRpcoh76g1AdfGVMsLufxIFyG-t5IZPBYQl4xjyxCaGrIcLI98XtWnHOC0wINH8KL9mYFdsUG0U-nPvUmc7uEPcRLLU1g6aQRzTlmdJpZrlekQrvmcc8GgVx8BbWi98zxAtFijP8cGngeOwxufliVogiMQbON2tRZK20A8mrbv5fEiTd8jiWAZKJAuttcLqcQV-K_kpDbLKid0s7YAc_Bpnmj0qlydMOSOyX3jhMHTmaZu8YwDV5ee5Sc2AuVB4sTaTbi6pgW3civZHUVAjpyE6vc8ryHjiTulYPFAKqZH8vcVP-QendRqot91YDLp_3suKHuEW2meo1",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "af785ea7-37a6-4118-9f54-31cd59d1eae4"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 16,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 224,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 224
+                }
+              ],
+              "thoughts_token_count": 74,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 314,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-aff89082-d0b8-4d0f-8c5d-a0f77087fb64",
+            "author": "SauvegardeAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "af785ea7-37a6-4118-9f54-31cd59d1eae4"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "id": "2d2780e1-2615-414f-8271-d0a11c22ca65",
+            "timestamp": 1772798640.834725
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-a0d85aaa-8a29-4e53-a394-5c3be3587e79",
+                    "name": "sauvegarder_toutes_transactions",
+                    "response": {
+                      "nb_sauvegardees": 1,
+                      "transactions": [
+                        {
+                          "montant": 1500.0,
+                          "categorie": "salaire",
+                          "type": "revenu"
+                        }
+                      ],
+                      "categories_a_verifier_budget": []
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-aff89082-d0b8-4d0f-8c5d-a0f77087fb64",
+            "author": "SauvegardeAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "categories_a_verifier": [],
+                "transactions_sauvegardees": [
+                  {
+                    "montant": 1500.0,
+                    "categorie": "salaire",
+                    "type": "revenu"
+                  }
+                ],
+                "streak_sans_depassement": 1
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "ec1ce078-f176-4b88-9aab-999dce56e482",
+            "timestamp": 1772798642.087361
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "J'ai sauvegardé 1 transaction. Il s'agit d'un revenu de 1500 euros, catégorisé comme salaire.",
+                  "thought": null,
+                  "thought_signature": "CrEDAb4-9vux6te2G0nfEpK1CdYmGCJPJiIGk95Lv9J_CrUf8sZ9Uh2GyJqq2hQpbCuLVoDNultrh14dNym_pNtMN-btsg1h3sGm_grRAk_dGPuH1aWWjpmkZ9OU4C3kGiz-xvTEGu4gzENBOIQEuN6BXZ79GrG0nzUNRTEDDcFDJ7kcFFOGQjMOX-tnW767HW59TCiCJkRorvv6pTbnVnipCoo_tjJ7iD-SvApfFOTlHDVTZuKJXjfwCsSGybg9-Ww26QgZlURdPwyOZPQ4ppgbjf6lOgk29gESilxhXoUohE5JoXv64Mok7EfLhb65i_KWBKfbg_8_H0t4d6drGMurWOJKIx8m18G2-B_Gyg9C-3N3rGXO0MMibduyY2uNzsnSi03_MZ9HBU5B7QlDU3C_4DnLQT5sGdlPEbWnZ3l93L_7z8cxnmM-mpbajBZitzEcEV7dzW_3GrKAlVy5q8ngUAV_sO2SWNSPCpXMy7UfIEStBX_gk2ysZiLmTR3rC87RhUcrmKLxZN7ek8F6fjcTQw5nD42J6Un-Zis3gnZAhmXB5oQp9iEt2K__M_jjCPBz_w==",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "d30dee8d-8244-4834-a9ee-5800712a1adb"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 31,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 305,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 305
+                }
+              ],
+              "thoughts_token_count": 92,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 428,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-aff89082-d0b8-4d0f-8c5d-a0f77087fb64",
+            "author": "SauvegardeAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "d30dee8d-8244-4834-a9ee-5800712a1adb",
+                "resultat_sauvegarde": "J'ai sauvegardé 1 transaction. Il s'agit d'un revenu de 1500 euros, catégorisé comme salaire."
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "cb2e9948-b83d-45c9-b9a6-59055594b4c7",
+            "timestamp": 1772798642.094134
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Aucune dépense à vérifier.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-aff89082-d0b8-4d0f-8c5d-a0f77087fb64",
+            "author": "BudgetLoop",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "a6739d04-2acd-43c0-9a0b-21c9b4a3c610",
+            "timestamp": 1772798643.612953
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Un revenu de 1 500 euros, catégorisé comme salaire, a été enregistré.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "610b4498-0842-448e-9d82-72736e43c3c3"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 21,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 361,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 361
+                }
+              ],
+              "thoughts_token_count": 263,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 645,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-aff89082-d0b8-4d0f-8c5d-a0f77087fb64",
+            "author": "ResumeAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "610b4498-0842-448e-9d82-72736e43c3c3"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "6be58271-2b38-4adb-8ee6-9ac8244579c1",
+            "timestamp": 1772798643.629537
+          }
+        ],
+        "last_update_time": 1772798643.629537
+      },
+      "user_id": "user"
+    }
+  ],
+  "creation_timestamp": 1772798645.4970148
+}

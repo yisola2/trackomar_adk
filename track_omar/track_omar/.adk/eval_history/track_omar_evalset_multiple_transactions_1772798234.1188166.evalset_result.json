@@ -1,0 +1,2952 @@
+{
+  "eval_set_result_id": "track_omar_evalset_multiple_transactions_1772798234.1188166",
+  "eval_set_result_name": "track_omar_evalset_multiple_transactions_1772798234.1188166",
+  "eval_set_id": "evalset_multiple_transactions",
+  "eval_case_results": [
+    {
+      "eval_set_file": "evalset_multiple_transactions",
+      "eval_set_id": "evalset_multiple_transactions",
+      "eval_id": "case 2 transaction type depense different categories",
+      "final_eval_status": 2,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 0.7,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 0.0,
+          "eval_status": 2,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.6,
+          "criterion": null,
+          "custom_function_path": null,
+          "score": 0.9583333333333334,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "jai paye 15 uber et 20 euro grec",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Deux dépenses ont été enregistrées : 15 euros pour Uber (catégorie transport) et 20 euros pour un restaurant grec (catégorie resto).",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "SauvegardeAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-232a180b-842e-4d71-961d-9b85d07e6ef0",
+                          "args": {},
+                          "name": "sauvegarder_toutes_transactions",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CvgDAb4-9vsoqpJlkYMqwfJrzPFlSkLq_1naD1i__VwGVUaf6oO6WW3mlpR53xl6DrCeIdca3gFnD8No9cQ-dRM0PM4DMiKGqNXjFUTsNoJFeYZXSss0vCKvqG10a3GoSTNSnOiSv7US6IQuVR80U1iXuNkSpOymkyplTV1Cd21-xKjttSerHs_dxkBAbxnn-WaqFO4SmB2HNmtSEI3pGm3c_CSWmHAtQn9_wKbQAE3NSM0SSGysOrf2iPVLBWJxrSGASYUpJpAPQ2_NSevqys-Agrvs7CL08AMqnKAVR4721iebHtbevFSAeYT6c15dHYLWGhuudDdxQSkOlStTt5VVD9rzMr8Jv2M0LX7Hb56kdLVpFW9Vh61iPDqPcHBeuIkYx0zCy4QVahFHDLiH8kzXHtbb5Jv2qybTEmSPePlafpfgBnNq3AMNvsZHqR8XfbqXTAh-LZBrSX74BOk4yjbKuL4Uc0iSA1xu6tnsuP0PjFPouaWIQd9823bNudK5tcf2N81rtOTOAWVKNvsMcGiFUkQQ2726J6cA82ENtPT4HTbwuP5LBxgq3Y-11t8CAuIqL085ECXTwKSZBFnyx9-hXrVc60OM91Z60Ji1pUpIwf-bb-NCXs3bPJWKAQuo2pgveWH-b5McILDU4RD16Jjuqzf0qmjcl-0R",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "SauvegardeAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-232a180b-842e-4d71-961d-9b85d07e6ef0",
+                          "name": "sauvegarder_toutes_transactions",
+                          "response": {
+                            "nb_sauvegardees": 2,
+                            "transactions": [
+                              {
+                                "montant": 15.0,
+                                "categorie": "transport",
+                                "type": "depense"
+                              },
+                              {
+                                "montant": 20.0,
+                                "categorie": "resto",
+                                "type": "depense"
+                              }
+                            ],
+                            "categories_a_verifier_budget": [
+                              "transport",
+                              "resto"
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-839b1b08-e5ea-47ae-ae2e-50596d35f42f",
+                          "args": {},
+                          "name": "verifier_categorie_suivante",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CuADAb4-9vs63xNEBrzBIgwv6VOG_sxRYdNA_JzRG3W9modd-YStKbxKGt0Hghp4mAzO4L_czoUZuuMH5Iur7fFnqTFlvMMmAPR1943htMUybIf0R2CPqHwg-xK1IxkvWKO_0FhYnDycSYuav80rqrlGssg0TlSW7dOztOdJuIm7RBe-lHXO92fFCETbX3zIF8eTAXEIzJsnD9v6NphE31wJUADJcAy8uStD4lsaKOwaTtHLvkd9geoPuP46gqhF80N_Y-KD4i-rL_wSLlVKz4GMxg3TJXRQK9LKhvljIx2Ud7VpojnunVZWncd5vK25Zfybb6sEYGTRwozsjwbE2aDXOBxRRyfe2hd76IDDae7BRZeT3xZirwUsWTOJG3A1UqQTLh3nCIyryMJhrfaBLXFMCwtjPnt4NlMPa5iYNZAki0U7CgfYTznlDN3DM6qmu0n-O8-kR6D25Fnlej5mXmuuTrWXUeONGuqNAnV9EIFbCtGyGwfR9OGFFMGLaVqkIS_lgfNizqFTzF0emzz_0FvOC6D8ezFam_zjxuiYS2UmqBaJKA8ZL88lQRXP2eciueuDpICdmpUdz_uxWdGA8oe4P8UmMJW1FI67PuHjRAToNWGCmcr--JWRoS_bPqFGCdjF",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-839b1b08-e5ea-47ae-ae2e-50596d35f42f",
+                          "name": "verifier_categorie_suivante",
+                          "response": {
+                            "termine": false,
+                            "categorie": "transport"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-43f505e4-8cea-4363-af79-6691f8e71bab",
+                          "args": {
+                            "request": "transport"
+                          },
+                          "name": "BudgetAgent",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "Ct8EAb4-9vu1H9wz0i4_DT9m3y8Y9_MVicaT0CCz95rqiK4XHdryPA36YqYj9Tnsakc5SnAOgrzVdOASmGUYIjb8b7z3J5TNuDkt_E9K1SV31BwA7P_609gF3vzeSGnPnJfu9V3MKQbJlvhA0NL3i4D6KjBUfvoUqq2WlIMcRJIdLgt_gGdwRd6b1XVJQ98FGHaMEwLl7QwW2MLFY9Dp8uYnDXK_i4Mx-YmHW9RACDzqyhqzsDc-elNfu_aJrhLcIJ94ro9lx7ef-bXeQqeyTnc64NOQX_QwlMv5WansrrsNeDscJkq1i3SToura6YUX0W-AUXiUuPwPujbzpR9QeIRodEDIOWjo_m07UU11-lp6BXDSTj3pDt0-Cm7gKTXWxtSHHZvW7BxBHplKe3UcA2tykSBXocHsDSXrwoj67PB-mpBlK7DPND1ldYUmDkMXRDpL-xCCkymxWFE4cOhwhPPvo8sHYIe6YWq9wqxIXZLNNRxc4gAe3eKzXTP6xt61zfN1spuztv6tpMfF6XhScPTbGASf2ptrsouGTIcAR2Nz_jzMlGMXxHMECxYGtt7nWE0kMURjqIhsfJWy2MoS39E6CEl8uFGrPRksnZcnnOaasDUJ_BnFg6NxubNROtZPPFJ61IlZR69fla67ko4Hf4nYLvPtarWe2X_Pwj8uj975yVLFEJMvlGyFk8KSIBLOUa7I4h4SFpzMaYGzqDFlcnSny2rDKlqMSsXwAJTR_uupRhYpFwypiwH5eVYV0hS2aP0iqTXogabgDRopFU9RXmiPVT2wqTQEc4pWAVfYR1nLgA==",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-43f505e4-8cea-4363-af79-6691f8e71bab",
+                          "name": "BudgetAgent",
+                          "response": {
+                            "result": "{\"calculer_solde_budget_response\": {\"alerte\": false, \"budget_defini\": true, \"categorie\": \"transport\", \"limite\": 50, \"pourcentage\": 30, \"total_depense\": 15}}"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "OK, budget non dépassé pour cette catégorie.",
+                        "thought": null,
+                        "thought_signature": "CvsFAb4-9vt5jRJz7BQ9bI232CDscICS7K--oU1uY9rhO8HTvJ_JPEe2tve8VQFQUVBmnITlEn0oMkUXy_l0whl6TvkfqBkkwGv8ZfCti3hpztbmUtQV03A2zNhgJWLffDZbTbgDqB2uTa4LRLEfrmpkCjtm2AWoGnQVedU25DEeKPT2Fl9XcowSzR9-RYnh604HXUqiF48cRXIgTiCtWKr6dh0l5t4DlV9hJ1njD07QRsPEIOptH70pV6osKqH0-YBUPpyqYihr1vPjfkI9D2pdy2XCTTBpJF--sUV9yPDHwQwD23d5RL722PB5Crpvv7rVtdSgDVb4-JLdSZr61PQsksYFABrcvyaGEB8s9v0zwkQc_xJw3xJgS3rYRSfDdtVSgDTyvOzuBTi7hCqkHGlSBmomtdiM0-TipT5rx7BtHGIQnCGA55LIWe-aFZX0FK010IVbPi4Yj1SQlFjslTLGwNa3ZTtDnmSQZdWYkUZ3P-iKpa1KCOiNfCMEdX7COHOy1hZZ8Tr1gT-cRjm6jF4uZDINArlChuZTQHwMCavJz3TYCqEvEV1mXscuw3ASDef2ahdSxr3Wp9oGfFf8lDJ7QunuN0ZubesFiDdsWFNIKByKgCSquC1tO6TC3NMHQCcMeTfcdn96geaicaiu3H1YlHsykSISWQWF5XXxB2mBlhqpWwRzR34wjxuKxEXGFpsPf0x5LT_f4RhsIrNx8BDM4lxtd_1TFDO7gmfaoZgBxhGOXKAsigoo-bn07Hy-eh12Q3QtZfUDiQHaLREAKMC1fJ6h8kNQNCv6XxaT82-FnP2HZV5qrhd8Oxz0cnO52b8R_f39tW8NH5ywDS5iaNAVkFHo0fdO1gfUK9x9Cf5gjrSyXM4vn1F2zjhvw4OXAu0hZlCNcmWHdgsQvZInPAfp50gg6t9_9RIekTVBLKGcvyDghHKUWGCpXBNuL10NuekvwOZiXr9YmtQi_sKwcTC5AzyQL5ZmET8z2n5RelJ6z2W2YiPBQJqUfHyyQA==",
+                        "video_metadata": null
+                      },
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-67741762-b18e-44d6-9391-7641c9b160f4",
+                          "args": {},
+                          "name": "verifier_categorie_suivante",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-67741762-b18e-44d6-9391-7641c9b160f4",
+                          "name": "verifier_categorie_suivante",
+                          "response": {
+                            "termine": false,
+                            "categorie": "resto"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-4e213a2c-e7dc-4ea8-bd5f-4573b6300d4c",
+                          "args": {
+                            "request": "resto"
+                          },
+                          "name": "BudgetAgent",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "Cs8EAb4-9vu1thOn3fl85iOverIyPFHy7eZkzcZyJOKbaq-bTJs7Jw_btrhlCGF7VY_5IQmlChE97_n_K4VyEK5Nq0FNzJrYAQFA6aAM1ObAYTTT9vInyVUKbSNgA8e3_CeeFWYpI32Anm0QGFVOtl1i2HkTgzp1jTd4W4ehVV0mdnfJShYhbNMdfcTBQCEo9_PWgW3WaiCLL5gGvMmvhSxOK87NvugiEds2rmul14hBwrQN6d7M3Mzr6CGz0ZVVuQicxi6ubOwvb3v91iyEqjkWO0mY5-UZDgEVP_WZKPjp4hGp2yUwbTuR9JN5tC-vR1XiCbQVrkW96cwsjooTl355izhGnPgFDiRFvdgzoHY9JTDZZGdShh-SbEJLw6io5JpB8KULQ84VIAPe-kZD8J3CSRCUrJ-1lCVwvlaGY2AI-qFwRgZAVjrcmjgTnAYmcZtOG5xMcBvZwrb_LS8sK37Mm_Zcjh1jIyG86JWXmLZcOgDcDSMwypjMXgFgElxu5DMJ0zFiuQuJdWqPoLPbiLuVA33LrStr0xM7WRorXPvxWkzdDPg4rNyOiKBWeF1GdTzygaI50e5TjzHK0N43ILFqPUJyClFowRXpln4bfSN98OXWcT_inGBFvrTW_-ikAIvCNpWvg1k94qVXtN1HceuFLrmLva-HgulgnahtFrZ1adKTysdjh0cVCJid1kH8WijpR4pSu5TBuR9P8b67hLjrAZXG30jLdc6pSQKbC4qnYX1MFoMoqNz01iMYcachEiu-RpQSAst4zSCoh8-F5hrn",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-4e213a2c-e7dc-4ea8-bd5f-4573b6300d4c",
+                          "name": "BudgetAgent",
+                          "response": {
+                            "result": "{\"calculer_solde_budget_response\": {\"alerte\": false, \"budget_defini\": true, \"categorie\": \"resto\", \"limite\": 50, \"pourcentage\": 40, \"total_depense\": 20}}"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "OK, budget non dépassé pour cette catégorie.",
+                        "thought": null,
+                        "thought_signature": "CoIGAb4-9vtyD0cQT66203a2TdTHXVm8LJI1Ku5To9mmh5I5qk-cJqswWAB-eCp93rdC7Cry4gOCFlkU8bUErZ1YCLbUIP9UI1LP065sTxza-5UY3prFzAcOi-g5xazj_9qrZFv3Ue5oRN-3KkPJE2bfjbwVaP_b6K9_yZ_Eh_wB4DqK4Z3abWW1BMjrrbiPyZJbRQEYsbRsNm2kETHi0N4MaUh8n4LP-mkWS3WPRbpSiDEqPBTUypbc48lHBsHa_YOK3SfSc2IcUul3oFjCEAdVk_jMj2HIF4TUj4xs4282cKq9L7BNiQ__5XGcydCwCr7vVkhmCLGuEQe3Hh2gHuiN7WQVg1YCBIUBKt44UFG594eop1-vbJMz9GyoWGvKyAJ-SbV7Mvher6TDY-Kj08j_72otluzgKVB4S8XKj3rHgEz5kVzka1MR-rU03TRENQNXn_yqq7o4dlbpXfeOqgQ7A4pH4WQVcfF8GnRmtS17ZJ50csK5vw1I3wrHzDN38bw2saR5o2njCuBjtZm-dfiGafjbZttSl7DEMWkS5603eKuzegDAU8R5ZP41oes1wVV9uzdzOaadLzKYAfgdVNvxXG3Veqv7qDwoHyTIYzMnrgLhvzh4Cs0Ot7hFcDb2ncyzLypAv8aVswxxJ9u-ZUNPErxgy3xfp8ycEtvodvKhAXvNagTKylH11emUyRikLZpKTQRKnW4gm0gRvgIyDekvl3sx1i9q7D5AzpblJBZt0zSnJVCHyosLbo9YRDgdPoLuXWzoTyymsLEjYUIpCHC3BvN6uJ-RuiI7Ff46SX1--3IjdH6sddVRWDG04p7M4-8_nudStsEODErqvx5pLeq4cfz_b_g4KD2J5o8Xc3oDqFwgP1Qys_uHOOtsuFTMwpivxgaJ5lUxQZqV-z2AUuUHmundySDn0bYeKuCIoVP5ZjNWkHhphwZ8x2QcRDzT-NVIuh3WwWy4MjShvBvC5lhXLs2HqSnHorQqQVyWjt_CC-jjmlqPP2H5G6TG_vmHhE0pWpg=",
+                        "video_metadata": null
+                      },
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-9620d649-240e-414e-bc4b-055a8bd6d269",
+                          "args": {},
+                          "name": "verifier_categorie_suivante",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-9620d649-240e-414e-bc4b-055a8bd6d269",
+                          "name": "verifier_categorie_suivante",
+                          "response": {
+                            "termine": true
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1772798216.472615,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "TranscriptionAgent": {
+                  "name": "TranscriptionAgent",
+                  "instructions": "\n    Tu reçois un texte brut issu d'une transcription vocale.\n    Nettoie et reformule ce texte pour le rendre clair et exploitable.\n    Retourne uniquement le texte nettoyé, sans commentaire.\n    \n\nYou are an agent. Your internal name is \"TranscriptionAgent\".",
+                  "tool_declarations": []
+                },
+                "ExtractionAgent": {
+                  "name": "ExtractionAgent",
+                  "instructions": "\n    \n    Contexte temporel :\n    Aujourd'hui : 2026-03-06 (vendredi)\n    Hier : 2026-03-05\n    Demain : 2026-03-07\n    lundi dernier : 2026-02-23\n    mardi dernier : 2026-02-24\n    mercredi dernier : 2026-02-25\n    jeudi dernier : 2026-02-26\n    vendredi dernier : 2026-02-27\n    samedi dernier : 2026-02-28\n    dimanche dernier : 2026-03-01\n    \n\n    Tu reçois ce texte : J'ai payé 15 euros pour Uber et 20 euros pour le grec.\n\n    Extrais TOUTES les transactions et retourne UNIQUEMENT un tableau JSON valide (sans backticks).\n    Chaque objet doit avoir : montant (float), type (\"depense\"/\"revenu\"),\n    categorie (depense: resto/transport/courses/loisirs/sante/loyer/autre,\n               revenu: salaire/remboursement/virement/autre),\n    date (YYYY-MM-DD), description (string).\n\n    Exemple de sortie attendue :\n    [{\"montant\": 12.0, \"type\": \"depense\", \"categorie\": \"resto\", \"date\": \"2026-03-06\", \"description\": \"kebab\"}, {\"montant\": 3.0, \"type\": \"depense\", \"categorie\": \"transport\", \"date\": \"2026-03-06\", \"description\": \"metro\"}]\n    \n\nYou are an agent. Your internal name is \"ExtractionAgent\".",
+                  "tool_declarations": []
+                },
+                "SauvegardeAgent": {
+                  "name": "SauvegardeAgent",
+                  "instructions": "\n    Appelle sauvegarder_toutes_transactions (sans argument).\n    Réponds avec le résumé retourné par l'outil.\n    \n\nYou are an agent. Your internal name is \"SauvegardeAgent\".",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "\n    Lit le JSON des transactions depuis le state, les sauvegarde toutes en base,\n    et prépare la liste des catégories de dépenses à vérifier pour le budget.\n\n    Returns:\n        dict avec le nombre de transactions sauvegardées et un résumé\n    ",
+                          "name": "sauvegarder_toutes_transactions",
+                          "parameters": null,
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search_retrieval": null,
+                      "url_context": null,
+                      "mcp_servers": null
+                    }
+                  ]
+                },
+                "OrchestratorAgent": {
+                  "name": "OrchestratorAgent",
+                  "instructions": "\n    1. Appelle verifier_categorie_suivante (sans argument).\n    2. Si \"termine\" est true : réponds \"Toutes catégories vérifiées.\"\n    3. Sinon, note la catégorie retournée et appelle BudgetAgent avec cette catégorie.\n    4. Si le résultat de BudgetAgent indique alerte=True : transfère le contrôle à AlertAgent.\n    5. Sinon : réponds \"OK, budget non dépassé pour cette catégorie.\"\n    \n\nYou are an agent. Your internal name is \"OrchestratorAgent\".\n\n\nYou have a list of other agents to transfer to:\n\n\nAgent name: AlertAgent\nAgent description: \n\n\nIf you are the best to answer the question according to your description,\nyou can answer it.\n\nIf another agent is better for answering the question according to its\ndescription, call `transfer_to_agent` function to transfer the question to that\nagent. When transferring, do not generate any text other than the function\ncall.\n\n**NOTE**: the only available agents for `transfer_to_agent` function are\n`AlertAgent`.\n\nIf neither you nor the other agents are best for the question, transfer to your parent agent BudgetLoop.\n",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Transfer the question to another agent.\n\n  This tool hands off control to another agent when it's more suitable to\n  answer the user's question according to the agent's description.\n\n  Note:\n    For most use cases, you should use TransferToAgentTool instead of this\n    function directly. TransferToAgentTool provides additional enum constraints\n    that prevent LLMs from hallucinating invalid agent names.\n\n  Args:\n    agent_name: the agent name to transfer to.\n  ",
+                          "name": "transfer_to_agent",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "agent_name": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": [
+                                  "AlertAgent"
+                                ],
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "agent_name"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "\n    Récupère la prochaine catégorie à vérifier pour le budget.\n    Déclenche l'escalade du LoopAgent quand toutes les catégories ont été vérifiées.\n\n    Returns:\n        dict avec 'termine': True si fini, sinon 'categorie': str\n    ",
+                          "name": "verifier_categorie_suivante",
+                          "parameters": null,
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        },
+                        {
+                          "description": "",
+                          "name": "BudgetAgent",
+                          "parameters": {
+                            "additional_properties": null,
+                            "defs": null,
+                            "ref": null,
+                            "any_of": null,
+                            "default": null,
+                            "description": null,
+                            "enum": null,
+                            "example": null,
+                            "format": null,
+                            "items": null,
+                            "max_items": null,
+                            "max_length": null,
+                            "max_properties": null,
+                            "maximum": null,
+                            "min_items": null,
+                            "min_length": null,
+                            "min_properties": null,
+                            "minimum": null,
+                            "nullable": null,
+                            "pattern": null,
+                            "properties": {
+                              "request": {
+                                "additional_properties": null,
+                                "defs": null,
+                                "ref": null,
+                                "any_of": null,
+                                "default": null,
+                                "description": null,
+                                "enum": null,
+                                "example": null,
+                                "format": null,
+                                "items": null,
+                                "max_items": null,
+                                "max_length": null,
+                                "max_properties": null,
+                                "maximum": null,
+                                "min_items": null,
+                                "min_length": null,
+                                "min_properties": null,
+                                "minimum": null,
+                                "nullable": null,
+                                "pattern": null,
+                                "properties": null,
+                                "property_ordering": null,
+                                "required": null,
+                                "title": null,
+                                "type": "STRING"
+                              }
+                            },
+                            "property_ordering": null,
+                            "required": [
+                              "request"
+                            ],
+                            "title": null,
+                            "type": "OBJECT"
+                          },
+                          "parameters_json_schema": null,
+                          "response": null,
+                          "response_json_schema": null,
+                          "behavior": null
+                        }
+                      ],
+                      "google_maps": null,
+                      "google_search_retrieval": null,
+                      "url_context": null,
+                      "mcp_servers": null
+                    }
+                  ]
+                },
+                "ResumeAgent": {
+                  "name": "ResumeAgent",
+                  "instructions": "\n    Le texte traité était : J'ai payé 15 euros pour Uber et 20 euros pour le grec.\n    Les transactions sauvegardées : Les 2 transactions ont bien été sauvegardées. Je vais maintenant vérifier le budget pour les catégories transport et resto.\n\n    Génère un court résumé en français de ce qui a été enregistré (1-2 phrases max).\n    \n\nYou are an agent. Your internal name is \"ResumeAgent\".",
+                  "tool_declarations": []
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "e-f25f2b9d-fb90-49e3-940c-4d0d3a0d9a20",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "jai paye 15 uber et 20 euro grec",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Deux dépenses ont été enregistrées : 15 euros pour Uber (catégorie transport) et 20 euros pour un repas grec (catégorie resto).",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "SauvegardeAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-90129dbe-7d1a-464c-aa89-9bf7bd423da2",
+                          "args": {},
+                          "name": "sauvegarder_toutes_transactions",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CtACAb4-9vtsuPnL_xK-_OgtyYMEY4AR3gj3jIE-QcCGR3uTqvPcN7tVPLmw8uyDq6TfxuAG7b6V0KnHLJ2pAfZg1zOcEe7CmWMJjWTbWv2u3JIN84nLw01Ek8ZZdH07qolNeYMXEZOVNrI3YMOX1v9CGWk_tJRY9jrX91zv9DNeVuCUVQQVwL9F80-9dtyIaeQPJwufhb_dGlpjlJusDDtgITi4DmV82r_r3ByIqCq2FdNybaoPJbWzsTq4FBCLJJExCPfXu6yU0q9lLQWEdo_4Di1U2Pqc-LdYLovAUk5BPm7ZtTkazwHdUuYfMJfFtBJMcFaKJNLjocPWnZy4UOqB8H3R-Xv0QsTLDgCFjtWkTGOeotC491Zrbbg3z0vn1RJr38u_facRzojw6m-CYCei7iTBHlE1aNMlowYgnBfgzu3-g7G_uQpHT7fAafHN2EWi",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "SauvegardeAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-90129dbe-7d1a-464c-aa89-9bf7bd423da2",
+                          "name": "sauvegarder_toutes_transactions",
+                          "response": {
+                            "nb_sauvegardees": 2,
+                            "transactions": [
+                              {
+                                "montant": 15.0,
+                                "categorie": "transport",
+                                "type": "depense"
+                              },
+                              {
+                                "montant": 20.0,
+                                "categorie": "resto",
+                                "type": "depense"
+                              }
+                            ],
+                            "categories_a_verifier_budget": [
+                              "transport",
+                              "resto"
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-3e795fad-a362-452e-bf41-cc9f1b0b7b1f",
+                          "args": {},
+                          "name": "verifier_categorie_suivante",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CsYDAb4-9vsk49kKRd_XwSJe5qmGIeWf9H2ICIgHz0htMqPdD5SVHfMaZCQRvaWQ2T8UphYK7pn2xw1kSGEMleM7_z-wFh0pcsTzOpDgQk7SMsRB-45PAct9cDLhalpvb87JiMZs84vuHP_Kzuzb8hcfZgf0acMpCtat3J30ShPVbohfcQ1sqtztMZpgaKCB1xpQh8rIXaFD6_O_U48x009lMei_U8KEuDyxKEyaKQWXD2d6QsYf2m7EqkwcnpueMTjEVhCmWfONFFc9XCLeOCjMRYKTBgPX70VPX037PBlhV02KeV3B6B1Cw1rGEChBLlxzUVWNwm-UDUl5yrQSbMhBb1rLRoRRf21S8ItE2iJu-utfb9W6OChbsmxB579cdaelhoUhR_SdgZxpnDwQ35QQ2qAroXZCYJbHVf6_f87dYpDjPe129Yy-LxAgCtGDCeeIxe08ad_vGXCWY40dyf2x4J90tNfZVSBtHP6ek9sM0w2B-yoMWQqODvRjnshujYquy5Z0ax3O5whLWJ3rWcNiYvNQ7J7t6fObmSBKDD6sd82kE1Ed5po4WGXwAiT2TVGGWIluFCh8SOzEZ4Qco1RfFIUqHmUb5Q==",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-3e795fad-a362-452e-bf41-cc9f1b0b7b1f",
+                          "name": "verifier_categorie_suivante",
+                          "response": {
+                            "termine": false,
+                            "categorie": "transport"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-8208775a-f097-45d8-b359-7a82c90f7959",
+                          "args": {
+                            "request": "transport"
+                          },
+                          "name": "BudgetAgent",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CqkDAb4-9vsgfzYTfEohEi-EpNe5mnFIb021tY0i0192XVzGbtJsTx_5cN-Udhf8SwOEUW0Wl3c9svj32OKnYSyboAAwJdwhyfjwuBe9GxzsBrWILzptJwi3Alp036NwxGx5HtqLTZn-m3GSbimyOY10Fvt1FsydrMzrNQYj1WEvrDJEDSq6VGvaarpG9mk_yxo3JekENs-6LFy7frAqE-dMZwuY7NgaBdxCfpZvO_OYBn37-fYuqJXP4hP0VvKNxMtVfCf0gznKneI80jlzCXdmrtDgTA8sodM_ZPNfm9rUrn8lVv8Mm5tUgo-vSBOOK0ySfuyUIYCauBGNwFd78UusjDon_iTDSi48pnTxBCHsVJ9afpnnBJPyyXgcPJlzHeJVFNOJ-QDklx4V4WFfKwIyFwZMFzASySBRRqYX-D-seR5fzzKDJtVwAC_3kkuE3puXOcG_8SGcGi2oqM-o94WWZz7__BDPb_qQ_h2S3kkk8pI5FmmALtavHNQrV8Ih4O9ycyGFAm0_2PMv14bCYlolCNjfyJnLDIYhrNmcZuJPuKQHI-pCsVpg_OA=",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-8208775a-f097-45d8-b359-7a82c90f7959",
+                          "name": "BudgetAgent",
+                          "response": {
+                            "result": "{\"calculer_solde_budget_response\": {\"budget_defini\": false, \"categorie\": \"transport\", \"total_depense\": 20}}"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-76cce286-afd1-4f74-8db7-95c798d8a85e",
+                          "args": {},
+                          "name": "verifier_categorie_suivante",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "Co4cAb4-9vtiyVFiU8Gdy3fu4cClBONmiNmJ2UmFO6XBDmtqViSdHgMw2XI92xrvZIV6ROHUr3m6TwhnFPHv6FKfI_YVOwabxodevXJIbLsNtgalonwhX6LGPPPingGkrTFYPaD7QQLbhGL4sBTp4LZaF-Ar2AnSw32JOapD58u1XmV8sRwuM5DIaANbQ_ZjgIqPnvdc4HT8I2IzD4MpGGYEA6-UOzd9BJsfTVGq1U8QPC39yeFAXyeHDDE2g58Jtedin7g4tqLf-yseRLTWFN6U1JKEdqdW03c5fB7VqOjK8Kk3tMWHRTFhj4MCt0d16d-QCkq-6XmZfZFdt5nGr3usMD91VtejpN0beCM9AGw-XmPXAInLpn4o-fDR_lJtWRt7BKRm81cgNCy9Qaad2-BaON6ZcGo6O_Ug1umDHuC9nThcqllieYTvDFqYBciTA5H91klbxlfW555lqzHlcLuyy7MQmyBbC8GdFPgrm3FFjyfwvx_aIK9rOkC01eY7qVD36wyWNfqeqgtEJejaHsPHKluuce7jr5YzLHJqTnSI4RL23Hh7bWr40sHFqe-FqS6Mig0nC1RMYgniipZC4Adwh5k_CB3FkJjpUg80U4XZWiOkXfKpgx_d2NQgf7AxeR0UONatJIy-ya4EVzoy-GnFpigNtBebr4WSqkRF-q657hAL5TVegjnu8rpF-KXZVqfRFWjq-j1oyJoM2nB1gM5BbAZNkWj9_uun938956k2rtecYTPMmj9X4Ug2lhVhmpLwUiP1DBS_yrXR8yI0NAuNS5-ULg2BsBMGGyr_n6fjfR50VJQQsf-54lMyyi2FZNIxoY_BV5X3YLACg0C8QuOnNJmGCXWrlOFc49jKmX1tT-apdjAlUKsrt3l5lqk1eQ9XmLMSQzaRV_MBy1Zy33YoTe3hRloisIkdnhpxS7kKzBA9D1LYaEp6KwvWblJi83ttSQD_Qff8dF_GSVGV1dDPmFxZP0tYDMGXrIsppbRyuFD-U0pLjBPC4krxh4KadGTNGtggStw7DB9UJXPyFiHOyM08YveJhLCYwE_A48Hs_FmdttMXRHCvYvaz92PnON9hu6BcTWDVpvLlVrRPefmMubKCPr7zoQFjJIWUpO-aicjLBUf4nZ1teVVhspn-7cNvF9EqUqb0H1TWUkSYUfemAClUMttpSZYNBlCzcaUeOOJPvLm6lI4cTXL0EQ_9ysawHvs5SHwZOdvneOdbw0pmiS8dZIUiLUBOvT_fFVB_HabpFqlt6C8_pAEurW-073eOOLwCR-dB2Kz1tOfUd04Eb4_4uWmK4iViQ-ail5jHYtTPiq9Mp-sC2JnLUyjRKWmE_BEZDqI1iY3Fs2B7Yi1gfpSMG_Yffl6r0gEL53Fu6BpNWELMVWnNjEb1sW5TMP1JvDnHs8QnUuSnkW3yZUfdONGMVFlQB4bmdQpWl-VOLlrwNFvoph2pON26bT1MrTUBbcnXlJmE-L3_AVXYrxmwY4kvgSk8TPdIJKpGv4MXO_1w_vt4HzpmDX6c1duEghvu1i0M4Zko7BMfat9oIEqiwrQ9B3v41k4TIMKoYkg5L4oyree3yX5mw6_qjs6cuyRWyLNPu_mvnSQHI9A9Qral2aoZY0Nv-AIuqzH7uij9_uKOVNwsscgCPiZvZnrSa2m9Y8RDVQwDY-crcOzebH8UdylHIYB5h_kVE1sCqYD8VxsuN0AcpobknUdevHseJMwPhgBY6FF-cgG51PoMeMV10LYVequJ72xcpVvek013p8ulEtEzTD1ZGKX7spB9f7rxHvl6wWIAVopgiy622fbgpIN13he0o40a5honOhT-TFevZz09sdp6hqHlhwuDcgpe4SXLPWzZnx-IHAMR2t63gGgaqmzBgfbzZIaIroOmaxuM3YU5lBeaoy1DXOq9O3wQRBL9f8ZSmU7KWAElKrGORV3JtrIDpeAGOWW9hBO2l7IW35peKdYlVzkVOyKqS0YDv9QCb5rw219_zOIVJKrgcoDqdLLKsx54OPBodSpKu8Eckhh1G9zNZFlGBZ7Tl2kVsLL_IOxyz1klFVHZn6yoiXsdwWNLr4i1dTqr4peIEHyOyNIDQxv6RAuG5OlUrbsfD3DwYYxr53iwU5k__h9Yji4-2T0EAt36BzDeeztLXLZ1d9WPXMmeUatUGIM-8jxVebnmZFcPbF9QwF_nGi1I0qoWdYkAz8NdBnmYPJMmF_ArclPlKQVzbfyC73Dt17jq3eDMja6pfiGT7OZaf663AtJM8dVAKJ0Epj43Zw82GgNw7XXg-OC2orf3XBV4qh0qw49YOIGNO5AZi9yAy9wgzgzn9wPE4FvCpWQ89dMpjjw714oOC56wONtBbfBqqha2tCDj089gGzOfbtGNPgW_t48TRduj7d2OpJ6zM0sGLiR4BgjHnaeSV_XYDgl2HXCGSrF8r2OVpapNDniFOXfE1iNeCnSgNRg5XPqErHHxcPLb9QsK3h_djWAncZf424I2Tkh-MPy7X1eEbhI3MH041qHvVBmBlGjxD7cltrFd4JRgbzFFUEga-ZwDmm7A1wL2DWa4i8s18_gQbpIcSM5GwjkVS2sisLmzAUyVDx92ac79qOgTIF5x9Fm62Z3eQpjOaV2aENoiBLehYK25ZcgfBO4dQP8Qu3aIXrOho3LYfz8t98sKF9tbbNE4ISPnz7ANlTTSQkU8AwDyVlhqhUF-Au4KuAwJsJ4pZF8_Mlx02445Fe5lLi5NsaQWMAyH-y17vhFWSmd-32BEzlNsRmY5-B7LCCjrBZK635J581fKhZfcbX5-5EY1_gUnGMH_YG9L_ItFgfhTgJt1IOi5RYN1iBvVR_tj-s0CnLLZOdtxHCRRX2LRbX3EGdZpXH6ixl8gq8HlHKqoIbmtlBDLDhArXb_Lboh3DXfJahO_pjPu4dDRtEqVLd-sElF-5dtUNAFQjx1C_mUJx3FsuR-MW5v2Hz_37WaClgnivoaqu9JoMpjmhp7hy_tZcfZF-Jq86v0yHogMLWyNN3WFMOQlpnrWescj7u8W3hfijB6PGS963FcYpDv9Lz-Mgpy_RPPoMKUyW0mrjrWu88Wu4cT91quAKpNWYr_lTeI4eZSE7BAdF3a77K0Y8P-kymAX5gUS_ohJH6RqXEEDVqTUyFnK65JLm6dFHU_0s1zNm61u1upjq3EESHAYR43Nj8Z0SbEIjI9ROa-gONiPsDtIp4jeKzljgvc0yozORYDYcNaUkKLAXZxcQx4k7QUo80FNRhcV5qz0pqAgQMb4ZMk-8tq4zfr-_7Uh3G8UUcSib1_a-bEGKItWEb7OHA2yED5oiQ3y1VmjPsgeii7MLLLWSW-Hk2oTGSZ58wBrZVc_rFwRV9DcmPzL8WMXeG72yHIHHHrnhGO3Jt7JBh7msS5Q0woSeJI5r968Rjz9WuE7O5Mukto8WXtc5fuM_r7LjdRViPIaQTdTCqyETEC-xQ1Jcw3dzFQxcChdbcDZoQ1CfW_qKGrdyvfRxueB9B14eTCSGMqYr1aobf4WpC3gLX0vQ1t116NrEZi6Tq0v_acUJwmPrB7kKZ7LhE6mPrYt9bpkI0g04CSzdE4i4pIi2fvMv-MjQgepKNFmEGGuXIPrt9AHYu_adEeUFNtvfAHbypoawDzfSpPGsQIqrV8WEZCz2Up0OvE9SARKXzMA57NOMCrhmTJDGIXnjUapNppLHTfO1dH3_HOQdOnFsZ_BvM9gDtjXdRxR1vnQ-zYY-1H4WnaCcAbd9TsDAd_V0r_rk2B8okT5GLZ8CuPNpfmrA4iJxQQzdUcRzhPoVEIFEpix3rBa_bsVsHbLM6SRokPyVQAOTtOc8UFPKilfeElTy7mQYdE_GJdlBHFo6R5H1sKSzZpHJKgjK6vXwDTJDELnvzT3Lr1ot0bWQM6DFVVI8d5SxGu05mUKupQfB1De7tY86wDY_pAHfj6xVLH3vwZeAx_573li6x3RTJpVnTiV1wsu86qAXqVpWWJ2HkFUhgu1WOGr3DRtOYfgoAqteYitBRVw_YNLsi6QvGVpkpbi2i6Qut3gqoojLJPAPyckxUjiQ5wiDxjLMInw8uYlqH6zvB5XOkR3GO0lmkPcsAvhJqODBudQt9JtRKfAZ8X_A3ObMcAcW3KiLIs7fs_iEV3fWsh_0NmfYS4L2gFcLiXH6lMP1mIJhbN2h-tgW0KGWDLL_YikssWteIgQpjDzUNRPBL2RHvILdM2oeHL0Hvl99NmvBVstMeU2FnBmOtj-CBOkf4LN4jyrjnL4HtwTpLmVpY3XAKoW_YS5_8RMXGWaoE-HXgAXX5dFqOS2E3yzVOTpyRzjo-i5Yv5tniit5N_HnY-zlsDDlsVAZwgADpOWf6SMawHdrMlHSsj5FXOi9Sya-tBEHijShhGIUyAas1e91iFir60cQ2daZ4WqA1Yryn4SIn0IFhIQXW6I7438ai7fZQmYo0OUqa7adF793LrKEQZr3BXAIofsxUJScyS0MgBRdbQt2GkejoIV_vR7OWdjL9Qc-fcBY9Yg6WqIDsnjBWW8QvbWP982wtSIH8ZjV4TRm9zZvzx_M9tLUY93GtxVhRqnYK1IhNAluDOOriy-V1_djPXGEKNk5QCeMIonpr9koDDnie2Wh7QEV-U3RTZ0Pv7t0I78Df_lVeYaM2W-NVPc7r3hettnULThc6TJ4HxqO_MfJ7vE4qew5ZqaHQzhr3F_mo58JBT5kXmCcojquPvXPWrHFmiT71YLvx0m0xN1UJ2AbSyQ-zIWZIG8MpMG7Dw5NprXYgMtSF8N6LOf4uywAs9jAQ==",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-76cce286-afd1-4f74-8db7-95c798d8a85e",
+                          "name": "verifier_categorie_suivante",
+                          "response": {
+                            "termine": false,
+                            "categorie": "resto"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-3231028e-1b9c-45d1-a684-26f8d4a3773c",
+                          "args": {
+                            "request": "resto"
+                          },
+                          "name": "BudgetAgent",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "Cp0DAb4-9vtNYSGYLrBSHcxlOfEa0DEd10aoomb5bYPBXtAhakJAqoAqsczgV9-9Y0RnwDspVNM8h-BkOA0G4TAOxHWyNyyoeRecQQePZTRLbews3_qrgwxG5l8iYNlAalFF4AM0TKJT5J27v1I9mEz4--kZQPFj2TqezsyvtGRRtWs_KSQazNSfgvRS65krOjld-VLMQZJUHLS3H7fAimr14GHgNuI9UIhqIFAXjLMfcV3ajdi2Smi-uBXGyPgWKzxXupv4RuzdTDocEw9RAgMd3_LNOEQH3KyTYG2hjqS17nQcRb8uU76uv5SWiUvZcQ6e0A3FoXTm1ISDt6SjfZgFxkGzK_kbxl6rHtwb1IHGaRRlqB1Cv7c8ZrJRpd5M7vvbHUGQ83hMasQoPKzH5_-uZVzg3kmwGDYJJb-KA-PA3IX0a_osOFY1PZu1CijCQ9g9d6okc5P1E0uss2i0PzB-tdY3FgJDi0YiarwmQHZ5hruoi9T-mvwPgq_wt6oAoWqMakHwm5MIFqQc0ciGNbISJqObV_Xtb7ljcssLIAk=",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-3231028e-1b9c-45d1-a684-26f8d4a3773c",
+                          "name": "BudgetAgent",
+                          "response": {
+                            "result": "{\"calculer_solde_budget_response\": {\"alerte\": true, \"budget_defini\": true, \"categorie\": \"resto\", \"limite\": 50, \"pourcentage\": 5191, \"total_depense\": 2595.5}}"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-8f3823c9-331b-49ad-9939-ab4b7818f57f",
+                          "args": {
+                            "agent_name": "AlertAgent"
+                          },
+                          "name": "transfer_to_agent",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CroFAb4-9vuqmDnz1f-NZ3raWQ1K9hS5dKJu9VNHKvV6f5TGBqGi_POrTRcAe-VU3FJQLKn7LmfWzeXz931S2rE1zROGnKdKYUQvmnW7fE5-EjfK05jZ95SaDDGFddLobtnCxV6uAx53sQG3GcTxczAGhY0iDAR3_drTExxDeFV7AJxlP6R5qgNQUmecCiXjuCiBEryqRSE7J2ayPI9500_i34XRYpjqRIGfP4SM7I3pL0t7DCPRuXrewjMErm6-ntwydHa1epFqM_XeKoH8xkI7mL2AYyXG_MD5VMwPG2J5UF060__JcPMIAPpwNBC9m2BN3hRoTbhCj0JUCkroNZFmG32IkadodWxnrvhW4Z4WwVbww15_aV3OakwyxXm7AgF15Ec6gwgOxtXNdSW7hjMmwXvFhlGm-iZGoZjAFY7uRcoHHW9gcIOMhRE9oJ5gNx6kupfn885986YH4XFgE5eLocr3sj3LEo-q63eQ4_Wcu3xVS1IxuMxHT1IPcHftafxXEAnolkZrsWQ-yclcu-JhxaLh-4GxR2JPpI6zOSsRF7ZLv2pS1h8yPI8Iku-sDBcdBjqemrv7YzPWUfze4Almhgwzs7WU8GmbGx_V7sCVc1ttsjlDjS9YvBM3ZA3Z5z6ffmpjaLQOjgyR1urhG6p9tbfNAdvjO3JthJGmycDYTkmTCBMjYkmjKHsitBicwY3_LFAn_BIV3aWEhAVSbrsE7qwTDmrudWeyfZA7W5MaIDLIIv2JhuAW8m5UBVs-upok_aVSGmG5DBgQP9jUGKE0qJA1CLaNXoznMEd7YVjU0SfDXcd_-q8C4upihazgNZVvODzFkKJKQv9NNDZySSS7UlLRcvk2rrXqlmjB44edhQIwzyJZ-zfYjpZnN1Q0ZE6EUitNYpe6amfOBdrLiXwkSGdpnfUhMpa5zpU=",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-8f3823c9-331b-49ad-9939-ab4b7818f57f",
+                          "name": "transfer_to_agent",
+                          "response": {
+                            "result": null
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "AlertAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-ffb83f8e-b125-435b-846d-6da1842ea983",
+                          "args": {},
+                          "name": "obtenir_categorie_courante",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CoIGAb4-9vv2pwxPX7l3Csw3G_Fv6zw9a7E60H4gx2nfwysduOHarlCsqPox4PPs_O8OgMPdvTY4o7ZMDqXfdj_oGscneVOY7o1oK_gSAAdrde1922Awd_5Pc7oOpdVCKYYpR-EKgu8dKnzn_oECB7cMeNmeLmSZsJ0I3gJXRKMfLqIVaKl_jrvKHTwGQg3NHmNGBuBfvUC8tsZSpLtSt-JCsdfa-uMdQgmJFoGhF-TgH8ro1gH8yoh7uThoU1FDtQ7ybKmvfqrXQ8Wm5V6njzOSg2I2aZEoCNJfO9v0A96DxmXXU4K0k_lxv1Se-xDx58bBq4vktiewaFNNq8RQKVUvbG0xgqmL3MQjlN3HZ5MVggJTEHSwMiElzl1xRVzldhjPoOLyBJpPQ8_W7CVXOE5VGb-E1QFdJM0W8QcoMT4LSskO3d6N93Gxjz4oOb0Vj4u4hTJSYIO1SJGBsL1lO0mwcINGEWQk6QZpIuyVEQi-t3XH36Cs8dB6V7C_dYChH5xwuPQDCMUwDJZ1sDngH2q79xFV8CAPnRl-O6Si2-z8Av1y3O1g9bxrZSInvBb6WHSBpZ-S2Co1u_kQEVwmHURZrlGWzVEO0Xl3DBsECiPhFfRtMWB0lYviaerf1UAUqLPf7DsmIeNZ0TWYXKqDFRhWc9OLi3ehchWibAWkEtpZ5xAsn3MgjfiJKkJD8aqlejqacwjagwZPElVG3-ia8Fs-Np1mzc0HFJswzgT9q5vlwjezGDbNFgu1MJQiBImSfyhEjy79mf-wW-Cf6Wi5e5oSzz4RGqV-pAI9zqjkoRAxyb7wbd48MkHjr0c07gBy5TkeOK4AIxiCIaABr33k_zXVt5cdIlOdB7iRUxrdSQYAzdJgqhiFLlmiAKpJpuPheypCJnPUw8cky0lyu5W8KJrSX3cFEoLcAyXIz2y7UQFNlAuntkFM57l_BsjrjJmnHs3TfLAeYtL1LuDey6ts6fDRxm6cP0zs70yGEVZZnEZ31Hlh5SHeCpVu9Bb_3w-7xoeCoiE=",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "AlertAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-ffb83f8e-b125-435b-846d-6da1842ea983",
+                          "name": "obtenir_categorie_courante",
+                          "response": {
+                            "categorie": "resto"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "AlertAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-f1125a19-f800-4fc0-8f78-675f679cf1ff",
+                          "args": {
+                            "categorie": "resto"
+                          },
+                          "name": "calculer_solde_budget",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CsYBAb4-9vsmBegwfVjpSBTNWY-HgbPw7el2wttwEw-APbMLTj2T_kPc_0BUzeIHPHvjDZKeo-AvkevqqCH3FyZOb1-jFpHSrgJ490xl3OMY1LljsvUCaTnjxgjAidHWVTK6oD6yWKzuviINsrb3_nkGIqNWIsRKKBJFdw4y3HROtDLCB4vnmRuSjieNIDT8KCKLPxeq1rUz0v4eJOMZeLQkotMWv9GRwSxGDAUryG48WD0RfD3nQkqBgT6OX3iHS1xA_mXWPV4U",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "AlertAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-f1125a19-f800-4fc0-8f78-675f679cf1ff",
+                          "name": "calculer_solde_budget",
+                          "response": {
+                            "categorie": "resto",
+                            "budget_defini": true,
+                            "limite": 50.0,
+                            "total_depense": 2595.5,
+                            "pourcentage": 5191.0,
+                            "alerte": true
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "AlertAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-f80646e9-f448-4750-80fd-c7c4fdfe1f35",
+                          "args": {
+                            "categorie": "resto"
+                          },
+                          "name": "lire_contexte_alertes",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CqgCAb4-9vu6B-Hoq6oUpfgHvMw7i05HY0u5H4VtPbTgGJICNOrVcolkvWMMtxehn4KBeqWHH0Wepq142fi-coJFeTNwmqdbHzDQYeYGdIvGFH1Bro2kA4i96RzQI3c7dUuUgbVv6BkZ1G59J0pZDH054251wdt2t3y4eAjCG-XgKYuQF_kZ6kututihl1Dx-BCz_00MF7hHZiabfnEfbafyfe9S1_Rih1xJWXLjoTPH6jB5CnGv6bR3kpho6MujZyQcpANonoiBb7l296uN9HPA9Q1Q6SDiEVeL1TPY8GUSznMq7B_NhEgSRKbdlYUgISKIKsShs_mMiBeUUQh-TTlUQhI3vD6QJYWUdIkXgRcpShyTsRGs5h38TkKVjPwPQ9IzBrpOhcMT4YI=",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "AlertAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-f80646e9-f448-4750-80fd-c7c4fdfe1f35",
+                          "name": "lire_contexte_alertes",
+                          "response": {
+                            "nb_alertes_ce_mois": 0,
+                            "streak_jours": 1,
+                            "pourcentage_mois_precedent": null,
+                            "contexte": "premiere_fois"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "AlertAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-f0392f22-8ab2-4afd-ac1a-8e1ceceb11d1",
+                          "args": {
+                            "message": "Attention, petit dépensier ! On dirait que ton budget 'resto' est un peu trop gourmand ce mois-ci. Tu as déjà dépensé 5191% de tes 50€ alloués ! C'est ta première alerte, alors prends-le comme un petit clin d'œil pour la suite !"
+                          },
+                          "name": "envoyer_notif",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CuUGAb4-9vsaGs4-ElI42UfkkxVP6Qe0Jx9Q1SQAvVgWdVUNMNi4m0urJwmNiZ-MOmBgXysXotcwwTRmoHrm-Ky_P9IOxK8aM0iy1_FFnpjJaqhdlx5fL2LJszo0Q5SXiuOZ_Dgx9AG24SAib14hrTTWArS20Qa-M3Lcs-QmTCxfd7fTzkYJv6jPSKEae1y6LbmoPWLxvI5mbOyA81PXcQagIC2T7zbF9rKpzLbMDUcl_FXiJutU_-56fWfYp5FTF68xLagptbcDOZUmGmvcjm6nqJ438OdrUG5-dr68NJNogf0U2VBkWKQG5lk865hYDrqH6V1UbcODs32mkQSbHhNxi_oOOAFymyAW2aDukWo-L-10gVV17-s2620W0APthIMkiyUSUWd4uDAooO0Hs0IdUr9VJ7uRqot7zRsd3zmtw4iYnI9sroiZds-oXtiTvDqIqWY82JMnDuGzlZFQh-ywgUj-AdQrkLFWRJL4WVNEY3xXrMbMqV9c5FOQkda57B7rd5Ox2L5cVHpaIef18v1KwMSG7dy_qf0OZXTsZCyVTEiImYpWW8i--9quhLdekD63Nh5kwL2W_X8r1Y2ynnW0nFRL_mfgFAvZRcLaWBPeMHuNFn_RMtc1TdHVZdakvx7phjJI_2H66FO7ZUvMqHmyPMsqlIpCY2CnuwesY_Z7mAQnNP84YbdKxQ9MKcsiL86uRCkxchZqsdImonI5yVSSXrmRZwcQOViSdmCBE8a_OFZh68_rtcBaSaoMv-6It9l3PSW_IQKMFS1SS51AVQ-0g5UY4Xa8JL2aoIKJ9W0br_wcHw65f405-Jc3G9woD7AUo7q0jhKuKPXF3thpUj_HO-eABcz-eMRxbGGOr_5IdbRX5rvMVigHXRIrgQ5e7TAr3AdnPiT6kI2FO_TfL8tguLbDLt4fWKO_BR21_54vJ7NTHezUSgf9IdJUSk0XM_0n52yFdHxFScZSeEM-C-6M5qtc9_GRMejSTD5Sp2yhUvWrsgyg1CtHTuSuv8jHv6OfkTKpyda8fwB3ktbTGAKSbfKIOzkg4eTuxAO5X_Pd6A9F7itCKCyDic95Ay6FwBqII3AzWG8Eb-TRxLyc5CMVbBMpEqFPBEBNT3d9I5y0kp1nUp7HVNDwVaWAVO6FYYqOtMP9OlU=",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "AlertAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-f0392f22-8ab2-4afd-ac1a-8e1ceceb11d1",
+                          "name": "envoyer_notif",
+                          "response": {
+                            "envoye": true,
+                            "message": "Attention, petit dépensier ! On dirait que ton budget 'resto' est un peu trop gourmand ce mois-ci. Tu as déjà dépensé 5191% de tes 50€ alloués ! C'est ta première alerte, alors prends-le comme un petit clin d'œil pour la suite !"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "AlertAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-51aef1b7-0224-432c-aa98-b2bd203192aa",
+                          "args": {
+                            "categorie": "resto"
+                          },
+                          "name": "enregistrer_alerte",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CrsBAb4-9vuC1NyodexIGJrUjMrKxH0HwlYD1lG4DJDmZ0F_OaFq06Lht6VhyL0TWcv1hD1VyarRxgoKGYlIWDfmzDma1MMdDHPglYvgFa-wv_Ry4sA3QilGi1ZOphzOI63spNplvcv9j-P5UxjZXapjN_J41c-udjKWu7E40o5dzCEp_pX49wNce7hUnSE9tSZkUlqBVID4MeHKZrUJ0lIKPsgrY9bTevy4jHBV7UowIWFbKSa9Q2BHjj7qWQ==",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "AlertAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-51aef1b7-0224-432c-aa98-b2bd203192aa",
+                          "name": "enregistrer_alerte",
+                          "response": {
+                            "enregistre": true,
+                            "nb_total_alertes": 1
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-d82a04fa-6b65-493b-a44b-29314ed70cc9",
+                          "args": {},
+                          "name": "verifier_categorie_suivante",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CsgJAb4-9vuc8MCJsXybOjLLy4aVvWSZrVPjQ25LgGv465R_Tbeal0GReyOs6f2uIwNEqFR9mEIWhoWXytWCVT4wSHM5EZzolpcF9kNiQX_v2kK1XMYS18YWhlReWe3EWaediVGj6u5mSwMUPBQZNaPfRP9HCJEnvAWzpufJLG8CZ_7bHz39ENVeE31Kocx7VCEF1ZnAGb7PN39FXJTEuqVND29YWBTpgeP_jS2yh_enNzCHyG3HrmU7Gq6vH_iqIJuVs_PqjzL0ZKxNKgIvu48VkH7s4v8MhRahqnBRbwsNZJ6Wgc51o2Anqjp-HC1G5sd3W66OJYjcKvLVmWEGB945zTf5UuC85ICPvVVQw-OMu39HiFZzwAEWJbDZXqjT5WgNr5vgdB_x4tnBQ9T5ywLNSb8YDXGgjJr2rV1MfCXDsEu14j-oEKJKWuZWJ8Zlnd8KXtXD6I5BFCXIG4TvKF3x0FFzzQAsz86AZmGxQ0mHobSNeNBBVvbUMeRISgseRMNEzMU7w9fOMe7P8yj24wwBB8MTU-6Iqd5O-Ar-cHr6ZPB3uvcMn5GyANrciWw8dKD7p3g-Gk9YPes8RM761A664P0WSHhM3Dcg1HnwIYF2kjy3dlA78CBVxWgvVqmPcetsN7TpopbBnJknUj0lqffyaRm9mBViImf2NzDKKm_LFkWmXHy9quoqf39otPrtWi6TJvkYuoXXg-6J7FFaTSQf55V6d4JgMyxtSPc4sXearZxmKRcHizvtG5JUjLyE22Uxnf8tcBprg-Ir8IbIZGAfP6k6Wf_4ipQX_1KZJMFm2MfFjOHnOBmtpblIru6AmgGDtVaDT-yDaeMR9hbTQ_18BNNVS5796sk7ZqWw6Rw8T2zrOiIGk29ih14j1HF2n7smQyY1s9orVA2oIsxmUi2W6mjS4J1DuL7s85OVN40iBx0IJ0RHPO36pPfETNjHb_iqE7Qimrk7bKohkXc9Yxus7o33VhNXqxBNM1t7xYXvdXLmfq0m5foMWpqGmCQ9AJbyEa8Qv3PiL5zLG3Xr0sUeXa9uVi3mMkvpnFiL1no-34liIRgY17h8bPiGRDr4ca8RaNTsQDyN7q0k_QwGZFmRMs4XdkKZL41FcQFWGywByF0R3AWaPhQznxdgNsYeiM64-BwNbwO2swLglGYa5TW2WjBgE0j_kQdAoghUjGoqggHPgfaZNMLoM3_XYZ8wrSN8HbS2mHxnE8CR6ejYNiDCai4iHqepoCQ0UWbBD3KZrM3QsVF72ackws_ksa58Id6-DkCP9f33wtQOSD1-UmcAmk49xvMRzwKZQnNsigAbfEiw6O0LlXzSyVX0ynRXGlylJxYYFO45WzKvpT3Jm7a3S61R8UCimfyTvfX07r1kTh7Q7hpGqI2cVManyVB7Hl-xHpGi6b6Fh5JHr5A61z1DSi6oecb0iH6v9SL5VfY7HVnAMvIMKtLY8iSVXmthW1lAdfGNd2RrLZ78GLmsvY90ndelfD8P8L3o2c3A4nYDXkCgKFWAGS9qJ1Q0BHexBEYgTAeSibOwr8xx1T3gTrsVQVYYk_Ne1EYMFZhD_5cpidOPCzfm0rRRQ2bWXknTgUt_JJlkGN7TElUr3sIE3TccLeXwBkv2iPGY",
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "OrchestratorAgent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-d82a04fa-6b65-493b-a44b-29314ed70cc9",
+                          "name": "verifier_categorie_suivante",
+                          "response": {
+                            "termine": true
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1772797095.176659,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 0.7,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 0.0,
+              "eval_status": 2,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.6,
+              "criterion": null,
+              "custom_function_path": null,
+              "score": 0.9583333333333334,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___5f50158a-e547-4a6c-b159-e3e57075f304",
+      "session_details": {
+        "id": "___eval___session___5f50158a-e547-4a6c-b159-e3e57075f304",
+        "app_name": "track_omar",
+        "user_id": "user",
+        "state": {
+          "texte_nettoye": "J'ai payé 15 euros pour Uber et 20 euros pour le grec.",
+          "resultat_sauvegarde": "Les 2 transactions ont bien été sauvegardées. Je vais maintenant vérifier le budget pour les catégories transport et resto.",
+          "__llm_request_key__": "f6bb988b-39d4-4eb6-99bc-cc36e7a55a6e",
+          "transactions_json": "[\n  {\n    \"montant\": 15.0,\n    \"type\": \"depense\",\n    \"categorie\": \"transport\",\n    \"date\": \"2026-03-06\",\n    \"description\": \"Uber\"\n  },\n  {\n    \"montant\": 20.0,\n    \"type\": \"depense\",\n    \"categorie\": \"resto\",\n    \"date\": \"2026-03-06\",\n    \"description\": \"grec\"\n  }\n]",
+          "categories_a_verifier": [],
+          "transactions_sauvegardees": [
+            {
+              "montant": 15.0,
+              "categorie": "transport",
+              "type": "depense"
+            },
+            {
+              "montant": 20.0,
+              "categorie": "resto",
+              "type": "depense"
+            }
+          ],
+          "streak_sans_depassement": 1,
+          "categorie_courante": "resto"
+        },
+        "events": [
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "jai paye 15 uber et 20 euro grec",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "3bb514da-ee2f-4fff-895d-4ed75941e481",
+            "timestamp": 1772798210.846931
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "J'ai payé 15 euros pour Uber et 20 euros pour le grec.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "5fc20b81-0a11-44bd-9a3c-cad5435988a9"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 20,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 78,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 78
+                }
+              ],
+              "thoughts_token_count": 351,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 449,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "TranscriptionAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "5fc20b81-0a11-44bd-9a3c-cad5435988a9",
+                "texte_nettoye": "J'ai payé 15 euros pour Uber et 20 euros pour le grec."
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "38939389-5775-4313-adc8-f91df7b01e87",
+            "timestamp": 1772798210.849796
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "[\n  {\n    \"montant\": 15.0,\n    \"type\": \"depense\",\n    \"categorie\": \"transport\",\n    \"date\": \"2026-03-06\",\n    \"description\": \"Uber\"\n  },\n  {\n    \"montant\": 20.0,\n    \"type\": \"depense\",\n    \"categorie\": \"resto\",\n    \"date\": \"2026-03-06\",\n    \"description\": \"grec\"\n  }\n]",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "b035ea55-f507-4f7a-99af-bf6aa1c2dd43"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 124,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 469,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 469
+                }
+              ],
+              "thoughts_token_count": 206,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 799,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "ExtractionAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "b035ea55-f507-4f7a-99af-bf6aa1c2dd43",
+                "transactions_json": "[\n  {\n    \"montant\": 15.0,\n    \"type\": \"depense\",\n    \"categorie\": \"transport\",\n    \"date\": \"2026-03-06\",\n    \"description\": \"Uber\"\n  },\n  {\n    \"montant\": 20.0,\n    \"type\": \"depense\",\n    \"categorie\": \"resto\",\n    \"date\": \"2026-03-06\",\n    \"description\": \"grec\"\n  }\n]"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "5795e107-7658-400f-b98e-5bfc197348c0",
+            "timestamp": 1772798216.473636
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-232a180b-842e-4d71-961d-9b85d07e6ef0",
+                    "args": {},
+                    "name": "sauvegarder_toutes_transactions",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "CvgDAb4-9vsoqpJlkYMqwfJrzPFlSkLq_1naD1i__VwGVUaf6oO6WW3mlpR53xl6DrCeIdca3gFnD8No9cQ-dRM0PM4DMiKGqNXjFUTsNoJFeYZXSss0vCKvqG10a3GoSTNSnOiSv7US6IQuVR80U1iXuNkSpOymkyplTV1Cd21-xKjttSerHs_dxkBAbxnn-WaqFO4SmB2HNmtSEI3pGm3c_CSWmHAtQn9_wKbQAE3NSM0SSGysOrf2iPVLBWJxrSGASYUpJpAPQ2_NSevqys-Agrvs7CL08AMqnKAVR4721iebHtbevFSAeYT6c15dHYLWGhuudDdxQSkOlStTt5VVD9rzMr8Jv2M0LX7Hb56kdLVpFW9Vh61iPDqPcHBeuIkYx0zCy4QVahFHDLiH8kzXHtbb5Jv2qybTEmSPePlafpfgBnNq3AMNvsZHqR8XfbqXTAh-LZBrSX74BOk4yjbKuL4Uc0iSA1xu6tnsuP0PjFPouaWIQd9823bNudK5tcf2N81rtOTOAWVKNvsMcGiFUkQQ2726J6cA82ENtPT4HTbwuP5LBxgq3Y-11t8CAuIqL085ECXTwKSZBFnyx9-hXrVc60OM91Z60Ji1pUpIwf-bb-NCXs3bPJWKAQuo2pgveWH-b5McILDU4RD16Jjuqzf0qmjcl-0R",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "fee44790-9115-4739-8fe9-29ff8de6f86f"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 16,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 303,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 303
+                }
+              ],
+              "thoughts_token_count": 101,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 420,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "SauvegardeAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "fee44790-9115-4739-8fe9-29ff8de6f86f"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "id": "078a8683-10d3-4ade-9983-0caa20a31988",
+            "timestamp": 1772798218.393157
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-232a180b-842e-4d71-961d-9b85d07e6ef0",
+                    "name": "sauvegarder_toutes_transactions",
+                    "response": {
+                      "nb_sauvegardees": 2,
+                      "transactions": [
+                        {
+                          "montant": 15.0,
+                          "categorie": "transport",
+                          "type": "depense"
+                        },
+                        {
+                          "montant": 20.0,
+                          "categorie": "resto",
+                          "type": "depense"
+                        }
+                      ],
+                      "categories_a_verifier_budget": [
+                        "transport",
+                        "resto"
+                      ]
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "SauvegardeAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "categories_a_verifier": [
+                  "transport",
+                  "resto"
+                ],
+                "transactions_sauvegardees": [
+                  {
+                    "montant": 15.0,
+                    "categorie": "transport",
+                    "type": "depense"
+                  },
+                  {
+                    "montant": 20.0,
+                    "categorie": "resto",
+                    "type": "depense"
+                  }
+                ],
+                "streak_sans_depassement": 1
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "283625a3-2ac9-4b85-ba38-0993bbbc4cab",
+            "timestamp": 1772798219.774037
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Les 2 transactions ont bien été sauvegardées. Je vais maintenant vérifier le budget pour les catégories transport et resto.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "8e1087ce-4212-44bb-979e-be23d23301c9"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 23,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 407,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 407
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 430,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "SauvegardeAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "8e1087ce-4212-44bb-979e-be23d23301c9",
+                "resultat_sauvegarde": "Les 2 transactions ont bien été sauvegardées. Je vais maintenant vérifier le budget pour les catégories transport et resto."
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "e61bb046-9191-4256-9bc4-33353129a7b9",
+            "timestamp": 1772798219.776039
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-839b1b08-e5ea-47ae-ae2e-50596d35f42f",
+                    "args": {},
+                    "name": "verifier_categorie_suivante",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "CuADAb4-9vs63xNEBrzBIgwv6VOG_sxRYdNA_JzRG3W9modd-YStKbxKGt0Hghp4mAzO4L_czoUZuuMH5Iur7fFnqTFlvMMmAPR1943htMUybIf0R2CPqHwg-xK1IxkvWKO_0FhYnDycSYuav80rqrlGssg0TlSW7dOztOdJuIm7RBe-lHXO92fFCETbX3zIF8eTAXEIzJsnD9v6NphE31wJUADJcAy8uStD4lsaKOwaTtHLvkd9geoPuP46gqhF80N_Y-KD4i-rL_wSLlVKz4GMxg3TJXRQK9LKhvljIx2Ud7VpojnunVZWncd5vK25Zfybb6sEYGTRwozsjwbE2aDXOBxRRyfe2hd76IDDae7BRZeT3xZirwUsWTOJG3A1UqQTLh3nCIyryMJhrfaBLXFMCwtjPnt4NlMPa5iYNZAki0U7CgfYTznlDN3DM6qmu0n-O8-kR6D25Fnlej5mXmuuTrWXUeONGuqNAnV9EIFbCtGyGwfR9OGFFMGLaVqkIS_lgfNizqFTzF0emzz_0FvOC6D8ezFam_zjxuiYS2UmqBaJKA8ZL88lQRXP2eciueuDpICdmpUdz_uxWdGA8oe4P8UmMJW1FI67PuHjRAToNWGCmcr--JWRoS_bPqFGCdjF",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "5fa2d297-943c-4c62-b96d-cb00566c99cc"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 14,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 858,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 858
+                }
+              ],
+              "thoughts_token_count": 91,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 963,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "5fa2d297-943c-4c62-b96d-cb00566c99cc"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "id": "e48e9886-bc59-4ef0-9746-005fe34256e9",
+            "timestamp": 1772798220.308152
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-43f505e4-8cea-4363-af79-6691f8e71bab",
+                    "args": {
+                      "request": "transport"
+                    },
+                    "name": "BudgetAgent",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "Ct8EAb4-9vu1H9wz0i4_DT9m3y8Y9_MVicaT0CCz95rqiK4XHdryPA36YqYj9Tnsakc5SnAOgrzVdOASmGUYIjb8b7z3J5TNuDkt_E9K1SV31BwA7P_609gF3vzeSGnPnJfu9V3MKQbJlvhA0NL3i4D6KjBUfvoUqq2WlIMcRJIdLgt_gGdwRd6b1XVJQ98FGHaMEwLl7QwW2MLFY9Dp8uYnDXK_i4Mx-YmHW9RACDzqyhqzsDc-elNfu_aJrhLcIJ94ro9lx7ef-bXeQqeyTnc64NOQX_QwlMv5WansrrsNeDscJkq1i3SToura6YUX0W-AUXiUuPwPujbzpR9QeIRodEDIOWjo_m07UU11-lp6BXDSTj3pDt0-Cm7gKTXWxtSHHZvW7BxBHplKe3UcA2tykSBXocHsDSXrwoj67PB-mpBlK7DPND1ldYUmDkMXRDpL-xCCkymxWFE4cOhwhPPvo8sHYIe6YWq9wqxIXZLNNRxc4gAe3eKzXTP6xt61zfN1spuztv6tpMfF6XhScPTbGASf2ptrsouGTIcAR2Nz_jzMlGMXxHMECxYGtt7nWE0kMURjqIhsfJWy2MoS39E6CEl8uFGrPRksnZcnnOaasDUJ_BnFg6NxubNROtZPPFJ61IlZR69fla67ko4Hf4nYLvPtarWe2X_Pwj8uj975yVLFEJMvlGyFk8KSIBLOUa7I4h4SFpzMaYGzqDFlcnSny2rDKlqMSsXwAJTR_uupRhYpFwypiwH5eVYV0hS2aP0iqTXogabgDRopFU9RXmiPVT2wqTQEc4pWAVfYR1nLgA==",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "223c230d-6e25-4a7f-8886-253504893a20"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 649
+                }
+              ],
+              "cached_content_token_count": 649,
+              "candidates_token_count": 14,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 896,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 896
+                }
+              ],
+              "thoughts_token_count": 141,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 1051,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "223c230d-6e25-4a7f-8886-253504893a20"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "id": "9aa0d62a-3b62-451f-b4bd-457368abb115",
+            "timestamp": 1772798221.618997
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-839b1b08-e5ea-47ae-ae2e-50596d35f42f",
+                    "name": "verifier_categorie_suivante",
+                    "response": {
+                      "termine": false,
+                      "categorie": "transport"
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "categories_a_verifier": [
+                  "resto"
+                ],
+                "categorie_courante": "transport"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "8185ae1d-2be5-4fe8-9b9c-be6c9a3855d6",
+            "timestamp": 1772798221.618997
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-43f505e4-8cea-4363-af79-6691f8e71bab",
+                    "name": "BudgetAgent",
+                    "response": {
+                      "result": "{\"calculer_solde_budget_response\": {\"alerte\": false, \"budget_defini\": true, \"categorie\": \"transport\", \"limite\": 50, \"pourcentage\": 30, \"total_depense\": 15}}"
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "6e698cd1-37f7-45cf-90e7-c4c23d941700"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "ce057e2f-a78f-42b0-8bcf-05cab5b134e7",
+            "timestamp": 1772798225.242367
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "OK, budget non dépassé pour cette catégorie.",
+                  "thought": null,
+                  "thought_signature": "CvsFAb4-9vt5jRJz7BQ9bI232CDscICS7K--oU1uY9rhO8HTvJ_JPEe2tve8VQFQUVBmnITlEn0oMkUXy_l0whl6TvkfqBkkwGv8ZfCti3hpztbmUtQV03A2zNhgJWLffDZbTbgDqB2uTa4LRLEfrmpkCjtm2AWoGnQVedU25DEeKPT2Fl9XcowSzR9-RYnh604HXUqiF48cRXIgTiCtWKr6dh0l5t4DlV9hJ1njD07QRsPEIOptH70pV6osKqH0-YBUPpyqYihr1vPjfkI9D2pdy2XCTTBpJF--sUV9yPDHwQwD23d5RL722PB5Crpvv7rVtdSgDVb4-JLdSZr61PQsksYFABrcvyaGEB8s9v0zwkQc_xJw3xJgS3rYRSfDdtVSgDTyvOzuBTi7hCqkHGlSBmomtdiM0-TipT5rx7BtHGIQnCGA55LIWe-aFZX0FK010IVbPi4Yj1SQlFjslTLGwNa3ZTtDnmSQZdWYkUZ3P-iKpa1KCOiNfCMEdX7COHOy1hZZ8Tr1gT-cRjm6jF4uZDINArlChuZTQHwMCavJz3TYCqEvEV1mXscuw3ASDef2ahdSxr3Wp9oGfFf8lDJ7QunuN0ZubesFiDdsWFNIKByKgCSquC1tO6TC3NMHQCcMeTfcdn96geaicaiu3H1YlHsykSISWQWF5XXxB2mBlhqpWwRzR34wjxuKxEXGFpsPf0x5LT_f4RhsIrNx8BDM4lxtd_1TFDO7gmfaoZgBxhGOXKAsigoo-bn07Hy-eh12Q3QtZfUDiQHaLREAKMC1fJ6h8kNQNCv6XxaT82-FnP2HZV5qrhd8Oxz0cnO52b8R_f39tW8NH5ywDS5iaNAVkFHo0fdO1gfUK9x9Cf5gjrSyXM4vn1F2zjhvw4OXAu0hZlCNcmWHdgsQvZInPAfp50gg6t9_9RIekTVBLKGcvyDghHKUWGCpXBNuL10NuekvwOZiXr9YmtQi_sKwcTC5AzyQL5ZmET8z2n5RelJ6z2W2YiPBQJqUfHyyQA==",
+                  "video_metadata": null
+                },
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-67741762-b18e-44d6-9391-7641c9b160f4",
+                    "args": {},
+                    "name": "verifier_categorie_suivante",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "aa3e175d-6816-44b9-a3fd-984147f2ebb4"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 607
+                }
+              ],
+              "cached_content_token_count": 607,
+              "candidates_token_count": 24,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 980,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 980
+                }
+              ],
+              "thoughts_token_count": 196,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 1200,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "aa3e175d-6816-44b9-a3fd-984147f2ebb4"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "id": "e809586a-2809-4f89-82e6-e363b026c541",
+            "timestamp": 1772798225.253232
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-67741762-b18e-44d6-9391-7641c9b160f4",
+                    "name": "verifier_categorie_suivante",
+                    "response": {
+                      "termine": false,
+                      "categorie": "resto"
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "categories_a_verifier": [],
+                "categorie_courante": "resto"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "4c0966c4-a001-4208-b102-4326e601acf3",
+            "timestamp": 1772798226.91067
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-4e213a2c-e7dc-4ea8-bd5f-4573b6300d4c",
+                    "args": {
+                      "request": "resto"
+                    },
+                    "name": "BudgetAgent",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "Cs8EAb4-9vu1thOn3fl85iOverIyPFHy7eZkzcZyJOKbaq-bTJs7Jw_btrhlCGF7VY_5IQmlChE97_n_K4VyEK5Nq0FNzJrYAQFA6aAM1ObAYTTT9vInyVUKbSNgA8e3_CeeFWYpI32Anm0QGFVOtl1i2HkTgzp1jTd4W4ehVV0mdnfJShYhbNMdfcTBQCEo9_PWgW3WaiCLL5gGvMmvhSxOK87NvugiEds2rmul14hBwrQN6d7M3Mzr6CGz0ZVVuQicxi6ubOwvb3v91iyEqjkWO0mY5-UZDgEVP_WZKPjp4hGp2yUwbTuR9JN5tC-vR1XiCbQVrkW96cwsjooTl355izhGnPgFDiRFvdgzoHY9JTDZZGdShh-SbEJLw6io5JpB8KULQ84VIAPe-kZD8J3CSRCUrJ-1lCVwvlaGY2AI-qFwRgZAVjrcmjgTnAYmcZtOG5xMcBvZwrb_LS8sK37Mm_Zcjh1jIyG86JWXmLZcOgDcDSMwypjMXgFgElxu5DMJ0zFiuQuJdWqPoLPbiLuVA33LrStr0xM7WRorXPvxWkzdDPg4rNyOiKBWeF1GdTzygaI50e5TjzHK0N43ILFqPUJyClFowRXpln4bfSN98OXWcT_inGBFvrTW_-ikAIvCNpWvg1k94qVXtN1HceuFLrmLva-HgulgnahtFrZ1adKTysdjh0cVCJid1kH8WijpR4pSu5TBuR9P8b67hLjrAZXG30jLdc6pSQKbC4qnYX1MFoMoqNz01iMYcachEiu-RpQSAst4zSCoh8-F5hrn",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "471c7736-4f55-4e60-ba9a-793eee7e5add"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 14,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 1028,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 1028
+                }
+              ],
+              "thoughts_token_count": 141,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 1183,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "471c7736-4f55-4e60-ba9a-793eee7e5add"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "id": "24ee77a2-4aa4-4fe2-8913-ce6ea8832bd1",
+            "timestamp": 1772798226.917117
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-4e213a2c-e7dc-4ea8-bd5f-4573b6300d4c",
+                    "name": "BudgetAgent",
+                    "response": {
+                      "result": "{\"calculer_solde_budget_response\": {\"alerte\": false, \"budget_defini\": true, \"categorie\": \"resto\", \"limite\": 50, \"pourcentage\": 40, \"total_depense\": 20}}"
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "98e622b9-cb76-460b-a235-90ffd7b4d120"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "2301ba58-afef-4272-862d-09531f692916",
+            "timestamp": 1772798229.987964
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "OK, budget non dépassé pour cette catégorie.",
+                  "thought": null,
+                  "thought_signature": "CoIGAb4-9vtyD0cQT66203a2TdTHXVm8LJI1Ku5To9mmh5I5qk-cJqswWAB-eCp93rdC7Cry4gOCFlkU8bUErZ1YCLbUIP9UI1LP065sTxza-5UY3prFzAcOi-g5xazj_9qrZFv3Ue5oRN-3KkPJE2bfjbwVaP_b6K9_yZ_Eh_wB4DqK4Z3abWW1BMjrrbiPyZJbRQEYsbRsNm2kETHi0N4MaUh8n4LP-mkWS3WPRbpSiDEqPBTUypbc48lHBsHa_YOK3SfSc2IcUul3oFjCEAdVk_jMj2HIF4TUj4xs4282cKq9L7BNiQ__5XGcydCwCr7vVkhmCLGuEQe3Hh2gHuiN7WQVg1YCBIUBKt44UFG594eop1-vbJMz9GyoWGvKyAJ-SbV7Mvher6TDY-Kj08j_72otluzgKVB4S8XKj3rHgEz5kVzka1MR-rU03TRENQNXn_yqq7o4dlbpXfeOqgQ7A4pH4WQVcfF8GnRmtS17ZJ50csK5vw1I3wrHzDN38bw2saR5o2njCuBjtZm-dfiGafjbZttSl7DEMWkS5603eKuzegDAU8R5ZP41oes1wVV9uzdzOaadLzKYAfgdVNvxXG3Veqv7qDwoHyTIYzMnrgLhvzh4Cs0Ot7hFcDb2ncyzLypAv8aVswxxJ9u-ZUNPErxgy3xfp8ycEtvodvKhAXvNagTKylH11emUyRikLZpKTQRKnW4gm0gRvgIyDekvl3sx1i9q7D5AzpblJBZt0zSnJVCHyosLbo9YRDgdPoLuXWzoTyymsLEjYUIpCHC3BvN6uJ-RuiI7Ff46SX1--3IjdH6sddVRWDG04p7M4-8_nudStsEODErqvx5pLeq4cfz_b_g4KD2J5o8Xc3oDqFwgP1Qys_uHOOtsuFTMwpivxgaJ5lUxQZqV-z2AUuUHmundySDn0bYeKuCIoVP5ZjNWkHhphwZ8x2QcRDzT-NVIuh3WwWy4MjShvBvC5lhXLs2HqSnHorQqQVyWjt_CC-jjmlqPP2H5G6TG_vmHhE0pWpg=",
+                  "video_metadata": null
+                },
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-9620d649-240e-414e-bc4b-055a8bd6d269",
+                    "args": {},
+                    "name": "verifier_categorie_suivante",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "c817ef0f-d99e-4d4e-a0f2-d53e7d4ec89f"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 24,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 1112,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 1112
+                }
+              ],
+              "thoughts_token_count": 199,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 1335,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "c817ef0f-d99e-4d4e-a0f2-d53e7d4ec89f"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "id": "481baf74-82f9-49ed-a82e-d33b4268f748",
+            "timestamp": 1772798229.999698
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-9620d649-240e-414e-bc4b-055a8bd6d269",
+                    "name": "verifier_categorie_suivante",
+                    "response": {
+                      "termine": true
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": true,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "13315297-3aba-429f-b642-9720e1deaffe",
+            "timestamp": 1772798231.513592
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Toutes catégories vérifiées.",
+                  "thought": null,
+                  "thought_signature": "CokDAb4-9vscUP8VgUmHnQc2XZaaGoU-U38Mjeb5b8PuXjGRXiTJc5DVCtc28xxx3y-Y3IInSJYCaWLLBzQT12t5uC-QErQ6ift4AMyhXYhdc0522F66felaslIz_eMEOeZUFoQHKo34-PSaz48agjGa1A_jd7nLmm26B1oUahUSgVHjYeeqwvvejey3BkQl54GkznEaNnLfff_aEXDeXAfcriOGlNTzTUgW3RdEQQnL-KwLkgL-lPEAErzJxe3b01HmvvScbEWGRo-NLjQZ_Jtf0UsHOETbY9eORAx3IVkSDzf51gsfrCEWe6aaYnTQeTlXkHtoOJtXchAyGpSYrNEyrb0jGaTjtUQfv74OKZ6Hv7gRuYw0N9CuscsX3d6fhd0iYt0CHLurNDj1n9bPNtzK0mi7vlY1s_UgSwk6DEzuFPu1mjUCwSzFnZTZpz6IQF0VaeMGwrOxWAuobAt_dj5R7NFwsxhkgFyNWAMRXg-prIe92s3BU2ykGmZQgasbYOf1Dib57r12dgu7",
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "dbbd0590-afb7-4f35-b04c-88439b8d555d"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 6,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 1154,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 1154
+                }
+              ],
+              "thoughts_token_count": 87,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 1247,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "OrchestratorAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "dbbd0590-afb7-4f35-b04c-88439b8d555d"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "0b1ab5ab-0ff3-4363-a00f-3fe6ba6e5d29",
+            "timestamp": 1772798231.520779
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Deux dépenses ont été enregistrées : 15 euros pour Uber (catégorie transport) et 20 euros pour un restaurant grec (catégorie resto).",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "f6bb988b-39d4-4eb6-99bc-cc36e7a55a6e"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 34,
+              "candidates_tokens_details": null,
+              "prompt_token_count": 880,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 880
+                }
+              ],
+              "thoughts_token_count": 115,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 1029,
+              "traffic_type": null
+            },
+            "live_session_resumption_update": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-129557b9-9439-4047-9b64-db9d94488f54",
+            "author": "ResumeAgent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "f6bb988b-39d4-4eb6-99bc-cc36e7a55a6e"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "id": "d87a24f5-1a55-4349-b945-1cc15004eac2",
+            "timestamp": 1772798232.639017
+          }
+        ],
+        "last_update_time": 1772798232.639017
+      },
+      "user_id": "user"
+    }
+  ],
+  "creation_timestamp": 1772798234.1188166
+}
