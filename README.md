@@ -1,20 +1,20 @@
 # Trackomar
 
 Système multi-agents de suivi budgétaire vocal — Google ADK + Gemini 2.5 Flash
-
+Le nom derive du mot informel utilise en darija pour indiquer largent
 ---
 
 ## Démarrage rapide
 
 ```bash
 # Terminal 1 — Backend ADK
-cd agentic_ai/track_omar
+cd trackomar_adk/track_omar
 adk api_server . --allow_origins http://localhost:3000
 # ou en mode debug avec interface graphique :
 adk web .
 
 # Terminal 2 — Frontend
-cd agentic_ai
+cd trackomar_adk
 python serve_html.py
 ```
 
@@ -230,18 +230,17 @@ def detecter_injection(ctx):
 
 ### Lancer les tests
 
+Toujours remettre la DB dans un état connu avant de lancer les evals, sinon les résultats ne sont pas reproductibles :
+
 ```bash
-# Remettre la DB dans un état connu
+cd track_omar/
 python reset_test_db.py
-
-# Via ADK CLI
-adk eval . tests/trackomar_tests.test.json
-
-# Via ADK UI
 adk web .   # puis onglet Eval
 ```
 
-### Evalsets disponibles
+### Evalsets
+
+Les evalsets ont été créés directement depuis l'interface graphique d'ADK (`adk web .`, onglet **Eval**) : on enregistre une vraie conversation avec l'agent, ADK la sauvegarde comme référence. Les fichiers `.evalset.json` sont dans `track_omar/`, et les résultats de chaque passage sont conservés dans `track_omar/.adk/eval_history/`.
 
 | Fichier | Cas testé |
 |---------|-----------|
@@ -286,15 +285,17 @@ Deux points critiques avant de passer en prod : migrer de `InMemorySessionServic
 ## Structure des fichiers
 
 ```
-agentic_ai/
+trackomar_adk/                  ← repo git
 ├── micro.html                  ← interface web (micro + texte + envoi)
 ├── serve_html.py               ← proxy dev : sert HTML + redirige vers ADK
 └── track_omar/                 ← agents_dir (lancer ADK depuis ici)
     ├── reset_test_db.py        ← remet la DB dans un état connu avant eval
     ├── README.md
-    ├── ARCHITECTURE.md         ← diagrammes détaillés
-    ├── GLOSSAIRE.md            ← définitions de toutes les notions
     ├── screens/                ← captures d'écran du projet (UI, evals, erreurs...)
+    ├── evalset_date_compliquee.evalset.json
+    ├── evalset_multiple_transactions.evalset.json
+    ├── .adk/
+    │   └── eval_history/       ← résultats des evals (générés par ADK)
     └── track_omar/             ← package Python
         ├── __init__.py
         ├── agent.py            ← tous les agents + workflow
@@ -365,14 +366,7 @@ Pour ce projet, l'API Google (Gemini 2.5 Flash) a été utilisée pour tous les 
 
 ## Bonnes pratiques — Tests
 
-### Lancer les tests proprement
 
-Toujours remettre la DB dans un état connu avant les evals, sinon les résultats ne sont pas reproductibles :
-
-```bash
-python reset_test_db.py
-adk eval . tests/trackomar_tests.test.json
-```
 
 ---
 
@@ -428,5 +422,5 @@ python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab')"
 
 ---
 
-*Ce projet a été réalisé avec l'assistance de Claude (Anthropic) pour la conception de l'architecture, la rédaction de la documentation et le débogage.*
+*Ce projet a été réalisé avec les assistant IA*
 
