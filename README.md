@@ -1,6 +1,6 @@
 # Trackomar
 
-**Agent vocal multi-étapes pour le suivi budgétaire personnel** — propulsé par Google ADK et Gemini 2.5 Flash.  
+Système multi-agents de suivi budgétaire vocal — Google ADK + Gemini 2.5 Flash
 Le nom *trackomar* vient du darija (arabe marocain) : "surveille ton fric" 💸
 
 ---
@@ -322,7 +322,6 @@ trackomar_adk/                  ← repo git
 ├── serve_html.py               ← proxy dev : sert HTML + redirige vers ADK
 ├── screens/                    ← captures d'écran (UI, evals, erreurs, modèle local...)
 └── track_omar/                 ← agents_dir (lancer ADK depuis ici)
-    ├── .env                    ← GOOGLE_API_KEY (ne pas committer)
     ├── main.py                 ← runner programmatique (CLI)
     ├── reset_test_db.py        ← remet la DB dans un état connu avant eval
     ├── .adk/
