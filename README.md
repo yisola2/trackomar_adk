@@ -1,7 +1,8 @@
 # Trackomar
 
-Système multi-agents de suivi budgétaire vocal — Google ADK + Gemini 2.5 Flash
-Le nom derive du mot informel utilise en darija pour indiquer largent
+**Agent vocal multi-étapes pour le suivi budgétaire personnel** — propulsé par Google ADK et Gemini 2.5 Flash.  
+Le nom *trackomar* vient du darija (arabe marocain) : "surveille ton fric" 💸
+
 ---
 
 ## Démarrage rapide
@@ -23,6 +24,33 @@ Ouvrir **http://localhost:3000** dans Chrome.
 ---
 
 ## Architecture
+
+### Vue d'ensemble
+
+```mermaid
+flowchart LR
+    U["🎙️ Utilisateur"] -->|voix / texte| F["🌐 micro.html\n+ serve_html.py"]
+    F -->|POST /run| ROOT
+
+    subgraph ROOT["RootAgent — SequentialAgent"]
+        direction LR
+        T["TranscriptionAgent\nnettoie"] --> E["ExtractionAgent\nextrait JSON"]
+        E --> S["SauvegardeAgent\nSQLite"]
+        S --> BL
+
+        subgraph BL["BudgetLoop — LoopAgent"]
+            direction TB
+            O["OrchestratorAgent"] -->|budget dépassé ?| BA["BudgetAgent"]
+            BA -->|alerte=True| AL["AlertAgent\nnotif"]
+        end
+
+        BL --> R["ResumeAgent\nrésumé"]
+    end
+
+    ROOT -->|résumé| U
+```
+
+---
 
 ### Légende
 
@@ -212,7 +240,7 @@ Stocker `historique_alertes` et `streak_sans_depassement` dans une table SQLite 
 - Requêtes SQL paramétrées : pas d'injection SQL possible
 - `before_agent_callback` : valide que le JSON existe avant sauvegarde
 
-### À ajouter
+### une idée à ajouter
 
 ```python
 # before_model_callback sur TranscriptionAgent
@@ -240,7 +268,7 @@ adk web .   # puis onglet Eval
 
 ### Evalsets
 
-Les evalsets ont été créés directement depuis l'interface graphique d'ADK (`adk web .`, onglet **Eval**) : on enregistre une vraie conversation avec l'agent, ADK la sauvegarde comme référence. Les fichiers `.evalset.json` sont dans `track_omar/`, et les résultats de chaque passage sont conservés dans `track_omar/.adk/eval_history/`.
+Les evalsets ont été créés depuis l'interface graphique d'ADK (`adk web .`, onglet **Eval**) : j'enregistre une vraie conversation avec l'agent, ADK la sauvegarde comme référence. Les fichiers `.evalset.json` se trouvent dans `track_omar/track_omar/`, et les résultats de chaque passage sont conservés dans `track_omar/.adk/eval_history/`.
 
 | Fichier | Cas testé |
 |---------|-----------|
@@ -286,22 +314,26 @@ Deux points critiques avant de passer en prod : migrer de `InMemorySessionServic
 
 ```
 trackomar_adk/                  ← repo git
+├── .gitignore
+├── README.md
 ├── micro.html                  ← interface web (micro + texte + envoi)
 ├── serve_html.py               ← proxy dev : sert HTML + redirige vers ADK
+├── screens/                    ← captures d'écran (UI, evals, erreurs, modèle local...)
 └── track_omar/                 ← agents_dir (lancer ADK depuis ici)
+    ├── .env                    ← GOOGLE_API_KEY (ne pas committer)
+    ├── main.py                 ← runner programmatique (CLI)
     ├── reset_test_db.py        ← remet la DB dans un état connu avant eval
-    ├── README.md
-    ├── screens/                ← captures d'écran du projet (UI, evals, erreurs...)
-    ├── evalset_date_compliquee.evalset.json
-    ├── evalset_multiple_transactions.evalset.json
     ├── .adk/
     │   └── eval_history/       ← résultats des evals (générés par ADK)
     └── track_omar/             ← package Python
         ├── __init__.py
         ├── agent.py            ← tous les agents + workflow
         ├── callbacks.py        ← 3 callbacks
-        ├── main.py             ← runner programmatique (CLI)
+        ├── evalset_1_simple_revenu.evalset.json
+        ├── evalset_date_compliquee.evalset.json
+        ├── evalset_multiple_transactions.evalset.json
         └── tools/
+            ├── __init__.py
             ├── my_tools.py     ← 7 outils custom
             └── trackomar.db    ← base SQLite
 ```
@@ -312,7 +344,7 @@ trackomar_adk/                  ← repo git
 
 ### CORS
 
-Le problème le plus classique quand on lance le projet. Le navigateur bloque la requête parce que le frontend (`:3000`) et le backend ADK (`:8000`) sont sur des ports différents.
+Le problème le plus classique au démarrage. Le navigateur bloque la requête parce que le frontend (`:3000`) et le backend ADK (`:8000`) sont sur des ports différents.
 
 ```
 Access to fetch at 'http://localhost:8000/run' from origin 'http://localhost:3000'
@@ -347,13 +379,13 @@ L'ancien design demandait au LLM d'itérer sur une liste de transactions et d'ap
 
 **Micro qui capte seulement le premier mot**
 
-Chrome coupe la reconnaissance vocale après chaque silence même avec `continuous = true`. L'objet `SpeechRecognition` ne peut pas être relancé — il faut en créer un nouveau. Fix : dans `onend`, si l'utilisateur veut encore parler, on crée une nouvelle instance après 100ms.
+Chrome coupe la reconnaissance vocale après chaque silence même avec `continuous = true`. L'objet `SpeechRecognition` ne peut pas être relancé — il faut en créer un nouveau. Fix : dans `onend`, si l'utilisateur veut encore parler, je crée une nouvelle instance après 100ms.
 
 ---
 
 ### Modèle local — tentative Gemma
 
-On a tenté de remplacer `gemini-2.5-flash` par `ollama/gemma2` sur le `TranscriptionAgent` uniquement. Résultat : le PC a souffert — Gemma2 est trop lourd pour tourner en local en parallèle avec le reste du pipeline.
+J'ai tenté de remplacer `gemini-2.5-flash` par `ollama/gemma2` sur le `TranscriptionAgent` uniquement. Résultat : le PC a souffert — Gemma2 est trop lourd pour tourner en local en parallèle avec le reste du pipeline.
 
 Les modèles locaux posent plusieurs problèmes sur ce projet :
 - **RAM** : un modèle 7B+ consomme 8-16GB — le pipeline en a besoin plusieurs fois
@@ -365,10 +397,6 @@ Pour ce projet, l'API Google (Gemini 2.5 Flash) a été utilisée pour tous les 
 ---
 
 ## Bonnes pratiques — Tests
-
-
-
----
 
 ### Pourquoi `tool_trajectory_avg_score` est 0
 
@@ -401,11 +429,11 @@ python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab')"
 
 ---
 
-### Pièges à éviter quand on crée un evalset
+### Pièges à éviter lors de la création d'un evalset
 
-**Evalset enregistré avec une ancienne version de l'agent** — si tu as refactorisé un outil (ex: `sauvegarder_transaction` → `sauvegarder_toutes_transactions`), les anciens evalsets ont l'ancien nom → `tool_trajectory = 0.0`. Re-enregistrer les evalsets depuis l'UI ADK après chaque refacto.
+**Evalset enregistré avec une ancienne version de l'agent** — après une refacto d'outil (ex: `sauvegarder_transaction` → `sauvegarder_toutes_transactions`), les anciens evalsets ont l'ancien nom → `tool_trajectory = 0.0`. Il faut re-enregistrer les evalsets depuis l'UI ADK après chaque refacto.
 
-**L'evalset dépend de l'état de la DB** — un evalset enregistré quand le budget était dépassé ne sera pas reproductible sur une DB vide. Toujours enregistrer les evalsets juste après `reset_test_db.py`.
+**L'evalset dépend de l'état de la DB** — un evalset enregistré quand le budget était dépassé ne sera pas reproductible sur une DB vide. Il faut toujours enregistrer les evalsets juste après `reset_test_db.py`.
 
 **`response_match_score` bas à cause de la catégorisation** — le LLM peut classer "grec" en `courses` au lieu de `resto`. Si la `reference` dit "resto" mais que l'agent répond "courses", le score baisse. Ajuster la `reference` ou améliorer l'instruction de l'ExtractionAgent.
 
