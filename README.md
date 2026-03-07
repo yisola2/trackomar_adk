@@ -499,5 +499,5 @@ python -c "import nltk; nltk.download('punkt'); nltk.download('punkt_tab')"
 
 ---
 
-*Ce projet a été réalisé avec les assistant IA*
+*Ce projet a été réalisé avec les assistants IA*
 
