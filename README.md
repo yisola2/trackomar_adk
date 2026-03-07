@@ -28,6 +28,7 @@ Ouvrir **http://localhost:3000** dans Chrome.
 ### Vue d'ensemble
 
 ```mermaid
+%%{init: {'themeVariables': {'fontSize': '20px'}}}%%
 flowchart LR
     U["🎙️ Utilisateur"] -->|voix / texte| F["🌐 micro.html\n+ serve_html.py"]
     F -->|POST /run| ROOT
@@ -65,6 +66,7 @@ flowchart LR
 | 🔔 | Callback |
 
 ```mermaid
+%%{init: {'themeVariables': {'fontSize': '20px'}}}%%
 flowchart LR
 
     %% ── FRONTEND ──────────────────────────────────────────
