@@ -1,6 +1,6 @@
 # Trackomar
 
-Système multi-agents de suivi budgétaire vocal — Google ADK + Gemini 2.5 Flash
+Système multi-agents de suivi budgétaire vocal — Google ADK + Gemini 2.5 Flash.
 Le nom *trackomar* vient du darija (arabe marocain) : "surveille ton fric" 💸
 
 ---
@@ -128,6 +128,54 @@ flowchart LR
 
 ---
 
+### Séquence
+
+```mermaid
+%%{init: {'themeVariables': {'fontSize': '20px'}}}%%
+sequenceDiagram
+    actor U as Utilisateur
+    participant H as micro.html
+    participant P as serve_html.py
+    participant T as TranscriptionAgent
+    participant E as ExtractionAgent
+    participant S as SauvegardeAgent
+    participant O as OrchestratorAgent
+    participant B as BudgetAgent
+    participant AL as AlertAgent
+    participant R as ResumeAgent
+    participant DB as SQLite
+
+    U->>H: voix / texte
+    H->>P: POST /run
+    P->>T: texte brut
+
+    T-->>E: texte_nettoye
+    E-->>S: transactions_json
+
+    S->>DB: INSERT transactions
+    S-->>O: categories_a_verifier
+
+    loop pour chaque catégorie
+        O->>B: AgentTool(categorie)
+        B->>DB: SELECT somme du mois
+        DB-->>B: total
+        alt budget dépassé
+            B-->>O: alerte=True
+            O->>AL: transfer_to_agent
+            AL->>U: notification
+        else budget OK
+            B-->>O: alerte=False
+        end
+    end
+
+    O-->>R: fin du loop
+    R-->>P: résumé
+    P-->>H: résumé
+    H-->>U: affichage
+```
+
+---
+
 ## Agents & Workflow
 
 ### Agents LLM
@@ -242,7 +290,7 @@ Stocker `historique_alertes` et `streak_sans_depassement` dans une table SQLite 
 - Requêtes SQL paramétrées : pas d'injection SQL possible
 - `before_agent_callback` : valide que le JSON existe avant sauvegarde
 
-### une idée à ajouter
+### Piste d'amélioration — détection de prompt injection
 
 ```python
 # before_model_callback sur TranscriptionAgent
